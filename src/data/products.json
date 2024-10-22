@@ -1,0 +1,334 @@
+[
+    {
+        "id": 0,
+        "facilityId": 1,
+        "name": { "tr": "Altın", "en": "Gold" },
+        "image": "/assets/products/gold.jpg",
+        "images": [
+            "/assets/products/gold.jpg",
+            "/assets/products/gold1.jpg",
+            "/assets/products/gold2.jpg",
+            "/assets/products/gold3.jpg"
+        ],
+        "description": {
+            "tr": "Özgül  ağırlığı 19.3 , ergime noktası 1064 °C, kaynama noktası 2660 °C  ve Kimyasal sembolü Au; olan Altın, 35 km kalınlıktaki yer kabuğunda on milyonda 2 den az bir oranda bulunması sebebi ile en az bulunan elementlerden biridir. Altının az olmasının yanında, doğadaki en iyi iletken olması, aynı zamanda su ve oksijen ile reaksiyona girmemesi sebebi(ki bu özelliği sayesinde binlerce sene bozulmadan özelliğini koruyabilmektedir) ile değerli olmasının haklı sebepleri vardır. Altın iletkenlik özelliği ile elektronik, sağlık ve uzay sanayinde geniş kullanım alanına sahiptir. Ayrıca kolay işlenebilme özelliği şekil vermede tartışılmaz üstünlük kazandırmaktadır, bu sebeple de kuyumculuk ve mücevherat sanayinin vazgeçilmezidir. Altın tarih boyunca güç ve güzellik simgesi, en güvenilir yatırım aracı olagelmiştir. Zenginleştirmede nadir kullanılan (yani dünya toplam altın üretiminin %3 lük kısmının üretiminde kullanılan) bir yöntem olan Gravimetrik yöntem ile Salihli Sart'daki ruhsatlı maden sahalarımızda nabit altın elde etmekteyiz. Yoğunluk Farkından Faydalanarak Zenginleştirme olarak tanımlanabilen Gravimetrik Zenginleştirme Yöntemi doğaya ve çevreye dost bir yöntemdir. Ülke ekonomisine katma değer sağalarken doğaya zarar vermeden çalışmalarımızı yapmaktayız.",
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Kuyumculuk, kaplama, süsleme, elektrik & elektronik, uzay sanayi, tıp, para yapımı, külçe stokları, tekstil vb gibi çok geniş kullanım alanına sahip bir cevherdir.",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "technicalInfo": {
+            "chemicalFormula": "Au",
+            "gravity": "~19.3 gr/cm3",
+            "hardness": "2.5-3 Mohs"
+        },
+        "link": "/product/0"
+    },
+    {
+        "id": 1,
+        "facilityId": 1,
+        "name": { "tr": "Kuvars", "en": "Quartz" },
+        "image": "/assets/products/quartz.jpg",
+        "images": [
+            "/assets/products/quartz.jpg",
+            "/assets/products/quartz1.jpg",
+            "/assets/products/quartz2.jpg",
+            "/assets/products/quartz3.jpg",
+            "/assets/products/quartz4.jpg",
+            "/assets/products/quartz5.jpg"
+        ],
+        "description": {
+            "tr": "Salihli Kaletepe Mevkiindeki ruhsatlı ocağımızdan çıkarılan kuvars (SiO2) Sardes Kuvars tesislerinde işlenerek yurtiçi ve yurtdışı pazara sunulmaktadır. Her tür granül ve mikronize kuvars üretimi yapılabilen tesissimizde müşteri taleplerine uygun gradasyon ve özellikte üretim gerçekleşmektedir. Yüksek saflıkta üretilen kuvars ürünlerimiz  müşteri beklentilerine uygun titizlikte  üretilmektedir. Değişen sektörel ihtiyaçlara cevap verebilmeyi sağlayan  tam otomatik makine parkı ile üretim yapılan tesisimizde Kraft torba, PP torba, Bigbag ambalaj ile sevkiyat yapılabildiği gibi silobas ile ürün sevkiyatı da gerçekleşmektedir.",
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Seramik, cam, yapı kimyasalı, suni granit, elektronik, deterjan, boya, zımpara, dolgu ve sondaj, Tekstil, Arıtma tesisleri, yüzey temizleme (kumlama-raspa), yapı malzemeleri, kimya sanayi, akvaryum kumu, kompoze inşaat elemanları, söve imalatı, prekast sistemlerde vb gibi bir çok alanda.",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "technicalInfo": {
+            "chemicalFormula": "SiO2",
+            "gravity": "~2,65 gr/cm3",
+            "hardness": "7 Mohs"
+        },
+        "link": "/product/1"
+    },
+    {
+        "id": 2,
+        "facilityId": 1,
+        "name": { "tr": "Rutil", "en": "Rutile" },
+        "image": "/assets/products/rutile.jpg",
+        "images": [
+            "/assets/products/rutile.jpg",
+            "/assets/products/rutile2.jpg"
+        ],
+        "description": {
+            "tr": [
+                "2,5 mm kadar istenilen boyutlarda",
+                "Mikronize ve granül halinde",
+                "Standart, ürün kalitesinde değişim olmayan",
+                "3 kat kraft torba ve big bag ambalajda"
+            ],
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Kaynak elektrotları ve boya sanayi için Rutil üretimi",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "technicalInfo": {
+            "chemicalFormula": "TiO2",
+            "gravity": "~4,25 gr/cm3",
+            "hardness": "6-6.5 Mohs"
+        },
+        "link": "/product/2"
+    },
+    {
+        "id": 3,
+        "facilityId": 1,
+        "name": { "tr": "Agrega", "en": "Agregates" },
+        "image": "/assets/products/agregates.jpg",
+        "images": [
+            "/assets/products/agregates.jpg",
+            "/assets/products/agregates1.jpg"
+        ],
+        "description": {
+            "tr": "TSE kalite belgesine sahip işletmemizde insan ve çevre sağlığını etkilemeyecek şekilde yürütülen çalışmalar ile  her türlü  agrega ihtiyaçlarına cevap verebilecek çeşitte ve gradasyonda agrega üretimi yapmaktayız. Asitlere, bazlara ve aşınmaya dayanıklı, boşluksuz beton elde etmeyi sağlayan agrega ürünlerimiz tane şekli itibari ile ve yabancı organik madde içermemesi sebebi ile tercih sebebi olmaktadır.",
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Beton, harç, asfalt gibi sağlam kütle üretimlerinde asit, baz, tuz ve aşınmaya dayanıklı beton imalatlarında kullanılmaktadır.",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "link": "/product/3"
+    },
+    {
+        "id": 4,
+        "facilityId": 1,
+        "name": { "tr": "Garnet", "en": "Garnet" },
+        "image": "/assets/products/garnet.jpg",
+        "images": [
+            "/assets/products/garnet.jpg",
+            "/assets/products/garnet1.jpg",
+            "/assets/products/garnet3.jpg"
+        ],
+        "description": {
+            "tr": [
+                "Sadece ürüne özel, dış etkenlerden koruyucu üretim (çift elemeli proses)",
+                "Standart kalitede üretim",
+                "Tıkanma yapmayan ürün",
+                "3 kat kraft torba ambalaj"
+            ],
+            "en": ""
+        },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": {
+            "tr": "80, 120, 180, 200 mesh ve kumlama üretimi",
+            "en": ""
+        },
+        "production": "",
+        "technicalInfo": {
+            "chemicalFormula": "X3Y2(SiO4)3",
+            "gravity": "~4,2 gr/cm3",
+            "hardness": "7-8 Mohs"
+        },
+        "link": "/product/4"
+    },
+    {
+        "id": 5,
+        "facilityId": 1,
+        "name": { "tr": "Silis Kumu", "en": "Silica Sand" },
+        "image": "/assets/products/silis.jpg",
+        "images": ["/assets/products/silis.jpg"],
+        "description": {
+            "tr": "Salihli Kaletepe Mevkiindeki ruhsatlı ocağımızdan çıkarılan silis kumu yıkama tesislerinde kil ve topraktan tamamen arındırılır. Kurutma tesisimizde kurutulduktan sonra müşteri taleplerine uygun gradasyonlarına ayrılır. Silis sıcaklık ve kimyasal etkilere çok dayanıklı olması sebebi ile endüstride çok çeşitli alanlarda kullanılmaktadır.",
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Döküm, tekstil, arıtma tesisleri, yüzey temizleme (kumlama-raspa), yapı malzemleri, kimya sanayi, cam kumlama, spor alanları, akvaryum kumu, pist kumu, söve imalatı, prekast sistemlerde, boru imalatı vb gibi bir çok alanda.",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "link": "/product/5"
+    },
+    {
+        "id": 6,
+        "facilityId": 1,
+        "name": { "tr": "Hematit", "en": "Hematite" },
+        "image": "/assets/products/hematite.jpg",
+        "images": [
+            "/assets/products/hematite.jpg",
+            "/assets/products/hematite1.jpg",
+            "/assets/products/hematite2.jpg"
+        ],
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "technicalInfo": {
+            "chemicalFormula": "Fe2O3",
+            "gravity": "~5,3 gr/cm3",
+            "hardness": "6,5 Mohs"
+        },
+        "link": "/product/6"
+    },
+    {
+        "id": 7,
+        "facilityId": 2,
+        "name": { "tr": "Perlit", "en": "Perlite" },
+        "image": "/assets/products/perlite.jpg",
+        "images": [
+            "/assets/products/perlite1.jpg",
+            "/assets/products/perlite.jpg",
+            "/assets/products/perlite2.jpg",
+            "/assets/products/perlite3.jpg",
+            "/assets/products/perlite4.jpg",
+            "/assets/products/perlite5.jpg",
+            "/assets/products/perlite6.jpg"
+        ],
+        "description": {
+            "tr": [
+                "Tozsuzdur",
+                "İdeal tane boyutu ve gözenek yapısına sahiptir, ileri teknoloji ile üretilir.",
+                "Sterildir, hastalıklardan aridir.",
+                "İnorganiktir – hastalık taşımaz ve yaymaz organiktir.",
+                "Uzun ömürlüdür.",
+                "%100 yerlidir.",
+                "Bitki sağlığına temel oluşturur.",
+                "Kök izolasyonu sağlar, kök dostudur.",
+                "Tüm bitki çeşitlerinde yüksek verimlilik elde edilir. Çeşitli yetiştirme ortamlarına uyumludur.",
+                "%100 Homojen ve standart kalite Fiyat/Performans tatmini sağlar.",
+                "Erken hasat almayı sağlar.",
+                "Tarımdaki başarısı ispatlıdır.",
+                "Satış sonrası desteklidir.",
+                "Sulama ihtiyacını azaltır.",
+                "Sterilizasyon sonrası tekrar kullanılabilir Ürün kalitesi standarttır.",
+                "Kullanıma hazır ambalajda teslim.",
+                "Tam zamanında teslim.",
+                "Hollanda başta olmak üzere birçok ülkeye ihracat yapılmaktadır."
+            ],
+            "en": ""
+        },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": {
+            "tr": "Her kalibrasyonda tasnif edilmiş perlit, genleştirilmiş perlit ve perlitten mamul ürünlerin dünya standartlarında ileri teknoloji ile üretilmesinin yanında kesintisiz Ar-Ge ve İş-Ge faaliyetlerine devam etmekteyiz.",
+            "en": ""
+        },
+        "production": "",
+        "technicalInfo": {
+            "gravity": "~1,1 gr/cm3",
+            "hardness": "2-2.5 Mohs"
+        },
+        "link": "/product/7"
+    },
+    {
+        "id": 8,
+        "facilityId": 3,
+        "name": { "tr": "Pomza", "en": "Pumice" },
+        "image": "/assets/products/pumice.jpg",
+        "images": ["/assets/products/pumice.jpg"],
+        "description": {
+            "tr": "İzmir ili Menderes ilçesi Pirintepe mevkiindeki ruhsatlı maden sahamızda pomza ürünlerinin çıkarılması işlenmesi faaliyetleri yapılmaktadır. Standart ürünlerimizin yanında müşteri taleplerine uygun gradasyonda ürün tedariği sağlamaktayız. Pomza, volkanik kökenli slikat esaslı camsı ve gözenekli bir yapıya sahip yüksek puzzolanik aktiviteli hafif yapı elemanıdır. Gözenekli olan bu doğal malzeme bünyesindeki bağlantısız boşluklar sayesinde yüksek ısı ve ses izolasyonu özelliklerine sahiptir. Çok eski çağlardan beri çok yönlü faydaları sebebi ile inşaat sektöründe kullanılan pomza günümüzde yapılarda aranan uzun ömürlülük, hafiflik ve depreme, yangına dayanıklılık, şok emilmesi, elastikiyet, donma olaylarından etkilenmeme gibi niteliklerin öne çıkması sebebi ile her geçen gün pomzanın kullanımı artmaktadır. Doğal olması çevre ve insan sağlığına dost olması tercih sebepleri arasındadır aynı zamanda kimyasal tepkimesiz, yanmaz, inorganik,non-toksik, mikro-organizmalardan etkilenmemesi sağladığı faydalara karşın ekonomiktir. inşaat sektörünün yanında en çok kullanım alanı olan tarımda daha az sulama, su tasarrufu, toprağın havalanmasını sağlama, drenaj düzenleme, toprağa yabancı ot ve hastalık taşımama, toprağın ph dengesini düzenleme, uzun süre kullanılabilmesi gibi faydaları özellikle sulama ve çöl ikliminin hakim olduğu bölgelerde yaygın pomza kullanımı sağlar. Ülkemizde yeni yeni tanınan Pomza çoğu zaman perlit, obsidyen, peks-tayn gibi volkanik kayaçlar ile karıştırılmaktadır. Pomzanın rengi, gözenekliliği ve kristal suyunun olmaması ile pratik olarak ayrılmaktadır ayrıca pomzada gözenekler birbirleri ile bağlantılı olmayan camsı bir zarla ayrılmış yapıdadır.",
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Pomza, dünyada halen elliden fazla endüstriyel alanda farklı amaçlarda kullanım imkanı bulmaktadır. Başlıca kullanım alanları inşaat, sıva, şap, seramik, tarım, tekstil, kozmetik, aşındırıcı, cila, boya, kimya sanayiinde, çatı ve dekoratif kaplama elemanları üretimi, çimento üretiminde puzzolonik malzeme olarak kullanılmaktadır.",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "technicalInfo": {
+            "gravity": "~0.3 gr/cm3",
+            "hardness": "6-6,5 Mohs"
+        },
+        "link": "/product/8"
+    },
+    {
+        "id": 9,
+        "facilityId": 3,
+        "name": { "tr": "Korund", "en": "Emery" },
+        "image": "/assets/products/korund.jpg",
+        "images": ["/assets/products/korund.jpg"],
+        "description": {
+            "tr": "Sertliği yaklaşık 8 mohs olan ve bu özelliği ile tercih edilen Korund (doğal alüminyum oksit (Al2O3) ) sertliğinin yanında yoğunluk ve kristal özelliği sebebi ile de aranan bir cevherdir. Çok sert aşındırıcı mekanik özelliğe sahiptir. Halihazırda müşterilerimizin taleplerine uygun olarak üretilen korund PP torba ve Bigbag ambalajlar ile sevk edilmektedir.",
+            "en": ""
+        },
+        "usageAreas": {
+            "tr": "Halihazırda üretimini yapmış olduğumuz korund büyük ölçüde yüzey sertleştirici, zımpara, yüzey temizleme (kumlama-raspa), yapı malzemeleri vb alanlarda kullanılmaktadır.",
+            "en": ""
+        },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "technicalInfo": {
+            "chemicalFormula": "Al2O3",
+            "gravity": "~3,7 gr/cm3",
+            "hardness": "7-8 Mohs"
+        },
+        "link": "/product/9"
+    },
+    {
+        "id": 10,
+        "facilityId": 1,
+        "name": { "tr": "Hazır Beton", "en": "Ready Mixed Concrete" },
+        "image": "/assets/mineImages/sart/8.jpg",
+        "images": [],
+        "description": {
+            "tr": [
+                "İstenilen beton sınıflarında",
+                "TSE standartlarına uygun",
+                "90 m3 saat kapasitesiyle hazır beton üretimi"
+            ],
+            "en": ""
+        },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "link": "/product/10"
+    },
+    {
+        "id": 11,
+        "facilityId": 2,
+        "name": { "tr": "Bims Blok", "en": "Bims Block" },
+        "image": "/assets/products/bims-blok.jpg",
+        "images": [],
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "externalLink": true,
+        "link": "https://eilepomex.com/pomexblok"
+    },
+    {
+        "id": 12,
+        "facilityId": 2,
+        "name": { "tr": "Yapı Elemanları", "en": "Construction Chemicals" },
+        "image": "/assets/products/eilepomex.jpg",
+        "images": [],
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "externalLink": true,
+        "link": "https://eilepomex.com"
+    },
+    {
+        "id": 13,
+        "facilityId": 1,
+        "name": { "tr": "Kil", "en": "Clay" },
+        "image": "/assets/products/clay.jpg",
+        "images": [],
+        "description": { "tr": "", "en": "" },
+        "usageAreas": { "tr": "", "en": "" },
+        "productVariety": { "tr": "", "en": "" },
+        "production": "",
+        "link": "/product/13"
+    }
+]
