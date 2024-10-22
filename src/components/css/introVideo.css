@@ -1,0 +1,13 @@
+.slide{
+    animation: slideImage 100s linear alternate infinite;
+}
+
+@keyframes slideImage {
+    from {
+        object-position: 30%;
+    }
+
+    to {
+        object-position: 80%;
+    }
+}

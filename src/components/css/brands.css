@@ -1,0 +1,116 @@
+.brands {
+    position: relative;
+    display: flex;
+    /* width: 100%; */
+    height: 400px;
+    background-image: url("/assets/common/brands-background.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 70%;
+    /* filter: brightness(45%); */
+    z-index: 0;
+    margin-block: 5rem;
+}
+
+.brands .content {
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(1, 21, 38, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.brands .content .headerContainer {
+    height: 10%;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.brands .content .headerContainer h1 {
+    color: white;
+    text-transform: capitalize;
+    font-size:2.2rem;
+    text-align: center;
+}
+
+.brands .content .images {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.brands .content .imgContainer {
+    width: auto;
+    max-width: 150px;
+    height: 100px;
+}
+
+.brands .content .imgContainer  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.2s ease;
+}
+
+.brands .content .imgContainer  img:hover {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.708));
+}
+
+.brands .content-border {
+    width: 1px;
+    height: 100%;
+    border: 1px solid white;
+}
+.brands .content-border-h{
+    height: 1px;
+    width: 100%;
+    border: 1px solid white;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .brands {
+        flex-direction: column;
+        margin-block: 3rem;
+    }
+
+    .brands .content{
+        padding: 1rem;
+    }
+
+    .brands .content-border {
+        width: 100%;
+        height: 1px;
+    }
+
+    .brands .content .headerContainer {
+        height: 30%;
+        margin-bottom: 1rem;
+    }
+    .brands .content .headerContainer h1 {
+        font-size: 1.6rem;
+    }
+
+    .brands .content .images {
+        height: 35%;
+    }
+
+    .brands .content .imgContainer{
+        height: auto;
+        max-width: 80px;
+    }
+}

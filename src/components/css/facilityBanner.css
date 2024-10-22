@@ -1,0 +1,48 @@
+.enterAnim{
+    animation: slideUp .5s ease;
+}
+.leaveAnim{
+    animation: slideDown .5s ease;
+}
+
+.scale{
+    animation: scaleImage 40s linear alternate infinite;
+}
+
+.infoLink:hover{
+    box-shadow: 0 0 10px grey;
+}
+
+@keyframes scaleImage {
+    from {
+        /* object-position: 30%; */
+        transform: scale(1);
+    }
+
+    to {
+        /* object-position: 80%; */
+        transform: scale(1.4);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+  }
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+  }
