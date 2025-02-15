@@ -1,0 +1,96 @@
+{
+    "Header": {
+        "aboutus": "about us",
+        "facilities": "facilities",
+        "contact": "contact",
+        "products": "products"
+    },
+    "Footer": {
+        "aboutus": "about us",
+        "ourQualityPolicy": "our quality policy",
+        "missionVision": "mission vision",
+        "products": "products",
+        "certificates": "certificates",
+        "companyCertificates": "company certificates",
+        "productCertificates": "product certificates",
+        "copyright": "copyright",
+        "kvkk": "kvkk",
+        "eilePomexConstructionChemicals": "eile pomex construction chemicals"
+    },
+    "Home": {
+        "title": "Landing Page",
+        "naturalSolutionsInInsulation": "natural solutions in insulation",
+        "infoThermomex": "It is a cement-based, multi-purpose insulation material in plaster form that provides breathing, heat, sound and fire insulation on the surface owing to the natural lightweight aggregates with a porous structure in its mixture. It is applied instead of rough plaster on surfaces such as brick, aerated concrete and pumice block on the exterior and interior facades of buildings.",
+        "weCareAboutTheEnviromentWeLiveInAndYou": "we care about the enviroment we live in and you!",
+        "weContinueOurZeroWastePrincipleWithTheUnderstandingOfSustainableProductionInNature": "we continue our zero waste principle with the understanding of sustainable production in nature.",
+        "weUseRenewableEnergySources": "we use renewable energy sources.",
+        "infoPomexBlok": "Pumice, a natural material which has been frequently used in the construction industry in recent years, especially in heat and sound insulation, as a result of the advantages of its low density, is a crystallized, porous, spongy material that is resistant to physical and chemical factors.",
+        "projectsWhereOurProductsAreUsed": "projects where our products are used",
+        "selectLanguage": "Select Language",
+        "download": "Download",
+        "youCanDownloadOurDigitalCatalogHere": "You can download our digital catalog here",
+        "ourGroupCompanies": "our group companies",
+        "ourBrands": "our brands"
+    },
+    "About": {
+        "whoWeAre": "who we are",
+        "aboutus": "about",
+        "about1": "Pomza Export is one of the leading companies shaping Turkey's mining sector since 1961. Operating with the principle of sustainability, our company established eile Pomex Construction Chemicals in 2007 to produce value-added building products by adopting the 'zero-discharge' business model. By using aggregates such as perlite, quartz, and corundum produced in our own mines in these construction products, we have introduced quality, sustainability, and innovation to the market",
+        "about2": "Ensuring customer satisfaction at the highest level and acting in accordance with national and international quality standards are our main priorities. All our employees receive continuous training and support for their development, and training is provided at the highest professional standards to ensure the highest level of occupational health and safety awareness. In this way, we aim to increase awareness of occupational safety among our employees and create a safer working environment.",
+        "about3": "Additionally, we continuously improve our management system within the framework of respect for nature and humanity to prevent errors and avoid their repetition.",
+        "about4": "Operating in compliance with all laws and regulations is an integral part of our business. By demonstrating top-level performance in customer satisfaction, sustainability, quality, safety, and legal compliance, we fulfil our responsibilities to both our customers and the society.",
+        "ourMission": "mission",
+        "ourMission1": "To provide sustainable, value-added production in accordance with business ethics by understanding market needs and expectations and form long-term partnerships with our national and international customers.",
+        "ourVision": "vision",
+        "ourVision1": "As a company that has earned the trust of the industry over the years, our vision is to continuously improve ourselves and increase the effectiveness and efficiency of our company in both national and international markets, aiming to become a respected organization that operates with principles of innovation and environmentalism."
+    },
+    "Contact": {
+        "contact": "contact",
+        "contactUs": "contact us",
+        "reachUs": "you can reach us by calling our relavant number or filling out the contact form.",
+        "nameSurname": "name surname",
+        "address": "address",
+        "telephone": "telephone",
+        "fax": "fax",
+        "contactForm": "contact form",
+        "email": "email",
+        "yourMessage": "your message",
+        "send": "send"
+    },
+    "Docs": {
+        "companyCertificates": "company certificates",
+        "chemicalAnchorCertificates": "Chemical Anchor Certificates",
+        "cementBasedReinforcementCertificates": "Cement Based Reinforcement Certificates",
+        "epoxyBasedReinforcementCertificates": "Epoxy Based Reinforcement Certificates",
+        "cementBasedWaterproofingCertificates": "Cement Based Waterproofing Certificates",
+        "acrylicBasedWaterproofingCertificates": "Acrylic Based Waterproofing Certificates",
+        "bitumenBasedWaterproofingCertificates": "Bitumen Based Waterproofing Certificates",
+        "surfaceHardeners": "Surface Hardeners Certificates",
+        "thermalInsulationSystemCertificates": "Thermal Insulation System Certificates",
+        "plasterCertificates": "Plaster Certificates",
+        "cementBasedAdhesiveCertificates": "Cement Based Adhesive Certificates",
+        "cementBasedGroutingsCertificates": "Cement Based Groutings Certificates"
+    },
+    "ProductsPage": {
+        "products": "products",
+        "mainTitles": "main titles",
+        "all": "all"
+    },
+    "ProductDetailPage": {
+        "areasOfUsage": "areas of usage",
+        "featuresOfProduct": "features of product",
+        "surfacePreparation": "surface preparation",
+        "mixing": "mixing",
+        "application": "application",
+        "package": "package",
+        "storage": "storage",
+        "pointsToTakeIntoConsideration": "points to take into consideration",
+        "documents": "documents"
+    },
+    "Metrics": {
+        "projectsCompleted": "projects completed",
+        "productVariety": "product variety",
+        "dealership": "dealership",
+        "rawMaterialProduction": "raw material production"
+    }
+}

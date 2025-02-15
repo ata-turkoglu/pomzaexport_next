@@ -21,7 +21,6 @@ export default function TextTransitions({ children }) {
     };
 
     useEffect(() => {
-        console.log(content);
         let counter = 1;
 
         const showIntrvl = setInterval(() => {

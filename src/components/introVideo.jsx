@@ -34,11 +34,11 @@ export default function IntroVideo() {
                         Lidyalıların bıraktığı yerden devam ediyoruz.
                     </TextContainer>
                     <TextContainer>
-                        Türkiyede altın üreten ilk yerli firmayız.
+                        Türkiye'de altın üreten ilk yerli firmayız.
                     </TextContainer>
                     <TextContainer>Sıfır atık ile çalışıyoruz.</TextContainer>
                     <TextContainer>
-                        Türkiyenin ilk ve tek Rutil üreticisiyiz.
+                        Türkiye'nin ilk ve tek Rutil üreticisiyiz.
                     </TextContainer>
                     <TextContainer>
                         Türk maden sektöründe çevreci çalışmalarda bir lideriz.

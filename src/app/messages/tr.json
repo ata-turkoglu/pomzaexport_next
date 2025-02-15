@@ -1,0 +1,96 @@
+{
+    "Header": {
+        "aboutus": "hakkımızda",
+        "facilities": "işletmelerimiz",
+        "contact": "iletişim",
+        "products": "ürünler"
+    },
+    "Footer": {
+        "aboutus": "hakkımızda",
+        "ourQualityPolicy": "kalite politikamız",
+        "missionVision": "misyonumuz-vizyonumuz",
+        "products": "ürünler",
+        "certificates": "belgelerimiz",
+        "companyCertificates": "şirket belgeleri",
+        "productCertificates": "ürün belgeleri",
+        "copyright": "eile pomex tüm hakları saklıdır.",
+        "kvkk": " kişisel verilerin korunması",
+        "eilePomexConstructionChemicals": "eile pomex yapı kimyasalları"
+    },
+    "Home": {
+        "title": "Başlanfıç Sayfası",
+        "naturalSolutionsInInsulation": "yalıtımda doğal çözümler",
+        "infoThermomex": "Çimento esaslı, karışımında bulunan gözenekli yapıya sahip doğal hafif agregalar sayesinde uygulandığı yüzeyde nefes alan ısı-ses ve yangın yalıtımı sağlayan, sıva formunda çok amaçlı yalıtım malzemesidir. Yapıların dış ve iç cephelerinde tuğla-gaz beton-bims blok gibi yüzeyler üzerine kaba sıva yerine uygulanır.",
+        "weCareAboutTheEnviromentWeLiveInAndYou": "yaşadığımız çevreyi ve sizi önemsiyoruz!",
+        "weContinueOurZeroWastePrincipleWithTheUnderstandingOfSustainableProductionInNature": "Doğanın içinde sürdürülebilir üretim anlayışı ile sıfır atık çalışmalarımıza devam ediyoruz.",
+        "weUseRenewableEnergySources": "Yenilenebilir enerji kaynaklarını kullanıyoruz.",
+        "infoPomexBlok": "Son yıllarda inşaat sektöründe özellikle ısı ve ses yalıtımında, öz kütlesinin düşük olmasının sağladığı avantajların da bir sonucu olarak sıklıkla kullanılan, doğal bir malzeme olan bims, kristalize, gözenekli, süngerimsi, fiziksel ve kimyasal etkenlere karşı dayanıklı bir malzemedir.",
+        "projectsWhereOurProductsAreUsed": "ürünlerimizin kullanıldığı projeler",
+        "selectLanguage": "Dil Seçiniz",
+        "download": "İndir",
+        "youCanDownloadOurDigitalCatalogHere": "Dijital kataloğumuzu buradan indirebilirsiniz",
+        "ourGroupCompanies": "Grup Şirketlerimiz",
+        "ourBrands": "markalarımız"
+    },
+    "About": {
+        "whoWeAre": "biz kimiz",
+        "aboutus": "hakkımızda",
+        "about1": "Pomza Export A.Ş., madencilik sektöründe tamamen yerli sermaye kurulmuş, köklü bir şirket olarak 50 yıldan fazla süredir faaliyet göstermektedir. Sürdürülebilirlik ilkesiyle hareket eden firmamız, 2007 yılında Türkiye'ye daha fazla katma değer sağlamak amacıyla, 'sıfır-deşarj' üretim modelini benimseyerek eile Pomex Yapı Kimyasalları şirketini kurmuştur. Bu sayede, kendi madenlerinde üretilen perlit, kuvars, korund gibi agregaları yapı ürünlerinde kullanarak kaliteli, sürdürülebilir ve yenilikçi çözümleri pazara sunmuştur.",
+        "about2": "Müşteri memnuniyetini en üst düzeyde tutarak, ulusal ve uluslararası kalite standartlarına uygun şekilde hareket etmek temel önceliğimizdir. Tüm çalışanlarımızın sürekli mesleki alanda bilgilendirilmesi ve gelişimlerinin desteklenmesi, iş sağlığı ve iş güvenliği bilincinin en üst seviyede olması için en yüksek profesyonel standartlara uygun eğitimler verilmektedir. Bu şekilde, çalışanlarımızın iş güvenliği konusundaki bilincini artırarak daha güvenli bir çalışma ortamı sağlamayı hedefliyoruz.",
+        "about3": "Ayrıca, hataları önceden önlemek ve tekrarlanmasını engellemek için doğaya ve insana saygı çerçevesinde sürekli iyileştirmeler yaparak yönetim sistemimizi geliştirmekteyiz.",
+        "about4": "Tüm yasa ve mevzuatlara uygun olarak faaliyet göstermek ve en doğru şekilde çalışmak da işimizin ayrılmaz bir parçasıdır. Müşteri memnuniyeti, sürdürülebilirlik, kalite, güvenlik ve yasal uyumluluk alanlarında en üst düzeyde performans sergileyerek çalışanlarımıza, müşterilerimize ve topluma karşı sorumluluklarımızı yerine getiriyoruz.",
+        "ourMission": "Misyonumuz",
+        "ourMission1": "Genç, dinamik mühendis kadromuzla müşteri ihtiyaç ve beklentilerini en iyi şekilde anlayarak, iş etiği ve ahlak kurallarına uygun, sürdürülebilir ve kaliteli üretim sağlamaktır.",
+        "ourVision": "Vizyonumuz",
+        "ourVision1": "Sektörde yılların güvenini kazanmış bir firma olarak, kendimizi sürekli geliştirip firmamızın ulusal ve uluslararası pazardaki etkinliğini ve verimliliğini artırmak; Türkiye'nin inovasyon ve çevrecilik prensipleriyle hareket eden saygın bir kuruluşu olmaktır."
+    },
+    "Contact": {
+        "contact": "iletişim",
+        "contactUs": "bize ulaşın",
+        "reachUs": "ilgili numaramızı arayarak ya da iletişim formunu doldurarak bize ulaşabilirsiniz.",
+        "nameSurname": "isim soyisim",
+        "address": "adres",
+        "telephone": "telefon",
+        "fax": "faks",
+        "contactForm": "iletişim formu",
+        "email": "e-posta",
+        "yourMessage": "Mesajınız",
+        "send": "gönder"
+    },
+    "Docs": {
+        "companyCertificates": "şirket belgeleri",
+        "chemicalAnchorCertificates": "Kimyasal Dübel Belgelerimiz",
+        "cementBasedReinforcementCertificates": "Çimento Esaslı Onarım Güçlendirme Belgelerimiz",
+        "epoxyBasedReinforcementCertificates": "Epoksi Esaslı Onarım Güçlendirme Belgelerimiz",
+        "cementBasedWaterproofingCertificates": "Çimento Esaslı Su Yalıtım Belgelerimiz",
+        "acrylicBasedWaterproofingCertificates": "Akrilik Esaslı Su Yalıtım Belgelerimiz",
+        "bitumenBasedWaterproofingCertificates": "Bitum Esaslı Su Yalıtımı Belgelerimiz",
+        "surfaceHardeners": "Çimento Esaslı Zemin Sistemleri Belgelerimiz",
+        "thermalInsulationSystemCertificates": "Isı Yalıtım Belgelerimiz",
+        "plasterCertificates": "Sıva Belgelerimiz",
+        "cementBasedAdhesiveCertificates": "Çimento Esaslı Yapıştırıcı Belgelerimiz",
+        "cementBasedGroutingsCertificates": "Çimento Esaslı Derz Dolgu Belgelerimiz"
+    },
+    "ProductsPage": {
+        "products": "ürünler",
+        "mainTitles": "ana gruplar",
+        "all": "tümü"
+    },
+    "ProductDetailPage": {
+        "areasOfUsage": "kullanım alanları",
+        "featuresOfProduct": "ürün özellikleri",
+        "surfacePreparation": "Yüzey Hazırlığı",
+        "mixing": "karıştırma",
+        "application": "uygulama",
+        "package": "Ambalaj",
+        "storage": "Depolama",
+        "pointsToTakeIntoConsideration": "dikkat edilmesi gereken noktalar",
+        "documents": "belgeler"
+    },
+    "Metrics": {
+        "projectsCompleted": "proje tamamlandı",
+        "productVariety": "ürün çeşidi",
+        "dealership": "bayilik",
+        "rawMaterialProduction": "hammadde üretimi"
+    }
+}

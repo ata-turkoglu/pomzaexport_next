@@ -2,8 +2,8 @@
     {
         "id": 1,
         "name": {
-            "tr": "Sart Maden İşletmemiz",
-            "en": ""
+            "tr": "Sart Maden İşletmesi",
+            "en": "Sart Mining Facility"
         },
         "mineBgImage": "/assets/mineImages/sart/2.jpg",
         "images": [
@@ -25,13 +25,17 @@
             "en": ""
         },
         "location": "Manisa / Salihli",
-        "mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1179.063893529362!2d28.02165150942912!3d38.488710826204176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1720353441373!5m2!1str!2str&z=10"
+        "mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1179.063893529362!2d28.02165150942912!3d38.488710826204176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1720353441373!5m2!1str!2str&z=10",
+        "keywords": {
+            "tr": [],
+            "en": []
+        }
     },
     {
         "id": 2,
         "name": {
-            "tr": "Yeniköy Maden İşletmemiz",
-            "en": ""
+            "tr": "Yeniköy Maden İşletmesi",
+            "en": "Yeniköy Mining Facility"
         },
         "mineBgImage": "/assets/mineImages/yenikoy/1.jpg",
         "images": [
@@ -47,13 +51,17 @@
             "en": ""
         },
         "location": "İzmir / Menderes",
-        "mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2555.242748717744!2d27.059450734470055!3d38.22282261178677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1720353834233!5m2!1str!2str"
+        "mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2555.242748717744!2d27.059450734470055!3d38.22282261178677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1720353834233!5m2!1str!2str",
+        "keywords": {
+            "tr": [],
+            "en": []
+        }
     },
     {
         "id": 3,
         "name": {
-            "tr": "Küner Maden İşletmemiz",
-            "en": ""
+            "tr": "Küner Maden İşletmesi",
+            "en": "Küner Mining Facility"
         },
         "mineBgImage": "/assets/mineImages/kuner/1.jpg",
         "images": [
@@ -69,6 +77,10 @@
             "en": ""
         },
         "location": "İzmir / Menderes",
-        "mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4077.7213964218895!2d27.11619311514099!3d38.21956835222822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1720353770714!5m2!1str!2str"
+        "mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4077.7213964218895!2d27.11619311514099!3d38.21956835222822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2str!4v1720353770714!5m2!1str!2str",
+        "keywords": {
+            "tr": [],
+            "en": []
+        }
     }
 ]

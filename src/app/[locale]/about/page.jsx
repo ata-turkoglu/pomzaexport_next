@@ -1,4 +1,10 @@
-export default function About() {
+import { setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
+
+export default function About({ params: { locale } }) {
+    setRequestLocale(locale);
+    const t = useTranslations("About");
+
     return (
         <div
             className="flex flex-col justify-center items-center text-white h-fit relative overflow-hidden"
@@ -67,7 +73,7 @@ export default function About() {
                     kazanılabileceğini belirlemiştir. Yapılmış çok sayıda
                     araştırmalar sonrası 2002 yılında şirketimiz tarafından
                     işletmede cevher hazırlama tesisi kurulmuştur. Bu tesiste
-                    plaser yataktaki ağır mineraller ağır mineraller ekonomiye
+                    plaser yataktaki ağır mineraller ekonomiye
                     kazandırılmaktadır.
                 </p>
                 <p className="mb-2">
