@@ -2,12 +2,13 @@
 import React from "react";
 import "./css/brands.css";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 /* import { translateText as t } from "../../store/reducers/language"; */
 
 function Brands() {
     const [mobile, setMobile] = useState(null);
     const router = useRouter();
+    const { locale } = useParams();
     useEffect(() => {
         window.innerWidth < 768 ? setMobile(true) : setMobile(false);
     }, []);
@@ -55,21 +56,27 @@ function Brands() {
                     <div className="imgContainer">
                         <img
                             className="cursor-pointer"
-                            onClick={() => router.push("/product/7")}
+                            onClick={() =>
+                                router.push("/" + locale + "/product/7")
+                            }
                             src="/assets/logo/etiper-logo-white.png"
                         />
                     </div>
                     <div className="imgContainer">
                         <img
                             className="cursor-pointer"
-                            onClick={() => router.push("/product/1")}
+                            onClick={() =>
+                                router.push("/" + locale + "/product/1")
+                            }
                             src="/assets/logo/sardesquartz-logo-white.png"
                         />
                     </div>
                     <div className="imgContainer">
                         <img
                             className="cursor-pointer"
-                            onClick={() => router.push("/product/9")}
+                            onClick={() =>
+                                router.push("/" + locale + "/product/9")
+                            }
                             src="/assets/logo/emerex-logo-white.png"
                         />
                     </div>
@@ -86,14 +93,18 @@ function Brands() {
                     <div className="imgContainer">
                         <img
                             className="cursor-pointer"
-                            onClick={() => router.push("/product/4")}
+                            onClick={() =>
+                                router.push("/" + locale + "/product/4")
+                            }
                             src="/assets/logo/pomexgarnet-logo-white.png"
                         />
                     </div>
                     <div className="imgContainer">
                         <img
                             className="cursor-pointer"
-                            onClick={() => router.push("/product/10")}
+                            onClick={() =>
+                                router.push("/" + locale + "/product/10")
+                            }
                             src="/assets/logo/pomexbeton-logo-white.png"
                         />
                     </div>

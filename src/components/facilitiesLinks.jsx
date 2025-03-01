@@ -5,7 +5,6 @@ import { useRouter, useParams } from "next/navigation";
 export default function FacilitiesLinks() {
     const router = useRouter();
     const { locale } = useParams();
-    console.log("locale", locale);
     return (
         <div className="bg-[#151a381a] w-full flex justify-center">
             <div className="max-w-[1300px] w-full h-fit flex flex-col items-center pt-12 pb-4 md:py-20 md:pl-10 md:pr-5">
@@ -19,7 +18,9 @@ export default function FacilitiesLinks() {
                         <div
                             key={key}
                             onClick={() =>
-                                router.push("/", locale + "/mine/" + item.id)
+                                router.push(
+                                    "/" + locale + "/mine/" + item.id + "/"
+                                )
                             }
                             className="relative w-full h-auto md:h-full flex md:flex-1 mb-3 md:mb-0 ml-3 md:ml-0 mr-3 md:mr-5 cursor-pointer duration-300 hover:shadow-xl shadow-black hover:-translate-y-2 overflow-hidden"
                         >

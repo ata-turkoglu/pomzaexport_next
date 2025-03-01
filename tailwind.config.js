@@ -1,17 +1,16 @@
 // For JavaScript (tailwind.config.js)
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-        // Or if using `src` directory:
-        "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
+
+import withMT from "@material-tailwind/react/utils/withMT";
+
+export default withMT({
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
     theme: {
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
+                primary: "#2596be",
             },
         },
     },
     plugins: [],
-};
+});
