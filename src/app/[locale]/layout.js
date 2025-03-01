@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import siteMetaData from "@/lib/siteMetaData";
+import localFont from "next/font/local";
 
 export async function generateMetadata({ params }) {
     const { locale } = await params;
@@ -65,6 +66,31 @@ export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
+const GloberFont = localFont({
+    src: [
+        {
+            path: "../../fonts/GloberRegular.otf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../../fonts/GloberRegularItalic.otf",
+            weight: "400",
+            style: "italic",
+        },
+        {
+            path: "../../fonts/GloberBold.otf",
+            weight: "700",
+            style: "normal",
+        },
+        {
+            path: "../../fonts/GloberBoldItalic.otf",
+            weight: "700",
+            style: "italic",
+        },
+    ],
+});
+
 export default async function LocaleLayout({ children, params }) {
     const { locale } = await params;
     if (!routing.locales.includes(locale)) {
@@ -75,7 +101,12 @@ export default async function LocaleLayout({ children, params }) {
 
     return (
         <html lang={locale}>
-            <body className="antialiased w-full h-full overflow-auto">
+            <body
+                className={
+                    GloberFont.className +
+                    " antialiased w-full h-full overflow-auto"
+                }
+            >
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     {children}
