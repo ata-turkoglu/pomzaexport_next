@@ -76,21 +76,11 @@
         "mainTitles": "main titles",
         "all": "all"
     },
-    "ProductDetailPage": {
-        "areasOfUsage": "areas of usage",
-        "featuresOfProduct": "features of product",
-        "surfacePreparation": "surface preparation",
-        "mixing": "mixing",
-        "application": "application",
-        "package": "package",
-        "storage": "storage",
-        "pointsToTakeIntoConsideration": "points to take into consideration",
-        "documents": "documents"
-    },
-    "Metrics": {
-        "projectsCompleted": "projects completed",
-        "productVariety": "product variety",
-        "dealership": "dealership",
-        "rawMaterialProduction": "raw material production"
+    "ProductPage": {
+        "productInfo": "Product Info",
+        "productImages": "Product Images",
+        "areasOfUsage": "Areas Of Usage",
+        "productVariety": "Product Variety",
+        "technicalInfo": "Technical Info"
     }
 }

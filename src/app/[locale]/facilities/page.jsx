@@ -1,10 +1,11 @@
 "use client";
 import React, { useLayoutEffect } from "react";
-import minesJSON from "../../data/mines.json";
-import { useRouter } from "next/navigation";
+import minesJSON from "@/data/mines.json";
+import { useParams, useRouter } from "next/navigation";
 
 function Facilities() {
     const router = useRouter();
+    const { locale } = useParams();
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -16,7 +17,9 @@ function Facilities() {
                     <div
                         key={index}
                         className="w-full h-full relative mb-2 cursor-pointer"
-                        onClick={() => router.push("/mine/" + item.id)}
+                        onClick={() =>
+                            router.push("/" + locale + "/mine/" + item.id)
+                        }
                     >
                         <img
                             src={item.images[0]}

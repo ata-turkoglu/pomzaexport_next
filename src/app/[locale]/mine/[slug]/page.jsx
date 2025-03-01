@@ -10,6 +10,8 @@ import { useRouter } from "next/navigation";
 
 export default function Mine({ params: { locale, slug } }) {
     const router = useRouter();
+    const [mineData, setMineData] = useState(null);
+
     const [mineId, setMineId] = useState(null);
     const [mobileView, setMobileView] = useState(false);
     const [header, setHeader] = useState("");
@@ -40,20 +42,21 @@ export default function Mine({ params: { locale, slug } }) {
     };
 
     useLayoutEffect(() => {
-        console.log("slug", slug);
         const id = slug.split("-")[0];
-        console.log("id", id);
         setMineId(id);
 
-        const data = minesJSON.find((itm) => itm.id == mineId);
+        const data = minesJSON.find((itm) => itm.id == id);
         setMineData(data);
+
+        const products = productsJSON.filter((item) => item.facilityId == id);
+        setMineProducts([...products]);
 
         if (window.innerWidth < 768) {
             setMobileView(true);
         }
     }, []);
 
-    useLayoutEffect(() => {
+    /*     useLayoutEffect(() => {
         if (mineId) {
             const data = minesJSON.find((itm) => itm.id == mineId);
             setHeader(data.name[locale]);
@@ -66,7 +69,7 @@ export default function Mine({ params: { locale, slug } }) {
             );
             setMineProducts([...products]);
         }
-    }, [mineId]);
+    }, [mineId]); */
 
     useEffect(() => {
         const el = document.getElementById("showImage" + mineId);
@@ -74,7 +77,7 @@ export default function Mine({ params: { locale, slug } }) {
             el.classList.remove("leaveAnim");
             el.classList.add("enterAnim");
             el.style.display = "block";
-        } else {
+        } else if (el) {
             el.classList.remove("enterAnim");
             el.classList.toggle("leaveAnim");
             setTimeout(() => {
@@ -86,14 +89,14 @@ export default function Mine({ params: { locale, slug } }) {
 
     return (
         <>
-            {mineId && (
-                <div className="flex flex-col h-fit w-full items-center overflow-scroll">
+            {mineData && (
+                <main className="flex flex-col h-fit w-full items-center overflow-scroll">
                     {/* Image Container */}
                     <div
                         className="h-fit w-full overflow-hidden relative"
                         style={{ height: mobileView ? "50vh" : "70vh" }}
                     >
-                        <ImgCarousel images={mineImages} />
+                        <ImgCarousel images={[...mineData.images]} />
                         <h1
                             className="absolute text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
                             style={{
@@ -101,10 +104,10 @@ export default function Mine({ params: { locale, slug } }) {
                                 left: "5%",
                             }}
                         >
-                            {header}
+                            {mineData.name[locale]}
                         </h1>
                         <div
-                            id={"showImage" + mineId}
+                            id={"showImage" + mineData.id}
                             className="absolute left-0 top-0 w-full h-full bg-black z-200 hidden"
                         >
                             <img
@@ -198,23 +201,21 @@ export default function Mine({ params: { locale, slug } }) {
                     </div>
 
                     <div className="md:w-1/2 w-full p-3 mb-10 text-justify">
-                        {description}
+                        {mineData.description[locale]}
                     </div>
 
                     <div className="md:w-1/2 w-full flex items-center justify-center mb-10">
                         <div className="w-full flex items-center justify-center">
-                            {mapSrc && (
-                                <iframe
-                                    src={mapSrc}
-                                    width={mobileView ? "380" : "500"}
-                                    height={mobileView ? "380" : "500"}
-                                    allowFullScreen
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            )}
+                            <iframe
+                                src={mineData.mapSrc}
+                                width={mobileView ? "380" : "500"}
+                                height={mobileView ? "380" : "500"}
+                                allowFullScreen
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
                     </div>
-                </div>
+                </main>
             )}
         </>
     );

@@ -24,7 +24,6 @@ export default function TextTransitions({ children }) {
         let counter = 1;
 
         const showIntrvl = setInterval(() => {
-            console.log("counter", counter);
             if (counter != 0) {
                 document.getElementById("text" + (counter - 1)).style.display =
                     "none";

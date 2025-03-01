@@ -76,21 +76,11 @@
         "mainTitles": "ana gruplar",
         "all": "tümü"
     },
-    "ProductDetailPage": {
-        "areasOfUsage": "kullanım alanları",
-        "featuresOfProduct": "ürün özellikleri",
-        "surfacePreparation": "Yüzey Hazırlığı",
-        "mixing": "karıştırma",
-        "application": "uygulama",
-        "package": "Ambalaj",
-        "storage": "Depolama",
-        "pointsToTakeIntoConsideration": "dikkat edilmesi gereken noktalar",
-        "documents": "belgeler"
-    },
-    "Metrics": {
-        "projectsCompleted": "proje tamamlandı",
-        "productVariety": "ürün çeşidi",
-        "dealership": "bayilik",
-        "rawMaterialProduction": "hammadde üretimi"
+    "ProductPage": {
+        "productInfo": "Ürün Bilgileri",
+        "productImages": "Ürün Resimleri",
+        "areasOfUsage": "Kullanım Alanları",
+        "productVariety": "Ürün Çeşitleri",
+        "technicalInfo": "Teknik Bilgiler"
     }
 }
