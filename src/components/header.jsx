@@ -110,7 +110,7 @@ function Header() {
                                             )
                                         }
                                     >
-                                        {item.name.tr}
+                                        {item.name[locale]}
                                     </li>
                                 );
                             })}
@@ -138,7 +138,7 @@ function Header() {
                                                   )
                                         }
                                     >
-                                        {item.name.tr}
+                                        {item.name[locale]}
                                     </li>
                                 );
                             })}

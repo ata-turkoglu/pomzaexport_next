@@ -4,6 +4,8 @@ import React, { useState, useRef, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import swal from "sweetalert";
 import { Mail } from "lucide-react";
+import { useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -11,6 +13,9 @@ export default function Contact() {
         email: "",
         message: "",
     });
+
+    const { locale } = useParams();
+    const t = useTranslations("Contact");
 
     const [token, setToken] = useState(null);
 
@@ -79,8 +84,8 @@ export default function Contact() {
                 <div className="my-10">
                     <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                         <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200"></p>
-                        <h2 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-3xl sm:text-5xl">
-                            Bizimle İletişime Geçin
+                        <h2 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-3xl sm:text-5xl capitalize">
+                            {t("contactUs")}
                         </h2>
                     </div>
                 </div>
@@ -107,62 +112,94 @@ export default function Contact() {
                                         </svg>
                                     </div>
                                     <div className="ml-4 mb-4">
-                                        <h3 className="mb-2 text-lg font-medium leading-6 text-white dark:text-white">
-                                            İletişim Adreslerimiz
+                                        <h3 className="mb-2 text-lg font-medium leading-6 text-white dark:text-white capitalize">
+                                            {t("contactAdresses")}
                                         </h3>
                                         <p className="text-white dark:text-slate-400">
-                                            <strong>
-                                                SART MADEN İŞLETMESİ
+                                            <strong className="uppercase">
+                                                {t("sartMadenIsletmesi")}
                                             </strong>
                                             <br />
                                             Sart Mah. Pomza Sk. No: 40,
                                             Salihli/MANİSA
                                             <br />
-                                            Telefon : +90 236 724 20 21
+                                            <span className="capitalize">
+                                                {t("telephone")}
+                                            </span>{" "}
+                                            : +90 236 724 20 21
                                             <br />
-                                            Fax : +90 236 724 30 51 <br />
+                                            <span className="capitalize">
+                                                {t("fax")}
+                                            </span>{" "}
+                                            : +90 236 724 30 51 <br />
                                             <br />
-                                            <strong>
-                                                EİLE POMEX YAPI KİMYASALLARI
+                                            <strong className="uppercase">
+                                                {t("eilePomex")}
                                             </strong>
                                             <br />
                                             Yeniköy Mah. Menderes - Orhanlı Yolu
                                             Sk. No : 179/22 Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 360 17 77
+                                            <span className="capitalize">
+                                                {t("telephone")}
+                                            </span>{" "}
+                                            : +90 232 360 17 77
                                             <br />
-                                            Fax : +90 232 360 16 16 <br />
+                                            <span className="capitalize">
+                                                {t("fax")}
+                                            </span>{" "}
+                                            : +90 232 360 16 16 <br />
                                             <br />
-                                            <strong>
-                                                MENDERES MADEN İŞLETMESİ
+                                            <strong className="uppercase">
+                                                {t("menderesMadenIsletmesi")}
                                             </strong>
                                             <br />
                                             Küner Mah. 7801 Sk. No:94
                                             Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 782 14 46
+                                            <span className="capitalize">
+                                                {t("telephone")}
+                                            </span>{" "}
+                                            : +90 232 782 14 46
                                             <br />
-                                            Fax : +90 232 782 15 98 <br />
+                                            <span className="capitalize">
+                                                {t("fax")}
+                                            </span>{" "}
+                                            : +90 232 782 15 98 <br />
                                             <br />
-                                            <strong>
-                                                ETİPER PERLİT İŞLETMESİ
+                                            <strong className="uppercase">
+                                                {t("etiperPerlitIsletmesi")}
                                             </strong>
                                             <br />
                                             Yeniköy Mah. Menderes - Orhanlı Yolu
                                             Sk. No : 179/22 Menderes/İZMİR
                                             <br />
-                                            Telefon : +90 232 787 67 24
+                                            <span className="capitalize">
+                                                {t("telephone")}
+                                            </span>{" "}
+                                            : +90 232 787 67 24
                                             <br />
-                                            Fax : +90 232 782 67 25 <br />
+                                            <span className="capitalize">
+                                                {t("fax")}
+                                            </span>{" "}
+                                            : +90 232 782 67 25 <br />
                                             <br />
-                                            <strong>ANKARA OFİS</strong>
+                                            <strong className="uppercase">
+                                                {t("ankaraOffice")}
+                                            </strong>
                                             <br />
                                             Çukurca Birlik Mah. 447 Sk. No: 3/5
                                             Çankaya/ANKARA
                                             <br />
-                                            Telefon : +90 312 495 64 90
+                                            <span className="capitalize">
+                                                {t("telephone")}
+                                            </span>{" "}
+                                            : +90 312 495 64 90
                                             <br />
-                                            Fax : +90 312 495 64 93
+                                            <span className="capitalize">
+                                                {t("fax")}
+                                            </span>{" "}
+                                            : +90 312 495 64 93
                                         </p>
                                     </div>
                                 </li>
@@ -178,8 +215,8 @@ export default function Contact() {
                                     info@pomzaexport.com
                                 </span>
                             </div>
-                            <h2 className="my-4 text-2xl font-bold text-white">
-                                Bize Ulaşın
+                            <h2 className="my-4 text-2xl font-bold text-white capitalize">
+                                {t("contactUs")}
                             </h2>
                             <form id="contactForm" onSubmit={handleSubmit}>
                                 <div className="mb-6">
@@ -194,8 +231,8 @@ export default function Contact() {
                                                 id="name"
                                                 name="name"
                                                 autoComplete="given-name"
-                                                placeholder="Ad Soyad"
-                                                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                                placeholder={t("nameSurname")}
+                                                className="capitalize mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                                 value={formData.name}
                                                 onChange={handleChange}
                                             />
@@ -210,8 +247,8 @@ export default function Contact() {
                                                 id="email"
                                                 name="email"
                                                 autoComplete="email"
-                                                placeholder="Mail Adresiniz"
-                                                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                                placeholder={t("email")}
+                                                className="capitalize mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                                 value={formData.email}
                                                 onChange={handleChange}
                                             />
@@ -227,8 +264,8 @@ export default function Contact() {
                                             name="message"
                                             cols="30"
                                             rows="5"
-                                            placeholder="Lütfen Mesajınızı Yazınız"
-                                            className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                            placeholder={t("yourMessage")}
+                                            className="capitalize mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                             value={formData.message}
                                             onChange={handleChange}
                                         ></textarea>
@@ -244,8 +281,8 @@ export default function Contact() {
                                         disabled={!token}
                                         className="w-full bg-white text-[#151a38] px-6 py-3 font-xl rounded-md sm:mb-0 flex items-center justify-center"
                                     >
-                                        <span className="p-0 m-0 flex items-center">
-                                            Gönder
+                                        <span className="capitalize p-0 m-0 flex items-center">
+                                            {t("send")}
                                         </span>
                                     </button>
                                 </div>

@@ -6,16 +6,16 @@
         "products": "products"
     },
     "Footer": {
-        "aboutus": "about us",
-        "ourQualityPolicy": "our quality policy",
-        "missionVision": "mission vision",
         "products": "products",
-        "certificates": "certificates",
-        "companyCertificates": "company certificates",
-        "productCertificates": "product certificates",
         "copyright": "copyright",
         "kvkk": "kvkk",
-        "eilePomexConstructionChemicals": "eile pomex construction chemicals"
+        "facilities": "facilities",
+        "contactAdresses": "our contact addresses",
+        "sartMadenIsletmesi": "sart maning operations",
+        "eilePomex": "eile pomex construction chemicals",
+        "menderesMadenIsletmesi": "menderes mining operations",
+        "etiperPerlitIsletmesi": "etiper perlit facility",
+        "ankaraOffice": "ankara office"
     },
     "Home": {
         "title": "Landing Page",
@@ -50,12 +50,18 @@
         "reachUs": "you can reach us by calling our relavant number or filling out the contact form.",
         "nameSurname": "name surname",
         "address": "address",
-        "telephone": "telephone",
+        "telephone": "phone",
         "fax": "fax",
         "contactForm": "contact form",
         "email": "email",
         "yourMessage": "your message",
-        "send": "send"
+        "send": "send",
+        "contactAdresses": "our contact addresses",
+        "sartMadenIsletmesi": "sart maning operations",
+        "eilePomex": "eile pomex construction chemicals",
+        "menderesMadenIsletmesi": "menderes mining operations",
+        "etiperPerlitIsletmesi": "etiper perlit facility",
+        "ankaraOffice": "ankara office"
     },
     "Docs": {
         "companyCertificates": "company certificates",

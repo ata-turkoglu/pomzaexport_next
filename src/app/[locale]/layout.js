@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 
     return {
         title: {
-            template: locale == "tr" ? `%s Madencilik` : `%s Mining Company`,
+            //template: locale == "tr" ? `%s Madencilik` : `%s Mining Company`,
         },
         description: siteMetaData.description[locale],
         keywords: siteMetaData.keywords[locale],

@@ -6,16 +6,17 @@
         "products": "ürünler"
     },
     "Footer": {
-        "aboutus": "hakkımızda",
         "ourQualityPolicy": "kalite politikamız",
-        "missionVision": "misyonumuz-vizyonumuz",
         "products": "ürünler",
-        "certificates": "belgelerimiz",
-        "companyCertificates": "şirket belgeleri",
-        "productCertificates": "ürün belgeleri",
-        "copyright": "eile pomex tüm hakları saklıdır.",
+        "copyright": "pomza export tüm hakları saklıdır.",
         "kvkk": " kişisel verilerin korunması",
-        "eilePomexConstructionChemicals": "eile pomex yapı kimyasalları"
+        "facilities": "işletmelerimiz",
+        "contactAdresses": "our contact addresses",
+        "sartMadenIsletmesi": "sart maning operations",
+        "eilePomex": "eile pomex construction chemicals",
+        "menderesMadenIsletmesi": "menderes mining operations",
+        "etiperPerlitIsletmesi": "etiper perlit facility",
+        "ankaraOffice": "ankara office"
     },
     "Home": {
         "title": "Başlanfıç Sayfası",
@@ -46,7 +47,7 @@
     },
     "Contact": {
         "contact": "iletişim",
-        "contactUs": "bize ulaşın",
+        "contactUs": "bizimle iletişime geçin",
         "reachUs": "ilgili numaramızı arayarak ya da iletişim formunu doldurarak bize ulaşabilirsiniz.",
         "nameSurname": "isim soyisim",
         "address": "adres",
@@ -55,7 +56,13 @@
         "contactForm": "iletişim formu",
         "email": "e-posta",
         "yourMessage": "Mesajınız",
-        "send": "gönder"
+        "send": "gönder",
+        "contactAdresses": "iletişim adreslerimiz",
+        "sartMadenIsletmesi": "sart maden işletmesi",
+        "eilePomex": "eile pomex yapı kimyasalları",
+        "menderesMadenIsletmesi": "menderes maden işletmesi",
+        "etiperPerlitIsletmesi": "etiper perlit işletmesi",
+        "ankaraOffice": "ankara ofis"
     },
     "Docs": {
         "companyCertificates": "şirket belgeleri",

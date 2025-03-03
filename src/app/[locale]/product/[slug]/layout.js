@@ -20,12 +20,12 @@ export async function generateStaticParams({ params }) {
 
 //bakılacak
 export async function generateMetadata({ params }) {
-    const { locale } = await params;
+    const { locale, slug } = await params;
 
     //const mine = minesJSON.find()
 
     return {
-        title: siteMetaData.minePage.title[locale],
+        title: slug,
         description: siteMetaData.minePage.description[locale],
         keywords: siteMetaData.minePage.keywords[locale],
     };

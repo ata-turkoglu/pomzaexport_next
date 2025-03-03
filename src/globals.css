@@ -7,7 +7,7 @@
     src: url("./fonts/GloberRegular.otf") format("opentype");
 }
 
-/* h1 {
+h1 {
     display: block;
     font-size: 2em;
     margin-top: 0.67em;
@@ -65,7 +65,7 @@ h6 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-} */
+}
 
 .backShadow {
     filter: drop-shadow(0 0 10px black);

@@ -19,10 +19,10 @@ export default function About({ params: { locale } }) {
                     Biz Kimiz?
                 </h2>
                 <p className="mb-2">
-                    Şirketimiz, Erzincan da 1969 yılında perlit madeni
+                    Şirketimiz, Erzincan'da 1969 yılında perlit madeni
                     işletmesiyle başladığı endüstriyel hammadde üretimini bugün;
-                    İzmir-Menderes, Manisa-Salihli-Sart, Hatay-Merkez, Erzincan
-                    Refahiye olmak üzere sürdürmektedir.
+                    İzmir-Menderes, Manisa-Salihli-Sart, Hatay-Merkez,
+                    Erzincan-Refahiye olmak üzere sürdürmektedir.
                 </p>
                 <p className="mb-2">
                     Şirketimiz Perlit üretimine; Kuvars, Kuvarsit, Pomza,
@@ -53,11 +53,11 @@ export default function About({ params: { locale } }) {
                 <p className="mb-2">
                     Şirketimiz Sart İşletmesinin bulunduğu bölgede Sardes Antik
                     Kenti MÖ 2000'lere Lidya devletine başkentlik yapmıştır.
-                    Sardes tarihte ilk paranın basıldığı yer olarak
+                    Sardes, tarihte ilk paranın basıldığı yer olarak
                     bilinmektedir.
                 </p>
                 <p className="mb-2">
-                    Sardes aynı zamanda tarihteki ünlü Kral Yolunun başlangıcı
+                    Sardes aynı zamanda tarihteki ünlü Kral Yolu'nun başlangıcı
                     olarak da bilinmektedir. Uzun süre değerli taş olarak
                     kullanılmış turuncu kuvars taşının Batı dillerindeki ismi
                     olan ve "sard" kelimesi, taşın antik çağda çıkarıldığı Sart
@@ -99,7 +99,7 @@ export default function About({ params: { locale } }) {
                     Sart tesisinde plaser yatak içindeki kuvars mineralleri
                     öğütülerek mikronize kuvars üretilmektedir. Plaser yatak
                     içindeki küçük boyutlu kuvars parçalarının da ayrılarak
-                    mikronize kuvars üretimi için tesiste optik ayırıca
+                    mikronize kuvars üretimi için tesiste optik ayırıcı
                     kurulmuştur.
                 </p>
 

@@ -1,5 +1,6 @@
 "use client";
 //import React, { useEffect, useState, useLayoutEffect } from "react";
+import Gallery from "@/components/gallery";
 import productsJSON from "@/data/products.json";
 import { useTranslations } from "next-intl";
 /* import {
@@ -122,7 +123,7 @@ export default function Product({ params: { locale, slug } }) {
 
                     <div className="pt-5">
                         <h3>{t("productImages")}</h3>
-                        <div className="h-full w-full grid grid-cols-3 gap-1 md:gap-0 md:flex md:items-center md:justify-center">
+                        {/* <div className="h-full w-full grid grid-cols-3 gap-1 md:gap-0 md:flex md:items-center md:justify-center">
                             {productData.images.map((item, indx) => (
                                 <div
                                     key={indx}
@@ -138,7 +139,8 @@ export default function Product({ params: { locale, slug } }) {
                                     ></img>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
+                        <Gallery images={productData.images} />
                     </div>
 
                     <div className="pt-5">
