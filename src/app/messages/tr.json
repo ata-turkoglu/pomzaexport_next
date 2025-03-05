@@ -89,5 +89,8 @@
         "areasOfUsage": "Kullanım Alanları",
         "productVariety": "Ürün Çeşitleri",
         "technicalInfo": "Teknik Bilgiler"
+    },
+    "MinePage": {
+        "goToProductPage": "Ürün Sayfasına Git"
     }
 }

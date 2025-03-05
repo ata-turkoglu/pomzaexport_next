@@ -88,5 +88,8 @@
         "areasOfUsage": "Areas Of Usage",
         "productVariety": "Product Variety",
         "technicalInfo": "Technical Info"
+    },
+    "MinePage": {
+        "goToProductPage": "Product Page"
     }
 }

@@ -15,6 +15,12 @@ export async function generateMetadata({ params }) {
         title: {
             //template: locale == "tr" ? `%s Madencilik` : `%s Mining Company`,
         },
+        title: {
+            default:
+                locale == "tr"
+                    ? "Pomza Export Madencilik"
+                    : "Pomza Export Mining Company",
+        },
         description: siteMetaData.description[locale],
         keywords: siteMetaData.keywords[locale],
         openGraph: {
@@ -24,28 +30,16 @@ export async function generateMetadata({ params }) {
             siteName: siteMetaData.title,
             images: [
                 {
-                    url: "https://www.eilepomex.com/assets/logos/eile.png",
-                    height: "86",
-                    width: "86",
-                    alt: "eile pomex",
+                    url: "https://www.eilepomex.com/assets/logo/pomza.png",
+                    height: "457",
+                    width: "1364",
+                    alt: "pomza export",
                 },
                 {
-                    url: "https://www.eilepomex.com/assets/logos/eilepomex-round.png",
-                    height: "110",
-                    width: "300",
-                    alt: "eile pomex",
-                },
-                {
-                    url: "https://www.eilepomex.com/assets/logos/eile-logo-tr.png",
-                    height: "112",
-                    width: "300",
-                    alt: "eile pomex tr",
-                },
-                {
-                    url: "https://www.eilepomex.com/assets/logos/eile-logo-en.png",
-                    height: "112",
-                    width: "300",
-                    alt: "eile pomex en",
+                    url: "https://www.eilepomex.com/assets/logo/pomzaexport-logo-white.png",
+                    height: "59",
+                    width: "309",
+                    alt: "pomza export",
                 },
             ],
             locale,

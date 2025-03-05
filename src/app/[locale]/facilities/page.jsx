@@ -35,7 +35,7 @@ function Facilities() {
                             }}
                         >
                             {item.location} <br></br>
-                            {item.name.tr}
+                            {item.name[locale]}
                         </span>
                     </div>
                 ))}

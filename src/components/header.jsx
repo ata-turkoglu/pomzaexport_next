@@ -50,7 +50,7 @@ function Header() {
         <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-16 px-4">
             <div className="w-full h-full flex items-center justify-between">
                 <a
-                    href="/"
+                    href={"/" + locale + "/"}
                     className="w-1/2 md:w-1/4 font-semibold flex items-start"
                 >
                     <img

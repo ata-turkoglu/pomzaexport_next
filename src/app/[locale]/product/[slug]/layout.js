@@ -18,17 +18,48 @@ export async function generateStaticParams({ params }) {
     return list;
 }
 
-//bakılacak
 export async function generateMetadata({ params }) {
     const { locale, slug } = await params;
 
-    //const mine = minesJSON.find()
+    const slugList = slug.split("-");
+    const productId = slugList[0];
+    const product = productsJSON.find((item) => item.id == productId);
+    const keywords = product?.keywords?.[locale] || [];
 
-    return {
-        title: slug,
-        description: siteMetaData.minePage.description[locale],
-        keywords: siteMetaData.minePage.keywords[locale],
+    const str =
+        product.id.toString() + "-" + slugify(product.name[locale]) + "/";
+
+    const metaObj = {
+        title: product.name[locale],
+        description: product.description[locale],
+        keywords,
+        openGraph: {
+            title: product.name[locale],
+            description: product.description[locale],
+            url: "https://www.pomzaexport.com/" + locale + "/product/" + str,
+            images: [
+                {
+                    url: "https://www.pomzaexport.com" + product.image,
+                    alt: product.name[locale],
+                },
+            ],
+            locale,
+            type: "website",
+        },
     };
+
+    if (slugList.length == 1) {
+        metaObj.alternates = {
+            canonical:
+                "https://www.pomzaexport.com/" + locale + "/product/" + str,
+        };
+        metaObj.robots = {
+            index: false,
+            folow: true,
+        };
+    }
+
+    return metaObj;
 }
 
 export default async function ProductDetailLayout({ children, params }) {

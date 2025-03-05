@@ -7,6 +7,7 @@ import productsJSON from "@/data/products.json";
 import "./mine.css";
 import "@/components/css/facilityBanner.css";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Mine({ params: { locale, slug } }) {
     const router = useRouter();
@@ -24,6 +25,7 @@ export default function Mine({ params: { locale, slug } }) {
     const [showingImage, setShowingImage] = useState(false);
     const [linkId, setLinkId] = useState(null);
     const [external, setExternal] = useState(false);
+    const t = useTranslations("MinePage");
 
     const mouseOver = (e, name) => {
         setProductName(name);
@@ -126,10 +128,15 @@ export default function Mine({ params: { locale, slug } }) {
                                     onClick={() => {
                                         external
                                             ? window.open(linkId, "_blank")
-                                            : router.push("/product/" + linkId);
+                                            : router.push(
+                                                  "/" +
+                                                      locale +
+                                                      "/product/" +
+                                                      linkId
+                                              );
                                     }}
                                 >
-                                    Ürün Sayfasına Git...
+                                    {t("goToProductPage")}
                                 </span>
                             )}
                         </div>
@@ -153,7 +160,10 @@ export default function Mine({ params: { locale, slug } }) {
                                                       "_blank"
                                                   )
                                                 : router.push(
-                                                      "/product/" + item.id
+                                                      "/" +
+                                                          locale +
+                                                          "/product/" +
+                                                          item.id
                                                   ));
                                         mobileView &&
                                             window.scrollTo({
