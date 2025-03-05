@@ -21,24 +21,36 @@ function Brands() {
                 <div className="images">
                     <div className="imgContainer">
                         <a href="https://www.pomzaexport.com/" target="_blank">
-                            <img src="/assets/logo/pomzaexport-logo-white.png" />
+                            <img
+                                src="/assets/logo/pomzaexport-logo-white.png"
+                                alt="pomza export"
+                            />
                         </a>
                     </div>
                     <div className="imgContainer">
                         <a href="https://www.eilepomex.com/" target="_blank">
-                            <img src="/assets/logo/eilepomex-logo-white.png" />
+                            <img
+                                src="/assets/logo/eilepomex-logo-white.png"
+                                alt="eile pomex"
+                            />
                         </a>
                     </div>
                 </div>
                 <div className="images">
                     <div className="imgContainer">
                         <a href="http://www.persanyapi.com.tr/" target="_blank">
-                            <img src="/assets/logo/persan-logo-white.png" />
+                            <img
+                                src="/assets/logo/persan-logo-white.png"
+                                alt="persan"
+                            />
                         </a>
                     </div>
                     <div className="imgContainer">
                         <a href="http://www.erper.com.tr/" target="_blank">
-                            <img src="/assets/logo/erper-logo-white.png" />
+                            <img
+                                src="/assets/logo/erper-logo-white.png"
+                                alt="erper"
+                            />
                         </a>
                     </div>
                 </div>
@@ -60,6 +72,7 @@ function Brands() {
                                 router.push("/" + locale + "/product/7")
                             }
                             src="/assets/logo/etiper-logo-white.png"
+                            alt="etiper"
                         />
                     </div>
                     <div className="imgContainer">
@@ -69,6 +82,7 @@ function Brands() {
                                 router.push("/" + locale + "/product/1")
                             }
                             src="/assets/logo/sardesquartz-logo-white.png"
+                            alt="sardes quartz"
                         />
                     </div>
                     <div className="imgContainer">
@@ -78,6 +92,7 @@ function Brands() {
                                 router.push("/" + locale + "/product/9")
                             }
                             src="/assets/logo/emerex-logo-white.png"
+                            alt="emerex"
                         />
                     </div>
                 </div>
@@ -87,7 +102,10 @@ function Brands() {
                             href="https://www.eilepomex.com/pomexblok"
                             target="_blank"
                         >
-                            <img src="/assets/logo/pomexblok-logo-white.png" />
+                            <img
+                                src="/assets/logo/pomexblok-logo-white.png"
+                                alt="pomex blok"
+                            />
                         </a>
                     </div>
                     <div className="imgContainer">
@@ -97,6 +115,7 @@ function Brands() {
                                 router.push("/" + locale + "/product/4")
                             }
                             src="/assets/logo/pomexgarnet-logo-white.png"
+                            alt="pomex garnet"
                         />
                     </div>
                     <div className="imgContainer">
@@ -106,6 +125,7 @@ function Brands() {
                                 router.push("/" + locale + "/product/10")
                             }
                             src="/assets/logo/pomexbeton-logo-white.png"
+                            alt="pomex beton"
                         />
                     </div>
                 </div>

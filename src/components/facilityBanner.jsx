@@ -60,6 +60,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
                         <img
                             src={image}
                             className="w-full h-full object-cover"
+                            alt={name[locale]}
                         />
                         <span
                             className="hidden md:block absolute inset-x-0 mx-auto w-3/4 bg-white text-center shadow-lg capitalize"
@@ -68,7 +69,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
                                 border: "1px solid grey",
                             }}
                         >
-                            {name.tr}
+                            {name[locale]}
                         </span>
                     </div>
                 );

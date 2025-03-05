@@ -26,6 +26,7 @@ export default function IntroVideo() {
                         filter: "brightness(70%)",
                         objectPosition: "40%",
                     }}
+                    alt="pomza export"
                 />
             </div>
             <div className="absolute z-10 bottom-1/4 inset-x-0 h-fit w-full px-4">

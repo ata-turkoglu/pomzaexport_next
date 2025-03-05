@@ -100,7 +100,7 @@ export default function Mine({ params: { locale, slug } }) {
                     >
                         <ImgCarousel images={[...mineData.images]} />
                         <h1
-                            className="absolute text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
+                            className="absolute font-semibold text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
                             style={{
                                 top: mobileView ? "85%" : "80%",
                                 left: "5%",
@@ -189,10 +189,11 @@ export default function Mine({ params: { locale, slug } }) {
                                     <img
                                         className="w-full h-full object-cover"
                                         src={item.image}
+                                        alt={item.name[locale]}
                                     ></img>
                                     {mobileView && (
                                         <span
-                                            className="text-white z-10 text-center t-shadow"
+                                            className="text-white font-semibold z-10 text-center t-shadow"
                                             style={{
                                                 display: mobileView
                                                     ? "block"

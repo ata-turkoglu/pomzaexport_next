@@ -73,6 +73,11 @@ const GloberFont = localFont({
             style: "italic",
         },
         {
+            path: "../../fonts/GloberSemiBold.otf",
+            weight: "600",
+            style: "normal",
+        },
+        {
             path: "../../fonts/GloberBold.otf",
             weight: "700",
             style: "normal",

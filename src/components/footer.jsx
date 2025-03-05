@@ -26,7 +26,7 @@ function Footer({ hFull = false }) {
                         >
                             <img
                                 src="/assets/logo/pomzaexport-logo-white.png"
-                                alt=""
+                                alt="pomza export"
                                 className="w-60 inline-block items-center"
                             />
                         </Link>

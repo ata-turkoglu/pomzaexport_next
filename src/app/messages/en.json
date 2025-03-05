@@ -90,6 +90,9 @@
         "technicalInfo": "Technical Info"
     },
     "MinePage": {
-        "goToProductPage": "Product Page"
+        "goToProductPage": "Product Page",
+        "ourRawMaterialProductionFacilities": "our raw material production facilities",
+        "facilityLinksText1": "We produce many high-quality products that meet the needs of different sectors from produced ores. Our aim is to create more added value by increasing the value of the minerals we acquire within our own structure.",
+        "facilityLinksText2": "We are proud to be Türkiye's first gold producing company with 100% domestic capital. We always act with the principle of 'People first, then the environment, then the mine'."
     }
 }

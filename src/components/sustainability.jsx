@@ -13,26 +13,7 @@ export default function Sustainability() {
                     <h2 className="text-2xl md:text-3xl mb-2 md:mb-5 md:ml-0 w-full z-30 bg-transparent text-center">
                         Yenilenebilir enerji yatırımlarımıza <br></br> devam
                         ediyoruz.
-                        {/* <br></br>
-                        Sürdürülebilir bir yaşam için gerekli hammaddeleri
-                        üretiyoruz. */}
                     </h2>
-                    {/* <ul className="p-3 md:p-0">
-                        <li className="text-lg md:text-xl">
-                            Solar panel sayımızı her geçen gün artıyor,
-                        </li>
-                        <li className="text-lg md:text-xl">
-                            Kamyonlarda elektrikli araç dönüşümünü başladı,
-                        </li>
-                        <li className="text-lg md:text-xl">
-                            Çevre danışmanlarımız ile toz ve emisyonlarımızı
-                            kontrol altında,
-                        </li>
-                        <li className="text-lg md:text-xl">
-                            Su tüketimimizi yağmur sularını yönlendirip
-                            depolayarak minimuma indirdik.
-                        </li>
-                    </ul> */}
                     <span className="p-3 md:p-0 text-justify md:text-center text-lg md:text-xl">
                         Güneş paneli sayımız her geçen gün artıyor. Kamyonlarda
                         elektrikli araç dönüşümünü başlattık. Çevre
@@ -48,24 +29,28 @@ export default function Sustainability() {
                         <img
                             className="w-auto h-full object-cover"
                             src="/assets/common/sustainability.jpg"
+                            alt="pomza export"
                         />
                     </div>
                     <div className="flex flex-1 h-full">
                         <img
                             className="w-full h-full object-cover"
                             src="/assets/common/sustainability1.jpg"
+                            alt="pomza export"
                         />
                     </div>
                     <div className="flex flex-1 h-full">
                         <img
                             className="w-full h-full object-cover"
                             src="/assets/common/sany.jpg"
+                            alt="pomza export"
                         />
                     </div>
                     <div className="flex flex-1 h-full">
                         <img
                             className="w-full h-full object-cover"
                             src="/assets/common/water.jpg"
+                            alt="pomza export"
                         />
                     </div>
                 </div>

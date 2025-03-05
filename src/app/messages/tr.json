@@ -91,6 +91,9 @@
         "technicalInfo": "Teknik Bilgiler"
     },
     "MinePage": {
-        "goToProductPage": "Ürün Sayfasına Git"
+        "goToProductPage": "Ürün Sayfasına Git",
+        "ourRawMaterialProductionFacilities": "hammadde üretim tesislerimiz",
+        "facilityLinksText1": "Üretilmiş cevherlerden farklı sektörlerin ihtiyaçlarını karşılayan yüksek kaliteli çok ürünler üretiyoruz. Amacımız, kendi bünyemizde aldığımız minerallerin değerlerini arttırarak daha fazla katma değerden oluşmaktadır.",
+        "facilityLinksText2": "Türkiyenin ilk 100% yerli sermaye ile altın üreten firması olmanın gururunu yaşamaktayız. Her zaman 'Önce insan, sonra çevre, sonra maden' ilkesi ile hareket ederiz."
     }
 }

@@ -13,7 +13,10 @@ export default function TextTransitions({ children }) {
     const setWords = (item) => {
         return item.props.children.split(" ").map((el, idx) => {
             return (
-                <span key={idx} className="tt mr-2 text-white text-5xl">
+                <span
+                    key={idx}
+                    className="tt mr-2 text-white text-5xl font-medium"
+                >
                     {el}
                 </span>
             );
@@ -53,7 +56,7 @@ export default function TextTransitions({ children }) {
     useLayoutEffect(() => {
         const list = children.map((item, index) => {
             return (
-                <h1
+                <h3
                     id={"text" + index}
                     key={index}
                     className={
@@ -62,7 +65,7 @@ export default function TextTransitions({ children }) {
                     style={index != 0 ? { display: "none" } : {}}
                 >
                     {setWords(item)}
-                </h1>
+                </h3>
             );
         });
         setContent(list);

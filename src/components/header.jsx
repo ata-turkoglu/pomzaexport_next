@@ -55,7 +55,7 @@ function Header() {
                 >
                     <img
                         src="/assets/logo/pomzaexport-logo-white.png"
-                        alt="Pomzaexport Logo"
+                        alt="Pomza Export"
                         className="w-60 d-shadow"
                     />
                 </a>

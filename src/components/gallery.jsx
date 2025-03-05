@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Dialog } from "@material-tailwind/react";
-export default function Gallery({ images }) {
+export default function Gallery({ images, name = "gallery-image" }) {
     const [active, setActive] = React.useState(null);
     const [open, setOpen] = React.useState(false);
 
@@ -18,7 +18,7 @@ export default function Gallery({ images }) {
                             onClick={() => [setActive(imgelink), handleOpen()]}
                             src={imgelink}
                             className="w-full h-full object-cover"
-                            alt="gallery-image"
+                            alt={name}
                         />
                     </div>
                 ))}
@@ -29,7 +29,7 @@ export default function Gallery({ images }) {
                         <img
                             className="h-auto w-full max-w-full object-cover object-center"
                             src={active}
-                            alt=""
+                            alt={name}
                         />
                     )}
                 </div>

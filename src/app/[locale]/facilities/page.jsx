@@ -24,6 +24,7 @@ function Facilities() {
                         <img
                             src={item.images[0]}
                             className="w-full h-full objecj-cover brightness-75"
+                            alt={item.name[locale]}
                         />
                         <span
                             className="text-white z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow"

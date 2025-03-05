@@ -1,10 +1,11 @@
 "use client";
 import React, { useLayoutEffect } from "react";
 import productsJSON from "@/data/products.json";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
 function Products() {
     const router = useRouter();
+    const { locale } = useParams();
 
     return (
         <div className="h-full w-full flex flex-col">
@@ -17,15 +18,18 @@ function Products() {
                         onClick={() => {
                             item.externalLink
                                 ? window.open(item.link, "_blank")
-                                : router.push("/product/" + item.id);
+                                : router.push(
+                                      "/" + locale + "/product/" + item.id
+                                  );
                         }}
                     >
                         <img
                             src={item.image}
                             className="w-full h-full objecj-cover"
+                            alt={item.name[locale]}
                         />
                         <span
-                            className="text-white z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center"
+                            className="text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center"
                             style={{
                                 display: "block",
                                 fontSize: "1.8rem",
@@ -33,7 +37,7 @@ function Products() {
                                 justifySelf: "center",
                             }}
                         >
-                            {item.name.tr}
+                            {item.name[locale]}
                         </span>
                     </div>
                 ))}
