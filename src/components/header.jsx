@@ -179,13 +179,32 @@ function Header() {
                 overlay={true}
             >
                 <div className="p-4 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
-                    <button
-                        onClick={() => setIsOpen(false)}
-                        type="button"
-                        className="self-end text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
-                    >
-                        <X />
-                    </button>
+                    <div className="flex justify-between w-full items-start">
+                        <span className="text-white pl-1 h-full text-lg flex items-center cursor-pointer relative nav-link bg-transparent">
+                            <span>{lang}</span>
+                            <ul className="nav-list pb-3 bg-transparent">
+                                <li
+                                    className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
+                                    onClick={() => changeLanguage("tr")}
+                                >
+                                    tr
+                                </li>
+                                <li
+                                    className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
+                                    onClick={() => changeLanguage("en")}
+                                >
+                                    en
+                                </li>
+                            </ul>
+                        </span>
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            type="button"
+                            className="text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
+                        >
+                            <X />
+                        </button>
+                    </div>
                     <Link
                         href={"/" + locale + "/about"}
                         onClick={() => setIsOpen(false)}
