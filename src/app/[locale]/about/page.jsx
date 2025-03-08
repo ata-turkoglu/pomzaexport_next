@@ -14,129 +14,148 @@ export default function About({ params: { locale } }) {
                 backgroundBlendMode: "multiply",
             }}
         >
-            <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
-                <h2 className="mb-3 text-3xl text-center font-bold">
-                    Biz Kimiz?
-                </h2>
-                <p className="mb-2">
-                    Şirketimiz, Erzincan'da 1969 yılında perlit madeni
-                    işletmesiyle başladığı endüstriyel hammadde üretimini bugün;
-                    İzmir-Menderes, Manisa-Salihli-Sart, Hatay-Merkez,
-                    Erzincan-Refahiye olmak üzere sürdürmektedir.
-                </p>
-                <p className="mb-2">
-                    Şirketimiz Perlit üretimine; Kuvars, Kuvarsit, Pomza,
-                    Mikronize Pomza, Hematit, Rutil, Barit, Kurşun, Çinko,
-                    Manyezit ve Altın maden üretimlerini de ilave ederek
-                    madencilik sektöründe Türkiye'nin sayılı yerli üreticileri
-                    arasında yerini almıştır.
-                </p>
-                <p className="mb-2">
-                    Pomza Export A.Ş. Salihli Sart bölgesinde kurduğu plaser
-                    madeni işletmesi %100 yerli sermaye ve teknoloji kullanılmak
-                    suretiyle sektörde ilk altın üreten yerli firma olmuştur.
-                    Madencilik sektöründe 40 yılı aşkın elde ettiği tecrübesini
-                    inşaat sektörüne ileri teknoloji ve çevreci malzemeler
-                    üretmekte kullanan POMZA EXPORT A.Ş. bu maksatla; PERSAN
-                    markasıyla perlit beton kiremidi ve EILE POMEX markasıyla
-                    ileri teknoloji yapı kimyasallarını inşaat sektörüne
-                    kazandırmıştır. Şirketin hedefi; faaliyette bulunduğumuz
-                    sektörlerde pazarın beklentilerine cevap verebilecek;
-                    koşulsuz müşteri memnuniyeti veren, kaliteli, çevreci, ileri
-                    teknoloji ürünler üretmek ve kendini sürekli yinelemektir.
-                </p>
-                <p className="mb-2">
-                    Sart Plaser işletmemiz; Salihli-İzmir karayolu üzerinde
-                    Salihli'den sonra 10 km mesafedeki Sart Kasabasının hemen
-                    yakınında yer almıştır.
-                </p>
-                <p className="mb-2">
-                    Şirketimiz Sart İşletmesinin bulunduğu bölgede Sardes Antik
-                    Kenti MÖ 2000'lere Lidya devletine başkentlik yapmıştır.
-                    Sardes, tarihte ilk paranın basıldığı yer olarak
-                    bilinmektedir.
-                </p>
-                <p className="mb-2">
-                    Sardes aynı zamanda tarihteki ünlü Kral Yolu'nun başlangıcı
-                    olarak da bilinmektedir. Uzun süre değerli taş olarak
-                    kullanılmış turuncu kuvars taşının Batı dillerindeki ismi
-                    olan ve "sard" kelimesi, taşın antik çağda çıkarıldığı Sart
-                    bölgesinden gelmektedir.
-                </p>
-                <p className="mb-2">
-                    Pomza Export firması Dünyada plaser yataklarda olduğu gibi
-                    Sart Bölgesindeki plaser yatak içindeki ağır metallerin de
-                    kazanılması gerektiği üzerinde durmuş, çalışmalarını bu
-                    yönde yapmıştır. Yapılan analizlerden plaser yatakta altının
-                    yanı sıra rutil, zirkon, kasiterit, liminit, ilmenit,
-                    hemeatit, almandin gibi mineraller içerdiği bunların da
-                    kazanılabileceğini belirlemiştir. Yapılmış çok sayıda
-                    araştırmalar sonrası 2002 yılında şirketimiz tarafından
-                    işletmede cevher hazırlama tesisi kurulmuştur. Bu tesiste
-                    plaser yataktaki ağır mineraller ekonomiye
-                    kazandırılmaktadır.
-                </p>
-                <p className="mb-2">
-                    Sart Cevher Zenginleştirme Tesisi; ülkemizde plaser bir
-                    ocağın işletilmesine yönelik kurulu bulunan en önemli cevher
-                    hazırlama tesislerinden biridir. Bu tesis Türkiye'de ve
-                    Dünyada az benzeri olan sıfır deşarj olarak ifade edilen,
-                    üretilen beton madenin değerlendirildiği, ülkemizin
-                    Madencilik Vizyonu tanımı kapsamında ürettiklerinin tamamını
-                    uç ürünlere dönüştürme gayreti içinde bir şirket anlayışı
-                    ile çalışan{" "}
-                    <strong>
-                        Dünya madenciliği için de örnek olma yolunda bir
-                        tesistir.
-                    </strong>
-                </p>
-                <p className="mb-2">
-                    Eile kimyasallarında Sart ve Menderes işletmelerimizde
-                    üretilen ağır mineral, mikronize kuvars ve öğütülmüş pomza
-                    kullanılmaktadır.
-                </p>
-                <p className="mb-4">
-                    Sart tesisinde plaser yatak içindeki kuvars mineralleri
-                    öğütülerek mikronize kuvars üretilmektedir. Plaser yatak
-                    içindeki küçük boyutlu kuvars parçalarının da ayrılarak
-                    mikronize kuvars üretimi için tesiste optik ayırıcı
-                    kurulmuştur.
-                </p>
+            {locale == "tr" ? (
+                <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
+                    <h2 className="mb-3 text-3xl text-center font-bold">
+                        Hakkımızda
+                    </h2>
+                    <p className="mb-2">
+                        Pomza Export A.Ş., madencilik sektöründe tamamen yerli
+                        sermaye kurulmuş, köklü bir şirket olarak 50 yıldan
+                        fazla süredir faaliyet göstermektedir. Sürdürülebilirlik
+                        ilkesiyle hareket eden firmamız, 2007 yılında Türkiye'ye
+                        daha fazla katma değer sağlamak amacıyla, 'Sıfır-Deşarj'
+                        üretim modelini benimseyerek Eile Pomex Yapı
+                        Kimyasalları şirketini kurmuştur. Bu sayede, kendi
+                        madenlerinde üretilen Perlit, Kuvars, Korund gibi
+                        agregaları yapı ürünlerinde kullanarak kaliteli,
+                        sürdürülebilir ve yenilikçi çözümleri pazara sunmuştur.
+                    </p>
+                    <p className="mb-2">
+                        Müşteri memnuniyetini en üst düzeyde tutarak, ulusal ve
+                        uluslararası kalite standartlarına uygun şekilde hareket
+                        etmek temel önceliğimizdir. Tüm çalışanlarımızın sürekli
+                        mesleki alanda bilgilendirilmesi ve gelişimlerinin
+                        desteklenmesi, iş sağlığı ve iş güvenliği bilincinin en
+                        üst seviyede olması için en yüksek profesyonel
+                        standartlara uygun eğitimler verilmektedir. Bu şekilde,
+                        çalışanlarımızın iş güvenliği konusundaki bilincini
+                        artırarak daha güvenli bir çalışma ortamı sağlamayı
+                        hedefliyoruz.
+                    </p>
+                    <p className="mb-2">
+                        Ayrıca, hataları önceden önlemek ve tekrarlanmasını
+                        engellemek için doğaya ve insana saygı çerçevesinde
+                        sürekli iyileştirmeler yaparak yönetim sistemimizi
+                        geliştirmekteyiz.
+                    </p>
+                    <p className="mb-2">
+                        Tüm yasa ve mevzuatlara uygun olarak faaliyet göstermek
+                        ve en doğru şekilde çalışmak da işimizin ayrılmaz bir
+                        parçasıdır. Müşteri memnuniyeti, sürdürülebilirlik,
+                        kalite, güvenlik ve yasal uyumluluk alanlarında en üst
+                        düzeyde performans sergileyerek çalışanlarımıza,
+                        müşterilerimize ve topluma karşı sorumluluklarımızı
+                        yerine getiriyoruz.
+                    </p>
 
-                <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
-                    Vizyon - Misyon
-                </h2>
+                    <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
+                        Misyonumuz
+                    </h2>
 
-                <p className="mb-4">
-                    Sağlık ve güvenliğe öncelik vererek toplumu ve
-                    çalışanlarımızı koruyor, sürdürülebilirlik ilkeleriyle
-                    çevreyi savunuyor ve kaliteli ürünlerle sektöre katkı
-                    sağlıyoruz.
-                </p>
+                    <p className="mb-4">
+                        Genç, dinamik mühendis kadromuzla müşteri ihtiyaç ve
+                        beklentilerini en iyi şekilde anlayarak, iş etiği ve
+                        ahlak kurallarına uygun, sürdürülebilir ve kaliteli
+                        üretim sağlamaktır.
+                    </p>
 
-                <h2 className="text-xl mb-4 font-semibold">Önce İnsan;</h2>
+                    <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
+                        Vizyonumuz
+                    </h2>
 
-                <p className="mb-4">
-                    Sağlık ve güvenliğe öncelik vererek, çalışanlarımızın ve
-                    toplumun refahını sağlamak için çalışıyoruz.
-                </p>
+                    <p className="mb-4">
+                        Sektörde yılların güvenini kazanmış bir firma olarak,
+                        kendimizi sürekli geliştirip firmamızın ulusal ve
+                        uluslararası pazardaki etkinliğini ve verimliliğini
+                        artırmak; Türkiye'nin inovasyon ve çevrecilik
+                        prensipleriyle hareket eden saygın bir kuruluşu
+                        olmaktır.
+                    </p>
+                </div>
+            ) : (
+                <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
+                    <h2 className="mb-3 text-3xl text-center font-bold">
+                        About
+                    </h2>
 
-                <h2 className="text-xl mb-4 font-semibold">Sonra Çevre;</h2>
+                    <p className="mb-2">
+                        Pomza Export is one of the leading companies shaping
+                        Turkey's mining sector since 1961. Operating with the
+                        principle of sustainability, our company established
+                        Eile Pomex Construction Chemicals in 2007 to produce
+                        value-added building products by adopting the
+                        'Zero-Discharge' business model. By using aggregates
+                        such as Perlite, Quartz, And Corundum produced in our
+                        own mines in these construction products, we have
+                        introduced quality, sustainability, and innovation to
+                        the market
+                    </p>
 
-                <p className="mb-4">
-                    Sürdürülebilirlik ilkeleri doğrultusunda, doğal kaynakları
-                    koruyarak ve çevresel etkileri en aza indirerek
-                    faaliyetlerimizi yürütüyoruz.
-                </p>
+                    <p className="mb-2">
+                        Ensuring customer satisfaction at the highest level and
+                        acting in accordance with national and international
+                        quality standards are our main priorities. All our
+                        employees receive continuous training and support for
+                        their development, and training is provided at the
+                        highest professional standards to ensure the highest
+                        level of occupational health and safety awareness. In
+                        this way, we aim to increase awareness of occupational
+                        safety among our employees and create a safer working
+                        environment.
+                    </p>
 
-                <h2 className="text-xl mb-4 font-semibold">Sonra Maden;</h2>
+                    <p className="mb-2">
+                        Additionally, we continuously improve our management
+                        system within the framework of respect for nature and
+                        humanity to prevent errors and avoid their repetition.
+                    </p>
 
-                <p className="mb-4">
-                    Kaliteli ve güvenilir ürünler sunarak, sektörde lider
-                    konumumuzu sürdürüyoruz ve ekonomik büyümeye katkıda
-                    bulunuyoruz.
-                </p>
-            </div>
+                    <p className="mb-2">
+                        Operating in compliance with all laws and regulations is
+                        an integral part of our business. By demonstrating
+                        top-level performance in customer satisfaction,
+                        sustainability, quality, safety, and legal compliance,
+                        we fulfil our responsibilities to both our customers and
+                        the society.
+                    </p>
+
+                    <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
+                        Mission
+                    </h2>
+
+                    <p className="mb-4">
+                        To provide sustainable, value-added production in
+                        accordance with business ethics by understanding market
+                        needs and expectations and form long-term partnerships
+                        with our national and international customers.
+                    </p>
+
+                    <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
+                        Vision
+                    </h2>
+
+                    <p className="mb-4">
+                        As a company that has earned the trust of the industry
+                        over the years, our vision is to continuously improve
+                        ourselves and increase the effectiveness and efficiency
+                        of our company in both national and international
+                        markets, aiming to become a respected organization that
+                        operates with principles of innovation and
+                        environmentalism.
+                    </p>
+                </div>
+            )}
         </div>
     );
 }
