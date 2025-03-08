@@ -8,6 +8,7 @@ import "./mine.css";
 import "@/components/css/facilityBanner.css";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { slugify } from "@/utils/commonFuncs";
 
 export default function Mine({ params: { locale, slug } }) {
     const router = useRouter();
@@ -15,10 +16,10 @@ export default function Mine({ params: { locale, slug } }) {
 
     const [mineId, setMineId] = useState(null);
     const [mobileView, setMobileView] = useState(false);
-    const [header, setHeader] = useState("");
+    /* const [header, setHeader] = useState("");
     const [description, setDescription] = useState("");
     const [mineImages, setMineImages] = useState([]);
-    const [mapSrc, setMapSrc] = useState(null);
+    const [mapSrc, setMapSrc] = useState(null); */
     const [mineProducts, setMineProducts] = useState([]);
     const [productName, setProductName] = useState(null);
     const [imgUrl, setImgUrl] = useState(null);
@@ -38,9 +39,17 @@ export default function Mine({ params: { locale, slug } }) {
         }
     };
 
+    useEffect(() => {
+        console.log("linkId", linkId);
+    }, [linkId]);
+
     const mouseLeave = (e) => {
         setProductName(null);
         setShowingImage(false);
+    };
+
+    const setSlug = (id, name) => {
+        return id.toString() + "-" + slugify(name);
     };
 
     useLayoutEffect(() => {
@@ -163,7 +172,10 @@ export default function Mine({ params: { locale, slug } }) {
                                                       "/" +
                                                           locale +
                                                           "/product/" +
-                                                          item.id
+                                                          setSlug(
+                                                              item.id,
+                                                              item.name[locale]
+                                                          )
                                                   ));
                                         mobileView &&
                                             window.scrollTo({

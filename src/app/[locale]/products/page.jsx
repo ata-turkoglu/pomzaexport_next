@@ -2,10 +2,15 @@
 import React, { useLayoutEffect } from "react";
 import productsJSON from "@/data/products.json";
 import { useParams, useRouter } from "next/navigation";
+import { slugify } from "@/utils/commonFuncs";
 
 function Products() {
     const router = useRouter();
     const { locale } = useParams();
+
+    const setSlug = (id, name) => {
+        return id.toString() + "-" + slugify(name);
+    };
 
     return (
         <div className="h-full w-full flex flex-col">
@@ -19,7 +24,10 @@ function Products() {
                             item.externalLink
                                 ? window.open(item.link, "_blank")
                                 : router.push(
-                                      "/" + locale + "/product/" + item.id
+                                      "/" +
+                                          locale +
+                                          "/product/" +
+                                          setSlug(item.id, item.name[locale])
                                   );
                         }}
                     >

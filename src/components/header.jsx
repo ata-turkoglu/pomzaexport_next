@@ -42,6 +42,10 @@ function Header() {
         }
     };
 
+    const setSlug = (id, name) => {
+        return id.toString() + "-" + slugify(name);
+    };
+
     useLayoutEffect(() => {
         setLang(locale);
     }, []);
@@ -106,7 +110,10 @@ function Header() {
                                                 "/" +
                                                     locale +
                                                     "/mine/" +
-                                                    item.id
+                                                    setSlug(
+                                                        item.id,
+                                                        item.name[locale]
+                                                    )
                                             )
                                         }
                                     >
@@ -134,7 +141,10 @@ function Header() {
                                                       "/" +
                                                           locale +
                                                           "/product/" +
-                                                          item.id
+                                                          setSlug(
+                                                              item.id,
+                                                              item.name[locale]
+                                                          )
                                                   )
                                         }
                                     >

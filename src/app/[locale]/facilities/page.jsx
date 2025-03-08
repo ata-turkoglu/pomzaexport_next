@@ -2,13 +2,20 @@
 import React, { useLayoutEffect } from "react";
 import minesJSON from "@/data/mines.json";
 import { useParams, useRouter } from "next/navigation";
+import { slugify } from "@/utils/commonFuncs";
 
 function Facilities() {
     const router = useRouter();
     const { locale } = useParams();
+
+    const setSlug = (id, name) => {
+        return id.toString() + "-" + slugify(name);
+    };
+
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <div className="h-full w-full flex flex-col">
             <div className="h-16 w-100 bg-[#151a38]"></div>
@@ -18,7 +25,12 @@ function Facilities() {
                         key={index}
                         className="w-full h-full relative mb-2 cursor-pointer"
                         onClick={() =>
-                            router.push("/" + locale + "/mine/" + item.id)
+                            router.push(
+                                "/" +
+                                    locale +
+                                    "/mine/" +
+                                    setSlug(item.id, item.name[locale])
+                            )
                         }
                     >
                         <img

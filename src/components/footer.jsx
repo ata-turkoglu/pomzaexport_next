@@ -12,6 +12,11 @@ function Footer({ hFull = false }) {
     const t = useTranslations("Footer");
     const t_c = useTranslations("Contact");
     const { locale } = useParams();
+
+    const setSlug = (id, name) => {
+        return id.toString() + "-" + slugify(name);
+    };
+
     return (
         <footer
             className="w-full bg-[#151a38] md:px-10 p-4 pt-10 max-w-screen-2x1 mx-auto text-white overflow-scroll"
@@ -46,7 +51,12 @@ function Footer({ hFull = false }) {
                                     <Link
                                         key={key}
                                         className="block hover:text-gray-300"
-                                        href={"/" + locale + "/mine/" + item.id}
+                                        href={
+                                            "/" +
+                                            locale +
+                                            "/mine/" +
+                                            setSlug(item.id, item.name[locale])
+                                        }
                                     >
                                         {item.name[locale]}
                                     </Link>
@@ -72,7 +82,10 @@ function Footer({ hFull = false }) {
                                                 : "/" +
                                                   locale +
                                                   "/product/" +
-                                                  item.id
+                                                  setSlug(
+                                                      item.id,
+                                                      item.name[locale]
+                                                  )
                                         }
                                     >
                                         {item.name[locale]}
