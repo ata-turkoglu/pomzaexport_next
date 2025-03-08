@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /tr/docs
+Disallow: /en/docs
+
+# Host
+Host: https://pomzaexport.com/
+
+# Sitemaps
+Sitemap: https://pomzaexport.com/sitemap.xml

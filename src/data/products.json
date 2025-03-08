@@ -42,7 +42,6 @@
                 "Industry & Chemistry"
             ]
         },
-        "production": "",
         "technicalInfo": {
             "tr": [
                 "Kimyasal Formül: Au",
@@ -55,7 +54,21 @@
                 "Hardness: 2.5-3 Mohs"
             ]
         },
-        "link": "/product/0"
+        "link": "/product/0",
+        "keywords": {
+            "tr": [
+                "altın",
+                "altın madeni",
+                "altın üretimi",
+                "altın madenciliği"
+            ],
+            "en": [
+                "gold",
+                "gold mining company",
+                "gold production",
+                "gold mining"
+            ]
+        }
     },
     {
         "id": 1,
@@ -104,7 +117,6 @@
                 "Construction Materials: It is used as a strength enhancer in concrete and mortar mixtures. It is preferred as a filling material in epoxy floor coatings."
             ]
         },
-        "production": "",
         "technicalInfo": {
             "tr": [
                 "Kimyasal Formül: SiO2",
@@ -117,7 +129,27 @@
                 "Hardness: 7 Mohs"
             ]
         },
-        "link": "/product/1"
+        "link": "/product/1",
+        "keywords": {
+            "tr": [
+                "kuvars",
+                "granül kuvars",
+                "mikronize kuvars",
+                "kuvars üretimi",
+                "kuvars fiyat",
+                "kuvars tozu",
+                "kuvars satış"
+            ],
+            "en": [
+                "quartz",
+                "granule quartz",
+                "micronized quartz",
+                "quartz production",
+                "quartz price",
+                "quartz powder",
+                "quartz sales"
+            ]
+        }
     },
     {
         "id": 2,
@@ -172,7 +204,23 @@
                 "Hardness: 6-6.5 Mohs"
             ]
         },
-        "link": "/product/2"
+        "link": "/product/2",
+        "keywords": {
+            "tr": [
+                "rutil",
+                "rutil üretimi",
+                "mikronize rutil",
+                "granül rutil",
+                "rutile tozu"
+            ],
+            "en": [
+                "rutile",
+                "rutile production",
+                "micronized rutile",
+                "granule rutile",
+                "rutile powder"
+            ]
+        }
     },
     {
         "id": 3,
@@ -209,7 +257,11 @@
                 "Mortar and Plaster Production: Aggregate increases the strength of binding materials in mortar and plaster, which are the basic structural elements of construction."
             ]
         },
-        "link": "/product/3"
+        "link": "/product/3",
+        "keywords": {
+            "tr": ["agrega", "taz tozu", "mıcır", "agrega üretimi"],
+            "en": ["agregates", "agregates production"]
+        }
     },
     {
         "id": 4,
@@ -263,7 +315,21 @@
                 "Hardness: 7-8 Mohs"
             ]
         },
-        "link": "/product/4"
+        "link": "/product/4",
+        "keywords": {
+            "tr": [
+                "garnet",
+                "garnet üretimi",
+                "80 mesh garnet",
+                "180 mesh garnet"
+            ],
+            "en": [
+                "garnet",
+                "garnet production",
+                "80 mesh garnet",
+                "180 mesh garnet"
+            ]
+        }
     },
     {
         "id": 5,
@@ -299,7 +365,8 @@
                 "Landscape and Decoration: Used in garden arrangement and as a decorative filling material."
             ]
         },
-        "link": "/product/5"
+        "link": "/product/5",
+        "keywords": { "tr": [], "en": [] }
     },
     {
         "id": 6,
