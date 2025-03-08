@@ -17,7 +17,12 @@
                 "Pomza Export, Türkiye’nin ilk yüzde yüz türk sermayesi ile altın üreten firmasıdır. Firmamız, Manisa-Salihli Sart bölgesindeki ruhsatlı maden sahalarımızda, nadir kullanılan bir yöntem olan Gravimetrik Zenginleştirme Yöntemi ile nabit altın elde etmektedir. Gravimetrik zenginleştirme, yoğunluk farklarından faydalanarak altının saflaştırıldığı çevre dostu bir yöntemdir.",
                 "Doğaya zarar vermeyen ve hiç bir kimyasalın kullanılmadığı bu teknik, altın üretiminde çevresel sürdürülebilirliği ön planda tutmamızı sağlıyor. Böylece, ülke ekonomisine katma değer sağlarken doğayı koruma sorumluluğumuzu da yerine getiriyoruz."
             ],
-            "en": ""
+            "en": [
+                "Gold has been a symbol of power, beauty and wealth throughout history. It has also maintained its value for generations as one of the most reliable investment instruments. It is a unique element with a specific gravity of 19.3, a melting point of 1064 °C and a boiling point of 2660 °C, known by the chemical symbol 'Au'. It is considered one of the rarest elements because it is found in the Earth's crust, which is approximately 35 km thick, at a rate of less than 2 parts per million.",
+                "Another feature that increases the value of gold is that it is the best conductor in nature and does not react with water or oxygen. Thanks to these unique features, gold can maintain its existence and qualities without deterioration for thousands of years.",
+                "Pomza Export, Türkiye’nin ilk yüzde yüz türk sermayesi ile altın üreten firmasıdır. Firmamız, Manisa-Salihli Sart bölgesindeki ruhsatlı maden sahalarımızda, nadir kullanılan bir yöntem olan Gravimetrik Zenginleştirme Yöntemi ile nabit altın elde etmektedir. Gravimetrik zenginleştirme, yoğunluk farklarından faydalanarak altının saflaştırıldığı çevre dostu bir yöntemdir.",
+                "Doğaya zarar vermeyen ve hiç bir kimyasalın kullanılmadığı bu teknik, altın üretiminde çevresel sürdürülebilirliği ön planda tutmamızı sağlıyor. Böylece, ülke ekonomisine katma değer sağlarken doğayı koruma sorumluluğumuzu da yerine getiriyoruz."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -28,14 +33,27 @@
                 "Uzay ve Havacılık",
                 "Sanayi ve Kimya"
             ],
-            "en": ""
+            "en": [
+                "Electronics & Technology",
+                "Jewelry & Luxury Goods",
+                "Finance & Investment",
+                "Health & Medicine",
+                "Aerospace & Aviation",
+                "Industry & Chemistry"
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
-            "chemicalFormula": "Au",
-            "gravity": "~19.3 gr/cm3",
-            "hardness": "2.5-3 Mohs"
+            "tr": [
+                "Kimyasal Formül: Au",
+                "Özgül Ağırlık: ~19.3 gr/cm3",
+                "Sertlik: 2.5-3 Mohs"
+            ],
+            "en": [
+                "Chemical Formula: Au",
+                "Gravity: ~19.3 gr/cm3",
+                "Hardness: 2.5-3 Mohs"
+            ]
         },
         "link": "/product/0"
     },
@@ -60,7 +78,13 @@
                 "Isıya Dayanıklılık: Yüksek sıcaklıklara dayanıklı bir mineral.",
                 "Ekolojik Avantajlar: Doğal, çevre dostu ve toksik olmayan bir malzeme."
             ],
-            "en": ""
+            "en": [
+                "Quartz is a mineral with a chemical formula of SiO₂, which has a wide range of uses in industrial and decorative applications with its natural structure. Known for its high hardness, chemical purity and durability, quartz is an indispensable raw material in many sectors from glass production to electronic components.",
+                "Quartz extracted from our licensed quarry in Salihli Kaletepe Location is processed in Sardes Quartz facilities and offered to domestic and international markets. In our facility, where all types of granulated and micronized quartz can be produced, production is carried out in gradations and features suitable for customer demands. Our quartz products produced with high purity are produced meticulously in accordance with customer expectations. In our facility, where production is carried out with a fully automatic machine park that enables the ability to respond to changing sectoral needs, shipment can be made in Kraft bags, PP bags, Bigbag packaging, as well as product shipment with silobas.",
+                "Optical Properties: It offers an aesthetic appearance with its transparent or semi-transparent structure.",
+                "Heat Resistance: A mineral resistant to high temperatures.",
+                "Ecological Advantages: A natural, environmentally friendly and non-toxic material."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -71,14 +95,27 @@
                 "Dekoratif Uygulamalar: Tezgah üstleri, zemin kaplamaları ve duvar panelleri gibi dekoratif alanlarda estetik çözümler sunar.",
                 "İnşaat Malzemeleri: Beton ve harç karışımlarında mukavemet artırıcı olarak kullanılır. Epoksi zemin kaplamalarında dolgu malzemesi olarak tercih edilir."
             ],
-            "en": ""
+            "en": [
+                "Glass Production: Quartz is a basic component that increases the durability of glass. It is used in the production of optical glass, fiberglass and flat glass.",
+                "In the Electrical Field: It is used in quartz-based porcelain insulators, solar panels, and quartz-containing insulating fibers.",
+                "Electronics Industry: High purity quartz is preferred in semiconductor production and electronic components. Quartz crystals are used in watches, computers and communication devices.",
+                "Ceramics and Refractory Materials: It provides surface brightness and durability in ceramic production. It is used in applications requiring high temperature resistance.",
+                "Decorative Applications: It offers aesthetic solutions in decorative areas such as countertops, floor coverings and wall panels.",
+                "Construction Materials: It is used as a strength enhancer in concrete and mortar mixtures. It is preferred as a filling material in epoxy floor coatings."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
         "production": "",
         "technicalInfo": {
-            "chemicalFormula": "SiO2",
-            "gravity": "~2,65 gr/cm3",
-            "hardness": "7 Mohs"
+            "tr": [
+                "Kimyasal Formül: SiO2",
+                "Özgül Ağırlık: ~2,65 gr/cm3",
+                "Sertlik: 7 Mohs"
+            ],
+            "en": [
+                "Chemical Formula: SiO2",
+                "Gravity: ~2,65 gr/cm3",
+                "Hardness: 7 Mohs"
+            ]
         },
         "link": "/product/1"
     },
@@ -99,7 +136,13 @@
                 "Isıya Dayanıklılık: Yüksek sıcaklıklara dayanıklı bir malzeme.",
                 "Refraktif İndeks: Yüksek ışık yansıtma kapasitesine sahiptir, pigment üretiminde idealdir."
             ],
-            "en": ""
+            "en": [
+                "Rutile is a mineral with a chemical formula TiO₂, which stands out with its titanium dioxide content. Thanks to its natural brightness, high purity and unique properties, it is an indispensable raw material in many areas of the industry. Rutile has a wide range of uses, especially in titanium metal production, pigment industry and welding electrodes.",
+                "We produce it in micronized and granulated forms, in desired sizes up to 2.5 mm, in standard, product quality-free, 3-layer kraft bags or big bags.",
+                "Color: Natural golden yellow or dark brown tones.",
+                "Heat Resistance: A material resistant to high temperatures.",
+                "Refractive Index: It has a high light reflection capacity, ideal for pigment production."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -109,14 +152,25 @@
                 "Seramik ve Cam Üretimi: Seramik sırlarında parlaklık ve dayanıklılık sağlar. Cam üretiminde optik özelliklerin geliştirilmesine katkıda bulunur.",
                 "Dekoratif ve Endüstriyel Uygulamalar: Renkli ve estetik yapısıyla mücevher tasarımında ve dekoratif ürünlerde değerlendirilir."
             ],
-            "en": ""
+            "en": [
+                "Titanium Metal Production: It is used as the main raw material in the production of lightweight, durable and corrosion-resistant titanium metal. It is widely preferred in the aviation, automotive and medical implant sectors.",
+                "Pigment Production: Titanium dioxide is used in pigment production to provide brightness and opacity in paint, plastic, paper and ceramics.",
+                "Welding Electrodes: Rutile is used as a component that increases arc stability and improves seam quality in welding electrodes.",
+                "Ceramic and Glass Production: It provides brightness and durability in ceramic glazes. It contributes to the development of optical properties in glass production.",
+                "Decorative and Industrial Applications: It is evaluated in jewelry design and decorative products with its colorful and aesthetic structure."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
         "technicalInfo": {
-            "chemicalFormula": "TiO2",
-            "gravity": "~4,25 gr/cm3",
-            "hardness": "6-6.5 Mohs"
+            "tr": [
+                "Kimyasal Formül: TiO2",
+                "Özgül Ağırlık: ~4,25 gr/cm3",
+                "Sertlik: 6-6.5 Mohs"
+            ],
+            "en": [
+                "Chemical Formula: TiO2",
+                "Gravity: ~4,25 gr/cm3",
+                "Hardness: 6-6.5 Mohs"
+            ]
         },
         "link": "/product/2"
     },
@@ -134,7 +188,10 @@
                 "Agrega, inşaat sektörünün temel yapı taşlarından biri olan, farklı boyutlarda kırılmış taş, kum ve çakıl gibi granüler malzemelerin genel adıdır. İnşaat sektöründe agrega, beton, asfalt, harç ve yol yapımı gibi pek çok uygulamada kullanılır. Malzemenin özellikleri, uygulama alanına göre dayanıklılık, boyut ve fiziksel özellikler açısından titizlikle seçilir. Agreganın kalitesi ve uygun boyutta seçilmesi, kullanılan beton ve asfaltın dayanıklılığını doğrudan etkiler",
                 "Firmamız, agrega üretiminde çevreye duyarlı ve sürdürülebilir yöntemleri benimsemektedir. Sahalarımızda uygulanan geri dönüşüm ve yenilikçi teknolojilerle, çevre dostu üretim süreçlerini önceliklendiriyoruz. Yeniden rehabilite edilmiş maden sahalarımız, hem doğal kaynakların korunmasına hem de yeşil alanların artırılmasına katkı sağlamaktadır. Agrega ile ilgili daha fazla bilgi ve ihtiyaçlarınıza uygun çözümler için bizimle iletişime geçebilirsiniz."
             ],
-            "en": ""
+            "en": [
+                "Aggregate is the general name for granular materials such as crushed stone, sand and gravel in different sizes, which are one of the basic building blocks of the construction sector. In the construction sector, aggregate is used in many applications such as concrete, asphalt, mortar and road construction. The properties of the material are meticulously selected in terms of durability, size and physical properties according to the application area. The quality of the aggregate and its selection in the appropriate size directly affects the durability of the concrete and asphalt used",
+                "Our company adopts environmentally sensitive and sustainable methods in aggregate production. We prioritize environmentally friendly production processes with the recycling and innovative technologies applied in our fields. Our rehabilitated mining fields contribute to both the protection of natural resources and the increase of green areas. You can contact us for more information about aggregate and solutions suitable for your needs."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -144,11 +201,14 @@
                 "Peyzaj ve Dekorasyon: Bahçe düzenlemesi, yürüyüş yolları ve dekoratif yüzeylerde kullanılır.",
                 "Harç ve Sıva Üretimi: İnşaatın temel yapı elemanlarından olan harç ve sıva yapımında agrega, bağlayıcı malzemelerin dayanımını artırır."
             ],
-            "en": ""
+            "en": [
+                "Concrete Production: Aggregate, the main component of concrete, provides strength to the structure and ensures its longevity. Aggregate makes up approximately 60-80% of the concrete volume.",
+                "Asphalt Pavement: Aggregate provides surface durability and driving comfort in asphalt mixtures used in road construction.",
+                "Infrastructure and Road Construction: Aggregate is widely used in highways, bridges, tunnels and railway ballasts.",
+                "Landscape and Decoration: Used in garden arrangements, walking paths and decorative surfaces.",
+                "Mortar and Plaster Production: Aggregate increases the strength of binding materials in mortar and plaster, which are the basic structural elements of construction."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
-        "technicalInfo": {},
         "link": "/product/3"
     },
     {
@@ -167,7 +227,11 @@
                 "Kimyasal Stabilite: Çevresel etkilerden etkilenmeyen uzun ömürlü bir mineraldir.",
                 "Ekolojik Avantajlar: Doğada çözünmeyen ve zararlı kimyasal içermeyen garnet, çevre dostu bir aşındırıcıdır."
             ],
-            "en": ""
+            "en": [
+                "Garnet is an indispensable mineral for industrial applications with its superior physical properties and versatile areas of use. Garnet, which stands out with its hardness, durability and environmentally friendly structure, is preferred in many different sectors such as cutting, abrasion, surface cleaning and filtration.",
+                "Chemical Stability: It is a long-lasting mineral that is not affected by environmental effects.",
+                "Ecological Advantages: Garnet, which does not dissolve in nature and does not contain harmful chemicals, is an environmentally friendly abrasive."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -176,17 +240,28 @@
                 "Filtrasyon: Garnet, su arıtma sistemlerinde filtrasyon malzemesi olarak kullanılır.Kimyasal dayanıklılığı ve düşük çözünürlüğü sayesinde uzun ömürlü bir filtre malzemesi olarak tercih edilir.",
                 "Dekoratif Uygulamalar:Renkli ve estetik yapısıyla peyzaj düzenlemelerinde ve dekoratif taş uygulamalarında kullanılır."
             ],
-            "en": ""
+            "en": [
+                "Industrial Cutting and Abrasion: Provides precise and smooth cutting in water jet cutting machines. Used in abrasion of metal, stone and glass surfaces.",
+                "Surface Cleaning (Sandblasting): Used in sandblasting to clean rust, paint and dirt on the surface. Provides excellent results on large surfaces such as steel and ship hulls.",
+                "Filtration: Garnet is used as a filtration material in water treatment systems. It is preferred as a long-lasting filter material thanks to its chemical resistance and low solubility.",
+                "Decorative Applications: Used in landscaping and decorative stone applications with its colorful and aesthetic structure."
+            ]
         },
         "productVariety": {
             "tr": "80, 120, 180, 200 mesh ve kumlama üretimi",
-            "en": ""
+            "en": "80, 120, 180, 200 mesh and sandblasting production"
         },
-        "production": "",
         "technicalInfo": {
-            "chemicalFormula": "X3Y2(SiO4)3",
-            "gravity": "~4,2 gr/cm3",
-            "hardness": "7-8 Mohs"
+            "tr": [
+                "Kimyasal Formül: X3Y2(SiO4)3",
+                "Özgül Ağırlık: ~4,2 gr/cm3",
+                "Sertlik: 7-8 Mohs"
+            ],
+            "en": [
+                "Chemical Formula: X3Y2(SiO4)3",
+                "Gravity: ~4,2 gr/cm3",
+                "Hardness: 7-8 Mohs"
+            ]
         },
         "link": "/product/4"
     },
@@ -203,7 +278,12 @@
                 "Çevre Dostu Üretim: Sürdürülebilirlik esaslarına uygun, çevreye duyarlı üretim süreçleriyle sunulur.",
                 "Geniş Ürün Yelpazesi: Farklı sektörlere uygun boyut ve özelliklerde silis kumu seçenekleri."
             ],
-            "en": ""
+            "en": [
+                "The silica sand extracted from our licensed quarry in Salihli Kaletepe Location is completely cleaned from clay and soil in washing facilities. After drying in our drying facility, it is separated into gradations suitable for customer demands. Since silica is very resistant to temperature and chemical effects, it is used in a wide variety of areas in the industry.",
+                "High Quality: Our products are produced in accordance with sectoral needs with high purity and durability.",
+                "Environmentally Friendly Production: It is offered with environmentally sensitive production processes in accordance with sustainability principles.",
+                "Wide Product Range: Silica sand options in sizes and features suitable for different sectors."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -212,10 +292,13 @@
                 "Kimya ve Seramik Sanayi: Seramik üretiminde, kimyasal işlemlerde ve dolgu malzemesi olarak tercih edilir.",
                 "Peyzaj ve Dekorasyon: Bahçe düzenlemesinde ve dekoratif dolgu malzemesi olarak kullanılır."
             ],
-            "en": ""
+            "en": [
+                "Casting Industry: Used as mold material in metal casting processes. Provides excellent mold results thanks to its high heat resistance.",
+                "Construction and Building Materials: Increases strength in concrete and mortar mixtures. Used as a filling material in epoxy floor coatings.",
+                "Chemical and Ceramic Industry: Preferred in ceramic production, chemical processes and as a filling material.",
+                "Landscape and Decoration: Used in garden arrangement and as a decorative filling material."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
         "link": "/product/5"
     },
     {
@@ -233,9 +316,14 @@
                 "Hematit, doğal yapısı ve üstün fiziksel özellikleriyle sanayinin vazgeçilmez hammaddelerinden biridir. Özellikle demir içerikli ürünlerin üretiminde yaygın olarak kullanılan hematit, yüksek yoğunluğu ve demir oksit içeriğiyle dikkat çeker. Dayanıklı ve çevre dostu yapısı sayesinde pek çok endüstriyel uygulamada tercih edilmektedir.",
                 "Renk ve Doku: Metalik parlaklıkta koyu kırmızı veya gri tonlarında.",
                 "Manyetik Özellikler: Zayıf manyetik özelliklere sahip olup manyetitin bir alternatifidir.",
-                "Çevre Dostu: Doğal ve toksik olmayan bir mineraldir. "
+                "Çevre Dostu: Doğal ve toksik olmayan bir mineraldir."
             ],
-            "en": ""
+            "en": [
+                "Hematite is one of the indispensable raw materials of the industry with its natural structure and superior physical properties. Hematite, which is widely used especially in the production of iron-containing products, draws attention with its high density and iron oxide content. It is preferred in many industrial applications thanks to its durable and environmentally friendly structure.",
+                "Color and Texture: Dark red or gray tones with a metallic shine.",
+                "Magnetic Properties: It has weak magnetic properties and is an alternative to magnetite.",
+                "Environmentally Friendly: It is a natural and non-toxic mineral."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -245,14 +333,25 @@
                 "Kuyumculuk ve Dekoratif Ürünler: Parlak ve estetik yapısıyla takı tasarımı ve dekoratif taş ürünlerinde tercih edilir.",
                 "Filtrasyon ve Su Arıtma: Yüksek yoğunluğu ve kimyasal dayanıklılığı nedeniyle su arıtma sistemlerinde filtrasyon malzemesi olarak kullanılır."
             ],
-            "en": ""
+            "en": [
+                "Iron and Steel Production: Hematite is used as a basic raw material in iron and steel production due to its high iron content.",
+                "Heavy Concrete and Radiation Shields: It is preferred in radiation shielding and heavy concrete production due to its high density. It is especially used in nuclear power plants and hospital radiology rooms.",
+                "Pigment Production: It is used in paints, ceramics and pigment production due to its natural red tone.",
+                "Jewelry and Decorative Products: It is preferred in jewelry design and decorative stone products with its bright and aesthetic structure.",
+                "Filtration and Water Purification: It is used as a filtration material in water purification systems due to its high density and chemical resistance."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
         "technicalInfo": {
-            "chemicalFormula": "Fe2O3",
-            "gravity": "~5,3 gr/cm3",
-            "hardness": "6,5 Mohs"
+            "tr": [
+                "Kimyasal Formül: Fe2O3",
+                "Özgül Ağırlık: ~5,3 gr/cm3",
+                "Sertlik: 6,5 Mohs"
+            ],
+            "en": [
+                "Chemical Formula: Fe2O3",
+                "Gravity: ~5,3 gr/cm3",
+                "Hardness: 6,5 Mohs"
+            ]
         },
         "link": "/product/6"
     },
@@ -270,6 +369,19 @@
             "/assets/products/perlite5.jpg",
             "/assets/products/perlite6.jpg"
         ],
+        "whatIs": {
+            "head": { "tr": "Perlit Nedir?", "en": "What is Perlite?" },
+            "content": {
+                "tr": [
+                    "Perlit, volkanik camın ısıl işlemle genleştirilmesi sonucu elde edilen, gözenekli bir yapıya sahip, hafif ve çok yönlü bir mineraldir. Şirketimiz, Türkiye'nin en geniş perlit sahasında yenilikçi ve sürdürülebilir perlit üretim yapmaktadır. Türlü kalibrasyonlarda ham ve genleşmiş; ve mikronize perlit ürünlerini ETİPER markası ile pazara sunmaktadır.",
+                    "ETİPER perliti, ileri teknoloji tesislerimizde işlenerek tarım, inşaat, filtrasyon, döküm ve gıda gibi birçok sektörde kullanılabilecek yüksek kaliteli ürünler haline getirilir."
+                ],
+                "en": [
+                    "Perlite is a light and versatile mineral with a porous structure obtained by expanding volcanic glass through heat treatment. Our company produces innovative and sustainable perlite in the largest perlite field in Türkiye. It offers raw, expanded and micronized perlite products in various calibrations to the market under the ETİPER brand.",
+                    "ETİPER perlite is processed in our high-tech facilities and turned into high-quality products that can be used in many sectors such as agriculture, construction, filtration, casting and food."
+                ]
+            }
+        },
         "description": {
             "tr": [
                 "Tozsuzdur: Kullanım esnasında kolaylık sağlar.",
@@ -284,17 +396,43 @@
                 "Kullanıma Hazır Ambalajda ve Zamanında Teslim: Her teslimat özenle hazırlanarak zamanında yapılır.",
                 "İhracat potansiyeline sahiptir: Hollanda, İspanya ve Hindistan başta olmak üzere birçok ülkeye ihraç edilmektedir."
             ],
-            "en": ""
+            "en": [
+                "Dust-free: Provides ease of use.",
+                "Ideal Grain Size and Pore Structure: Produced with advanced technology, provides homogeneous and standard quality.",
+                "Sterile and Disease-Free: Provides a safe environment, does not carry and spread diseases.",
+                "Inorganic and Long-Lasting: Has a durable structure.",
+                "100% Domestic Production: Obtained from Türkiye's rich resources.",
+                "Support for Plant Health: Agricultural perlite provides root isolation, is root-friendly and helps achieve high productivity in all plant varieties.",
+                "High Price/Performance Ratio: Provides complete homogeneity with standard quality.",
+                "Reduces Irrigation Need: Provides water savings.",
+                "Reusable After Sterilization: It is a durable and reusable product.",
+                "Ready-to-Use Packaging and On-Time Delivery: Each delivery is carefully prepared and made on time.",
+                "It has export potential: It is exported to many countries, especially the Netherlands, Spain and India are exported to the country."
+            ]
         },
-        "usageAreas": { "tr": "", "en": "" },
+        "usageAreas": {
+            "tr": [
+                "Tarım ve Bahçecilik: Toprak düzenleyici olarak kullanılır. Bitkilerin kök izolasyonunu sağlar, su tutma kapasitesini artırır ve toprağın havalanmasını sağlar. Bitki sağlığını destekler ve yüksek verimlilik elde edilmesine yardımcı olur.",
+                "İnşaat: Hafif dolgu malzemesi olarak kullanılarak binaların ısı yalıtım özelliklerini artırır. Yeniköy perlit sahamızın sert ve dayanıklı perliti, inşaat sektörü için en uygun perlit yapısını sunar. ETİPER inşaat perliti, birçok sektör lideri tarafından tercih edilmektedir.",
+                "Filtrasyon: Sıvıların arıtılması ve saflaştırılması süreçlerinde yaygın olarak kullanılır. Kimyasallardan organik maddelere kadar geniş bir filtreleme kapasitesine sahiptir.",
+                "Döküm: Döküm kalıplarında ısıya dayanıklılık sağlamak için kullanılır.",
+                "Gıda: Gıda işleme ve depolama süreçlerinde yardımcı bir malzeme olarak tercih edilir."
+            ],
+            "en": [
+                "Agriculture and Gardening: Used as a soil conditioner. Provides root insulation for plants, increases water retention capacity and provides aeration of the soil. Supports plant health and helps achieve high productivity.",
+                "Construction: Used as a light filling material, it increases the thermal insulation properties of buildings. The hard and durable perlite of our Yeniköy perlite field offers the most suitable perlite structure for the construction sector. ETİPER construction perlite is preferred by many industry leaders.",
+                "Filtration: Widely used in the purification and purification processes of liquids. It has a wide filtering capacity from chemicals to organic substances.",
+                "Casting: Used to provide heat resistance in casting molds.",
+                "Food: Preferred as an auxiliary material in food processing and storage processes."
+            ]
+        },
         "productVariety": {
             "tr": "Her kalibrasyonda tasnif edilmiş perlit, genleştirilmiş perlit ve perlitten mamul ürünlerin dünya standartlarında ileri teknoloji ile üretilmesinin yanında kesintisiz Ar-Ge ve İş-Ge faaliyetlerine devam etmekteyiz.",
-            "en": ""
+            "en": "In addition to producing classified perlite, expanded perlite and perlite products in every calibration with advanced technology at world standards, we continue our uninterrupted R&D and Business Development activities."
         },
-        "production": "",
         "technicalInfo": {
-            "gravity": "~1,1 gr/cm3",
-            "hardness": "2-2.5 Mohs"
+            "tr": ["Özgül Ağırlık: ~1,1 gr/cm3", "Sertlik: 2-2.5 Mohs"],
+            "en": ["Gravity: ~1,1 gr/cm3", "Hardness: 2-2.5 Mohs"]
         },
         "link": "/product/7"
     },
@@ -309,7 +447,10 @@
                 "Pomza, volkanik kökenli doğal bir taş olup, gözenekli yapısı ve hafifliğiyle dikkat çeken bir mineraldir. Yüksek ısı dayanımı, aşındırıcı özellikleri ve çevre dostu yapısıyla inşaat, tarım, sanayi ve diğer birçok sektörde yaygın olarak kullanılmaktadır.",
                 "Üretim Süreci: Firmamız, İzmir Menderes Küner sahasında sürdürülebilir madencilik esaslarına uygun şekilde pumicit üretimi gerçekleştirmektedir. Üretim sonrası sahalarımız, doğaya yeniden kazandırılmak üzere rehabilite edilmekte ve örnek bir çevre projesi olarak yeşillendirilmektedir. Bu kapsamda, maden sahalarımızdan biri zeytinliğe dönüştürülerek bölgeye hem ekonomik hem de ekolojik değer kazandırılmıştır."
             ],
-            "en": ""
+            "en": [
+                "Pumice is a natural stone of volcanic origin, a mineral that draws attention with its porous structure and lightness. It is widely used in construction, agriculture, industry and many other sectors with its high heat resistance, abrasive properties and environmentally friendly structure.",
+                "Production Process: Our company carries out pumicite production in accordance with sustainable mining principles in İzmir Menderes Küner field. After production, our fields are rehabilitated to be restored to nature and are greened as an exemplary environmental project. In this context, one of our mining fields was converted into an olive grove, adding both economic and ecological value to the region."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -318,13 +459,16 @@
                 "Endüstriyel Uygulamalar: Filtrasyon malzemesi, kozmetik ürünlerde eksfoliant ve temizleyici olarak tercih edilir.",
                 "Dekoratif Uygulamalar: Peyzaj düzenlemelerinde doğal ve estetik bir görünüm sunar."
             ],
-            "en": ""
+            "en": [
+                "Construction Sector: Used in lightweight concrete and insulation materials. Contributes to heat and sound insulation.",
+                "Agriculture: Can be used as a soil conditioner. Increases water retention capacity and supports root development thanks to its porous structure.",
+                "Industrial Applications: Preferred as a filtration material, exfoliant and cleaner in cosmetic products.",
+                "Decorative Applications: Provides a natural and aesthetic appearance in landscaping."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
         "technicalInfo": {
-            "gravity": "~0.3 gr/cm3",
-            "hardness": "6-6,5 Mohs"
+            "tr": ["Özgül Ağırlık: ~0.3 gr/cm3", "Sertlik: 6-6,5 Mohs"],
+            "en": ["Gravity: ~0.3 gr/cm3", "Hardness: 6-6,5 Mohs"]
         },
         "link": "/product/8"
     },
@@ -340,7 +484,11 @@
                 "Yüksek sıcaklıklara ve aşındırıcı etkilere karşı direnci sayesinde korund, birçok endüstride vazgeçilmez bir hammadde olarak kullanılmaktadır. Korund, endüstriyel süreçlerinizde uzun ömürlü, verimli ve çevre dostu çözümler sunar. Dayanıklılığı ve çok yönlü kullanım özellikleriyle projelerinize değer katacak mükemmel bir mineraldir.",
                 "Ekolojik Avantajlar: Çevreye zarar vermeyen, doğal ve toksik olmayan bir malzeme."
             ],
-            "en": ""
+            "en": [
+                "Corundum (emery stone) is a natural mineral mixture that is often used as an abrasive material. Natural emery stone is mostly composed of corundum (aluminum oxide) and iron oxide minerals.",
+                "Thanks to its resistance to high temperatures and abrasive effects, corundum is used as an indispensable raw material in many industries. Corundum offers long-lasting, efficient and environmentally friendly solutions in your industrial processes. It is an excellent mineral that will add value to your projects with its durability and versatile usage features.",
+                "Ecological Advantages: A natural and non-toxic material that does not harm the environment."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -349,14 +497,24 @@
                 "Metalurji ve Döküm: Demir-çelik sektöründe refrakter malzeme olarak kullanılır. Metal ergitme ve kalıplama süreçlerinde dayanıklılık sağlar.",
                 "Kuyumculuk: Altın, gümüş gibi değerli metallerin işlenmesinde kullanılır."
             ],
-            "en": ""
+            "en": [
+                "Abrasive Materials: Provides performance in sandpaper, grinding and cutting discs. Provides high efficiency in surface treatments.",
+                "Heat-Resistant Ceramics: Used in furnaces, stoves and industrial applications requiring high temperatures.",
+                "Metallurgy and Casting: Used as a refractory material in the iron and steel industry. Provides durability in metal melting and molding processes.",
+                "Jewelry: Used in the processing of precious metals such as gold and silver."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
         "technicalInfo": {
-            "chemicalFormula": "Al2O3",
-            "gravity": "~3,7 gr/cm3",
-            "hardness": "~8 Mohs"
+            "tr": [
+                "Kimyasal Formül: Al2O3",
+                "Özgül Ağırlık: ~3,7 gr/cm3",
+                "Sertlik: ~8 Mohs"
+            ],
+            "en": [
+                "Chemical Formula: Al2O3",
+                "Gravity: ~3,7 gr/cm3",
+                "Hardness: ~8 Mohs"
+            ]
         },
         "link": "/product/9"
     },
@@ -372,7 +530,11 @@
                 "Hazır beton, modern inşaat projeleri için önemli bir yapı taşıdır. Yüksek kaliteli malzemelerden üretilen hazır beton, dayanıklılığı, homojen yapısı ve hızlı uygulama avantajlarıyla öne çıkar. Projelerin ihtiyaçlarına özel olarak üretilir ve sürdürülebilirlik ve güvenlik standartlarına uygun şekilde hazırlanır.",
                 "Firmamız, yılların deneyimiyle geliştirdiği hazır beton ürünlerini, çevreye duyarlı üretim süreçleri ve ileri teknoloji kullanarak üretmektedir. Tesislerimizde uygulanan sıkı kalite kontrol prosedürleri, müşterilerimize güvenilir ve yüksek performanslı çözümler sunmamıza olanak tanır."
             ],
-            "en": ""
+            "en": [
+                "Ready-mixed concrete is a ready-to-use building material obtained by mixing cement, aggregate (sand, gravel or crushed stone), water and, if necessary, special additives in predetermined proportions. The concrete we produce in our modern facilities is tested for suitability for the project by undergoing quality control processes. ",
+                "Ready-mixed concrete is an important building block for modern construction projects. Ready-mixed concrete, produced from high-quality materials, stands out with its durability, homogeneous structure and fast application advantages. It is produced specifically for the needs of the projects and prepared in accordance with sustainability and safety standards.",
+                "Our company produces ready-mixed concrete products, developed with years of experience, using environmentally friendly production processes and advanced technology. The strict quality control procedures applied in our facilities allow us to offer reliable and high-performance solutions to our customers."
+            ]
         },
         "usageAreas": {
             "tr": [
@@ -381,11 +543,13 @@
                 "Altyapı Projeleri: Köprüler, tüneller, barajlar ve yollar gibi büyük ölçekli projelerde kullanılır.",
                 "Peyzaj ve Çevre Düzenlemesi: Parklar, yürüyüş yolları ve peyzaj projelerinde estetik çözümler sunar."
             ],
-            "en": ""
+            "en": [
+                "Housing Constructions: Preferred for strong foundations, walls and floors.",
+                "Industrial Buildings: Provides high durability in factory buildings, warehouses and logistics facilities.",
+                "Infrastructure Projects: Used in large-scale projects such as bridges, tunnels, dams and roads.",
+                "Landscape and Environmental Arrangement: Provides aesthetic solutions in parks, walking paths and landscaping projects."
+            ]
         },
-        "productVariety": { "tr": "", "en": "" },
-        "production": "",
-        "technicalInfo": {},
         "link": "/product/10"
     },
     {
@@ -399,7 +563,6 @@
         "productVariety": { "tr": "", "en": "" },
         "production": "",
         "externalLink": true,
-        "technicalInfo": {},
         "link": "https://eilepomex.com/pomexblok"
     },
     {
@@ -413,7 +576,6 @@
         "productVariety": { "tr": "", "en": "" },
         "production": "",
         "externalLink": true,
-        "technicalInfo": {},
         "link": "https://eilepomex.com"
     }
 ]

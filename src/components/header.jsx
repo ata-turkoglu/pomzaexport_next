@@ -27,9 +27,9 @@ function Header() {
 
         const realPath = pathname.split("/").splice(2).join("/");
         const pathList = pathname.split("/").splice(2);
-        const index = pathList.indexOf("product-details");
+        const index = pathList.indexOf("product");
         if (index >= 0) {
-            const product = productList.find(
+            const product = productsJSON.find(
                 (item) => item.id == pathList[index + 1].split("-")[0]
             );
             const slug =
@@ -104,7 +104,7 @@ function Header() {
                                 return (
                                     <li
                                         key={key}
-                                        className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
+                                        className="text-sm text-white w-full px-6 pb-3 duration-200 z-40"
                                         onClick={() =>
                                             router.push(
                                                 "/" +
@@ -130,7 +130,7 @@ function Header() {
                                 return (
                                     <li
                                         key={key}
-                                        className="text-md text-white w-full px-6 pb-2 duration-200 z-40"
+                                        className="text-sm text-white w-full px-6 pb-2 duration-200 z-40"
                                         onClick={() =>
                                             item.externalLink
                                                 ? window.open(

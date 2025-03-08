@@ -19,7 +19,7 @@ function Products() {
                 {productsJSON.map((item, index) => (
                     <div
                         key={index}
-                        className="w-full h-full relative"
+                        className="w-full h-full relative cursor-pointer"
                         onClick={() => {
                             item.externalLink
                                 ? window.open(item.link, "_blank")

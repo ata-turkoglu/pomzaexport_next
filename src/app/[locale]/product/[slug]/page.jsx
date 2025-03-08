@@ -60,16 +60,6 @@ const SetUsageAreaListItem = (text) => {
 
 export default function Product({ params: { locale, slug } }) {
     const t = useTranslations("ProductPage");
-    /*     const [productData, setProductData] = useState(null);
-    const [selectedImg, setSelectedImg] = useState(null); */
-    //const [mobileView, setMobileView] = useState(false);
-
-    /*useLayoutEffect(() => {
-        if (window.innerWidth < 768) {
-            setMobileView(true);
-        }
-        window.scrollTo(0, 0);
-    }, []);*/
 
     const mobileView = true;
     const id = slug.split("-")[0];
@@ -78,14 +68,8 @@ export default function Product({ params: { locale, slug } }) {
     const productData = data;
     let selectedImg = data.image;
 
-    /*useEffect(() => {
-        const data = productsJSON.find((itm) => itm.id == productId);
-        setSelectedImg(data.image);
-        setProductData(data);
-    }, [productId]);*/
-
     return (
-        <div className="h-fit">
+        <main className="h-fit">
             <div className="flex flex-col min-h-screen h-fit w-full items-center pb-12">
                 <div
                     className="w-full relative duration-300"
@@ -104,87 +88,120 @@ export default function Product({ params: { locale, slug } }) {
                 </div>
 
                 <div className="p-3 w-full md:w-2/3 h-fit">
-                    <h3>{t("productInfo")}</h3>
-                    <div className="text-md text-neutral-500">
-                        {typeof productData.description[locale] == "string" ? (
-                            <span>{productData.description[locale]}</span>
-                        ) : (
-                            <ul>
-                                {productData.description[locale].map(
-                                    (itm, indx) => (
-                                        <li key={indx} className="mb-2">
-                                            {itm}
-                                        </li>
-                                    )
-                                )}
-                            </ul>
-                        )}
-                    </div>
+                    {productData.whatIs && (
+                        <div className="pt-5">
+                            <h3 className="mb-1">
+                                {productData.whatIs.head[locale]}
+                            </h3>
+                            <hr className="mb-4" />
+                            <div className="text-md text-neutral-500">
+                                <span>
+                                    {typeof productData.whatIs.content[
+                                        locale
+                                    ] == "string" ? (
+                                        <span>
+                                            {productData.whatIs.content[locale]}
+                                        </span>
+                                    ) : (
+                                        <ul>
+                                            {productData.whatIs.content[
+                                                locale
+                                            ].map((itm, indx) => (
+                                                <li key={indx} className="mb-2">
+                                                    {SetUsageAreaListItem(itm)}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </span>
+                            </div>
+                        </div>
+                    )}
 
                     <div className="pt-5">
+                        <h3 className="mb-0">{t("productInfo")}</h3>
+                        <hr className="mb-4" />
+                        <div className="text-md text-neutral-500">
+                            {typeof productData.description[locale] ==
+                            "string" ? (
+                                <span>{productData.description[locale]}</span>
+                            ) : (
+                                <ul>
+                                    {productData.description[locale].map(
+                                        (itm, indx) => (
+                                            <li key={indx} className="mb-2">
+                                                {SetUsageAreaListItem(itm)}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className="pt-5 mb-5">
                         <h3>{t("productImages")}</h3>
-                        {/* <div className="h-full w-full grid grid-cols-3 gap-1 md:gap-0 md:flex md:items-center md:justify-center">
-                            {productData.images.map((item, indx) => (
-                                <div
-                                    key={indx}
-                                    className="h-full max-h-40 w-full md:max-w-52 md:mx-1 cursor-pointer overflow-hidden"
-                                    onClick={() => {
-                                        selectedImg = item;
-                                        window.scrollTo(0, 0);
-                                    }}
-                                >
-                                    <img
-                                        className="w-full h-full object-cover"
-                                        src={item}
-                                    ></img>
-                                </div>
-                            ))}
-                        </div> */}
                         <Gallery images={productData.images} />
                     </div>
 
-                    <div className="pt-5">
-                        <h3>{t("areasOfUsage")}</h3>
-                        <div className="text-md text-neutral-500"></div>
-                        {typeof productData.usageAreas[locale] == "string" ? (
-                            <span>{productData.usageAreas[locale]}</span>
-                        ) : (
-                            <ul>
-                                {productData.usageAreas.tr.map((itm, indx) => (
-                                    <li key={indx} className="mb-3">
-                                        {SetUsageAreaListItem(itm)}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </div>
-
-                    <div className="pt-5">
-                        <h3>{t("productVariety")}</h3>
-                        <div className="text-md">
-                            {productData.productVariety[locale]}
-                        </div>
-                    </div>
-
-                    <div className="pt-5">
-                        <h3>{t("technicalInfo")}</h3>
-                        <div>
-                            {productData.technicalInfo.gravity && (
-                                <span>
-                                    Yoğunluk:
-                                    {" " + productData.technicalInfo.gravity}
-                                </span>
-                            )}
-                            {productData.technicalInfo.hardness && (
-                                <span>
-                                    Sertlik:
-                                    {" " + productData.technicalInfo.hardness}
-                                </span>
+                    {productData.usageAreas && (
+                        <div className="pt-5">
+                            <h3 className="mb-1">{t("areasOfUsage")}</h3>
+                            <hr className="mb-4" />
+                            <div className="text-md text-neutral-500"></div>
+                            {typeof productData.usageAreas[locale] ==
+                            "string" ? (
+                                <span>{productData.usageAreas[locale]}</span>
+                            ) : (
+                                <ul>
+                                    {productData.usageAreas[locale].map(
+                                        (itm, indx) => (
+                                            <li key={indx} className="mb-3">
+                                                {SetUsageAreaListItem(itm)}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
                             )}
                         </div>
-                    </div>
+                    )}
+
+                    {productData.productVariety && (
+                        <div className="pt-5">
+                            <h3 className="mb-1">{t("productVariety")}</h3>
+                            <hr className="mb-4" />
+                            <div className="text-md">
+                                {productData.productVariety[locale]}
+                            </div>
+                        </div>
+                    )}
+
+                    {productData.technicalInfo && (
+                        <div className="pt-5">
+                            <h3 className="mb-1">{t("technicalInfo")}</h3>
+                            <hr className="mb-4" />
+                            <div className="text-md text-neutral-500">
+                                {typeof productData.technicalInfo[locale] ==
+                                "string" ? (
+                                    <span>
+                                        {productData.technicalInfo[locale]}
+                                    </span>
+                                ) : (
+                                    <ul>
+                                        {productData.technicalInfo[locale].map(
+                                            (itm, indx) => (
+                                                <li key={indx} className="mb-3">
+                                                    {SetUsageAreaListItem(itm)}
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                )}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

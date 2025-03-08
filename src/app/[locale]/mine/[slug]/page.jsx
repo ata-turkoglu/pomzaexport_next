@@ -39,10 +39,6 @@ export default function Mine({ params: { locale, slug } }) {
         }
     };
 
-    useEffect(() => {
-        console.log("linkId", linkId);
-    }, [linkId]);
-
     const mouseLeave = (e) => {
         setProductName(null);
         setShowingImage(false);
