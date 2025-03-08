@@ -38,7 +38,19 @@ function Header() {
             const path = pathList.join("/");
             router.push("/" + language + "/" + path);
         } else {
-            router.push("/" + language + "/" + realPath);
+            const index = pathList.indexOf("mine");
+            if (index >= 0) {
+                const mine = minesJSON.find(
+                    (item) => item.id == pathList[index + 1].split("-")[0]
+                );
+                const slug =
+                    mine.id.toString() + "-" + slugify(mine.name[language]);
+                pathList[index + 1] = slug;
+                const path = pathList.join("/");
+                router.push("/" + language + "/" + path);
+            } else {
+                router.push("/" + language + "/" + realPath);
+            }
         }
     };
 
@@ -95,10 +107,12 @@ function Header() {
                         href={"/" + locale + "/about"}
                         className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
-                        <span className="capitalize">{t("aboutus")}</span>
+                        <span className="capitalize pt-1">{t("aboutus")}</span>
                     </Link>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        <span className="capitalize">{t("facilities")}</span>
+                        <span className="capitalize pt-1">
+                            {t("facilities")}
+                        </span>
                         <ul className="nav-list pb-3">
                             {minesJSON.map((item, key) => {
                                 return (
@@ -124,7 +138,7 @@ function Header() {
                         </ul>
                     </span>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        <span className="capitalize">{t("products")}</span>
+                        <span className="capitalize pt-1">{t("products")}</span>
                         <ul className="nav-list pb-3">
                             {productsJSON.map((item, key) => {
                                 return (
@@ -158,10 +172,12 @@ function Header() {
                         href={"/" + locale + "/contact"}
                         className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
-                        <span className="capitalize">{t("contact")}</span>
+                        <span className="capitalize pt-1">{t("contact")}</span>
                     </Link>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        <span>{lang}</span>
+                        <span className="border px-2 pt-1 rounded-3xl border-gray-800">
+                            {lang}
+                        </span>
                         <ul className="nav-list pb-3">
                             <li
                                 className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
@@ -191,7 +207,9 @@ function Header() {
                 <div className="p-4 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
                     <div className="flex justify-between w-full items-start">
                         <span className="text-white pl-1 h-full text-lg flex items-center cursor-pointer relative nav-link bg-transparent">
-                            <span>{lang}</span>
+                            <span className="border px-2 pt-1 rounded-3xl border-gray-700">
+                                {lang}
+                            </span>
                             <ul className="nav-list pb-3 bg-transparent">
                                 <li
                                     className="text-md text-white w-full px-6 pb-3 duration-200 z-40"

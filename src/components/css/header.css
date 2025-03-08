@@ -1,18 +1,18 @@
-.nav-item{
-    transition: all ease .25s;
+.nav-item {
+    transition: all ease 0.25s;
     /* font-weight: bold; */
 }
 
-.nav-item:hover{
-    background: rgba(50, 50, 50, 0.9);
+.nav-item:hover {
+    background: rgba(30, 40, 70, 0.95);
 }
-.nav-list{
+.nav-list {
     display: none;
     position: absolute;
-    background: rgba(50, 50, 50, 0.9);
+    background: rgba(30, 40, 70, 0.95);
 }
 
-.nav-link:hover .nav-list{
+.nav-link:hover .nav-list {
     animation: 0.25s ease-out slide-nav-down;
     transform-origin: top;
     display: flex;

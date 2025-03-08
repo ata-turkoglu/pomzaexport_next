@@ -16,7 +16,7 @@ export default function About({ params: { locale } }) {
         >
             {locale == "tr" ? (
                 <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
-                    <h2 className="mb-3 text-3xl text-center font-bold">
+                    <h2 className="mb-3 text-2xl md:text-3xl text-center font-bold">
                         Hakkımızda
                     </h2>
                     <p className="mb-2">
@@ -59,7 +59,7 @@ export default function About({ params: { locale } }) {
                         yerine getiriyoruz.
                     </p>
 
-                    <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
+                    <h2 className="mb-3 mt-10 text-2xl md:text-3xl font-bold text-center">
                         Misyonumuz
                     </h2>
 
@@ -70,7 +70,7 @@ export default function About({ params: { locale } }) {
                         üretim sağlamaktır.
                     </p>
 
-                    <h2 className="mb-3 mt-10 text-3xl font-bold text-center">
+                    <h2 className="mb-3 mt-10 text-2xl md:text-3xl font-bold text-center">
                         Vizyonumuz
                     </h2>
 

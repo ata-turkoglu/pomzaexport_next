@@ -94,5 +94,13 @@
         "ourRawMaterialProductionFacilities": "our raw material production facilities",
         "facilityLinksText1": "We produce many high-quality products that meet the needs of different sectors from produced ores. Our aim is to create more added value by increasing the value of the minerals we acquire within our own structure.",
         "facilityLinksText2": "We are proud to be Türkiye's first gold producing company with 100% domestic capital. We always act with the principle of 'People first, then the environment, then the mine'."
+    },
+    "Intro": {
+        "weContinueWhereTheLydiansLeftOff": "We continue where the Lydians left off",
+        "weAreTheFirstDomesticCompanyToProduceGoldInTurkiye": "We are the first domestic company to produce gold in Türkiye",
+        "weWorkWithZeroWaste": "We work with zero waste",
+        "weAreTheFirstAndOnlyRutileProducerInTurkiye": "We are the first and only Rutile producer in Türkiye",
+        "weAreALeaderInEnvironmentalWorkInTheTurkishMiningIndustry": "We are a leader in environmental work in the Turkish mining industry",
+        "weAreTheFirstAndOnlyGarnetProducerInTheCountry": "We are the first and only Garnet producer in the country"
     }
 }

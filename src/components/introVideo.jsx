@@ -1,8 +1,10 @@
 import React from "react";
 import TextTransitions, { TextContainer } from "./textTransitions";
 //import "@/components/css/introVideo.css";
+import { useTranslations } from "next-intl";
 
 export default function IntroVideo() {
+    const t = useTranslations("Intro");
     return (
         <div className="relative">
             <div className="h-full w-full overflow-hidden hidden md:block">
@@ -32,20 +34,24 @@ export default function IntroVideo() {
             <div className="absolute z-10 bottom-1/4 inset-x-0 h-fit w-full px-4">
                 <TextTransitions>
                     <TextContainer>
-                        Lidyalıların bıraktığı yerden devam ediyoruz.
+                        {t("weContinueWhereTheLydiansLeftOff")}
                     </TextContainer>
                     <TextContainer>
-                        Türkiye'de altın üreten ilk yerli firmayız.
+                        {t(
+                            "weAreTheFirstDomesticCompanyToProduceGoldInTurkiye"
+                        )}
                     </TextContainer>
-                    <TextContainer>Sıfır atık ile çalışıyoruz.</TextContainer>
+                    <TextContainer>{t("weWorkWithZeroWaste")}</TextContainer>
                     <TextContainer>
-                        Türkiye'nin ilk ve tek Rutil üreticisiyiz.
+                        {t("weAreTheFirstAndOnlyRutileProducerInTurkiye")}
                     </TextContainer>
                     <TextContainer>
-                        Türk maden sektöründe çevreci çalışmalarda bir lideriz.
+                        {t(
+                            "weAreALeaderInEnvironmentalWorkInTheTurkishMiningIndustry"
+                        )}
                     </TextContainer>
                     <TextContainer>
-                        Ülkenin ilk ve tek Garnet üreticisiyiz.
+                        {t("weAreTheFirstAndOnlyGarnetProducerInTheCountry")}
                     </TextContainer>
                 </TextTransitions>
             </div>
