@@ -3,12 +3,14 @@ import React from "react";
 import "./css/brands.css";
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 /* import { translateText as t } from "../../store/reducers/language"; */
 
 function Brands() {
     const [mobile, setMobile] = useState(null);
     const router = useRouter();
     const { locale } = useParams();
+    const t = useTranslations("Brands");
     useEffect(() => {
         window.innerWidth < 768 ? setMobile(true) : setMobile(false);
     }, []);
@@ -16,7 +18,7 @@ function Brands() {
         <div className="brands mx-3 md:mx-10 overflow-hidden">
             <div className="content">
                 <div className="headerContainer">
-                    <h1 color="white">Şirketlerimiz</h1>
+                    <h2 color="white">{t("ourGroupCompanies")}</h2>
                 </div>
                 <div className="images">
                     <div className="imgContainer">
@@ -62,7 +64,7 @@ function Brands() {
             )}
             <div className="content">
                 <div className="headerContainer">
-                    <h1 color="white">Markalarımız</h1>
+                    <h2 color="white">{t("ourBrands")}</h2>
                 </div>
                 <div className="images">
                     <div className="imgContainer">

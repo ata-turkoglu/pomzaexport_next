@@ -102,5 +102,13 @@
         "weAreTheFirstAndOnlyRutileProducerInTurkiye": "We are the first and only Rutile producer in Türkiye",
         "weAreALeaderInEnvironmentalWorkInTheTurkishMiningIndustry": "We are a leader in environmental work in the Turkish mining industry",
         "weAreTheFirstAndOnlyGarnetProducerInTheCountry": "We are the first and only Garnet producer in the country"
+    },
+    "Sustainability": {
+        "head": "We continue our investments in renewable energy.",
+        "content": "The number of our solar panels is increasing every day. We have started the conversion of trucks to electric vehicles. We keep our dust and emissions under control with our environmental consultants. We are taking steps to reduce our carbon footprint every day. We not only established our own water treatment plant, but also minimized our water consumption by storing and using rainwater."
+    },
+    "Brands": {
+        "ourGroupCompanies": "our group companies",
+        "ourBrands": "our brands"
     }
 }

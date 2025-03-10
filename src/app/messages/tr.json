@@ -103,5 +103,13 @@
         "weAreTheFirstAndOnlyRutileProducerInTurkiye": "Türkiye'nin ilk ve tek Rutil üreticisiyiz",
         "weAreALeaderInEnvironmentalWorkInTheTurkishMiningIndustry": "We are a leader in environmental work in the Turkish mining industry",
         "weAreTheFirstAndOnlyGarnetProducerInTheCountry": "Ülkenin ilk ve tek Garnet üreticisiyiz"
+    },
+    "Sustainability": {
+        "head": "Yenilenebilir enerji yatırımlarımıza devam ediyoruz.",
+        "content": "Güneş paneli sayımız her geçen gün artıyor. Kamyonlarda elektrikli araç dönüşümünü başlattık. Çevre danışmanlarımız ile toz ve emisyonlarımızı kontrol altında tutuyoruz. Her geçen gün karbon ayak izimizi düşürmek için adımlar atıyoruz. Kendi su arıtma tesisimizi kurmakla kalmadık, yağmur sularını depolayıp kullanarak su tüketimimizi minimuma indirdik."
+    },
+    "Brands": {
+        "ourGroupCompanies": "şirketlerimiz",
+        "ourBrands": "markalarımız"
     }
 }

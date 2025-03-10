@@ -17,7 +17,7 @@ export default function FacilitiesLinks() {
         <div className="bg-[#151a381a] w-full flex justify-center">
             <div className="max-w-[1300px] w-full h-fit flex flex-col items-center pt-12 pb-4 md:py-20 md:pl-10 md:pr-5">
                 <div className="w-full h-fit flex">
-                    <h2 className="text-2xl capitalize font-semibold md:text-4xl mb-2 md:mb-7 w-full flex justify-center md:mr-3 pt-3 md:pt-0">
+                    <h2 className="text-2xl capitalize font-semibold text-center md:text-4xl mb-2 md:mb-7 w-full flex justify-center md:mr-3 pt-3 md:pt-0">
                         {t("ourRawMaterialProductionFacilities")}
                     </h2>
                 </div>

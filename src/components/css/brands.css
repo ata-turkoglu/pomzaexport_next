@@ -33,10 +33,10 @@
     margin-bottom: 2rem;
 }
 
-.brands .content .headerContainer h1 {
+.brands .content .headerContainer h2 {
     color: white;
     text-transform: capitalize;
-    font-size:2.2rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
@@ -46,7 +46,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .brands .content .imgContainer {
@@ -55,14 +54,14 @@
     height: 100px;
 }
 
-.brands .content .imgContainer  img {
+.brands .content .imgContainer img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transition: all 0.2s ease;
 }
 
-.brands .content .imgContainer  img:hover {
+.brands .content .imgContainer img:hover {
     width: 100%;
     height: 100%;
     transform: translateY(-5px);
@@ -74,21 +73,19 @@
     height: 100%;
     border: 1px solid white;
 }
-.brands .content-border-h{
+.brands .content-border-h {
     height: 1px;
     width: 100%;
     border: 1px solid white;
 }
 
-
 @media screen and (max-width: 768px) {
-
     .brands {
         flex-direction: column;
         margin-block: 3rem;
     }
 
-    .brands .content{
+    .brands .content {
         padding: 1rem;
     }
 
@@ -101,15 +98,15 @@
         height: 30%;
         margin-bottom: 1rem;
     }
-    .brands .content .headerContainer h1 {
-        font-size: 1.6rem;
+    .brands .content .headerContainer h2 {
+        font-size: 1.4rem;
     }
 
     .brands .content .images {
         height: 35%;
     }
 
-    .brands .content .imgContainer{
+    .brands .content .imgContainer {
         height: auto;
         max-width: 80px;
     }
