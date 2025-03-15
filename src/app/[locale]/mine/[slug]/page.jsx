@@ -9,6 +9,7 @@ import "@/components/css/facilityBanner.css";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { slugify } from "@/utils/commonFuncs";
+import mineTexts from "@/data/mineTexts.js";
 
 export default function Mine({ params: { locale, slug } }) {
     const router = useRouter();
@@ -63,20 +64,12 @@ export default function Mine({ params: { locale, slug } }) {
         }
     }, []);
 
-    /*     useLayoutEffect(() => {
-        if (mineId) {
-            const data = minesJSON.find((itm) => itm.id == mineId);
-            setHeader(data.name[locale]);
-            setDescription(data.info[locale]);
-            setMineImages([...data.images]);
-            setMapSrc(data.mapSrc);
-
-            const products = productsJSON.filter(
-                (item) => item.facilityId == mineId
-            );
-            setMineProducts([...products]);
-        }
-    }, [mineId]); */
+    function Sas() {
+        var sss = document.getElementById("aaa");
+        //sss.innerHTML = yenikoy;
+        console.log("");
+        return sss;
+    }
 
     useEffect(() => {
         const el = document.getElementById("showImage" + mineId);
@@ -220,7 +213,15 @@ export default function Mine({ params: { locale, slug } }) {
                     </div>
 
                     <div className="md:w-1/2 w-full p-3 mb-10 text-justify">
-                        {mineData.description[locale]}
+                        {mineTexts[mineId] ? (
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: mineTexts[mineId][locale],
+                                }}
+                            ></div>
+                        ) : (
+                            mineData.description[locale]
+                        )}
                     </div>
 
                     <div className="md:w-1/2 w-full flex items-center justify-center mb-10">
