@@ -1,8 +1,6 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /tr/docs
-Disallow: /en/docs
 
 # Host
 Host: https://pomzaexport.com/

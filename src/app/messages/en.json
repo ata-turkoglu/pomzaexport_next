@@ -91,21 +91,21 @@
     },
     "MinePage": {
         "goToProductPage": "Product Page",
-        "ourRawMaterialProductionFacilities": "our raw material production facilities",
-        "facilityLinksText1": "We produce many high-quality products that meet the needs of different sectors from produced ores. Our aim is to create more added value by increasing the value of the minerals we acquire within our own structure.",
-        "facilityLinksText2": "We are proud to be Türkiye's first gold producing company with 100% domestic capital. We always act with the principle of 'People first, then the environment, then the mine'."
+        "ourRawMaterialProductionFacilities": "Our raw material production facilities",
+        "facilityLinksText1": "We produce high-quality, multi-products from the processed ores that meet the needs of various industries. Our goal is to increase the value of the minerals we obtain in-house, generating more added value.",
+        "facilityLinksText2": "We take pride in being Turkey's first 100% domestically funded company to produce gold. We always act with the principle of 'People first, then the environment, then mining'."
     },
     "Intro": {
-        "weContinueWhereTheLydiansLeftOff": "We continue where the Lydians left off",
-        "weAreTheFirstDomesticCompanyToProduceGoldInTurkiye": "We are the first domestic company to produce gold in Türkiye",
-        "weWorkWithZeroWaste": "We work with zero waste",
-        "weAreTheFirstAndOnlyRutileProducerInTurkiye": "We are the first and only Rutile producer in Türkiye",
-        "weAreALeaderInEnvironmentalWorkInTheTurkishMiningIndustry": "We are a leader in environmental work in the Turkish mining industry",
-        "weAreTheFirstAndOnlyGarnetProducerInTheCountry": "We are the first and only Garnet producer in the country"
+        "weContinueWhereTheLydiansLeftOff": "We continue from where the Lydians left off.",
+        "weAreTheFirstDomesticCompanyToProduceGoldInTurkiye": "We are the first local company to produce gold in Turkey.",
+        "weWorkWithZeroWaste": "We work with zero waste.",
+        "weAreTheFirstAndOnlyRutileProducerInTurkiye": "We are Turkey's first and only Rutile producer.",
+        "weAreALeaderInEnvironmentalWorkInTheTurkishMiningIndustry": "We are a leader in environmental work in the Turkish mining industry.",
+        "weAreTheFirstAndOnlyGarnetProducerInTheCountry": "We are the country's first and only Garnet producer."
     },
     "Sustainability": {
         "head": "We continue our investments in renewable energy.",
-        "content": "The number of our solar panels is increasing every day. We have started the conversion of trucks to electric vehicles. We keep our dust and emissions under control with our environmental consultants. We are taking steps to reduce our carbon footprint every day. We not only established our own water treatment plant, but also minimized our water consumption by storing and using rainwater."
+        "content": "The number of our solar panels is increasing every day. We have started the conversion of trucks to electric vehicles. We are keeping our dust and emissions under control with the help of our environmental consultants. Every day, we take steps to reduce our carbon footprint. Not only have we established our own water treatment facility, but we have also minimized our water consumption by storing and using rainwater."
     },
     "Brands": {
         "ourGroupCompanies": "our group companies",

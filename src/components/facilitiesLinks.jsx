@@ -48,10 +48,10 @@ export default function FacilitiesLinks() {
                     ))}
                 </div>
                 <div className="w-full flex flex-col items-center font-medium">
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
+                    <span className="w-full md:w-6/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         {t("facilityLinksText1")}
                     </span>
-                    <span className="w-full md:w-5/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
+                    <span className="w-full md:w-6/12 mt-0 p-3 md:p-0 md:mt-10 text-lg md:text-xl text-justify md:text-center md:mr-3">
                         {t("facilityLinksText2")}
                     </span>
                 </div>

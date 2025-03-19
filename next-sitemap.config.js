@@ -7,7 +7,7 @@ module.exports = {
     priority: 0.7,
     generateIndexSitemap: false,
     generateRobotsTxt: true,
-    exclude: ["/tr/docs/", "/en/docs/"],
+    exclude: [],
     transform: async (config, path) => {
         if (path == "/" || path == "/tr" || path == "/en") {
             return {
@@ -50,7 +50,7 @@ module.exports = {
             {
                 userAgent: "*",
                 allow: "/",
-                disallow: ["/tr/docs", "/en/docs"],
+                disallow: [],
             },
         ],
     },
