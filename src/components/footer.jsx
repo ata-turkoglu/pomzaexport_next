@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Linkedin, Facebook, Youtube } from "lucide-react";
+import { Linkedin, Facebook, InstagramIcon } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { slugify } from "@/utils/commonFuncs";
@@ -150,7 +150,7 @@ function Footer({ hFull = false }) {
                                 <span className="capitalize">
                                     {t_c("telephone")}
                                 </span>{" "}
-                                : +90 232 787 67 24
+                                : +90 232 782 67 24
                                 <br />
                                 <span className="capitalize">
                                     {t_c("fax")}
@@ -163,7 +163,7 @@ function Footer({ hFull = false }) {
                                 </strong>
                                 <br />
                                 Yeniköy Mah. Menderes - Orhanlı Yolu Sk. No:
-                                179/22
+                                179/26
                                 <br />
                                 Menderes/İZMİR
                                 <br />
@@ -216,7 +216,7 @@ function Footer({ hFull = false }) {
                         <Linkedin />
                     </Link>
                     <Link
-                        href="https://facebook.com"
+                        href="https://www.facebook.com/61565487748657"
                         target="_blank"
                         aria-label="Facebook"
                         className="w-8 cursor-pointer hover:-translate-y-1 transition-all duration-300"
@@ -224,12 +224,12 @@ function Footer({ hFull = false }) {
                         <Facebook />
                     </Link>
                     <Link
-                        href="https://youtube.com"
+                        href="https://www.instagram.com/pomza.exportt"
                         target="_blank"
-                        aria-label="Youtube"
+                        aria-label="Instagram"
                         className="w-8 cursor-pointer hover:-translate-y-1 transition-all duration-300"
                     >
-                        <Youtube />
+                        <InstagramIcon />
                     </Link>
                 </div>
             </div>

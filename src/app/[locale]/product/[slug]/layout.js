@@ -24,7 +24,6 @@ export async function generateMetadata({ params }) {
     const slugList = slug.split("-");
     const productId = slugList[0];
     const product = productsJSON.find((item) => item.id == productId);
-    const keywords = product?.keywords?.[locale] || [];
 
     const str =
         product.id.toString() + "-" + slugify(product.name[locale]) + "/";
@@ -32,7 +31,7 @@ export async function generateMetadata({ params }) {
     const metaObj = {
         title: product.name[locale],
         description: product.description[locale],
-        keywords,
+        keywords: product.keywords[locale],
         openGraph: {
             title: product.name[locale],
             description: product.description[locale],

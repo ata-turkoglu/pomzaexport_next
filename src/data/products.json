@@ -318,13 +318,17 @@
                 "garnet",
                 "garnet üretimi",
                 "80 mesh garnet",
-                "180 mesh garnet"
+                "180 mesh garnet",
+                "su jeti",
+                "kumlama"
             ],
             "en": [
                 "garnet",
                 "garnet production",
                 "80 mesh garnet",
-                "180 mesh garnet"
+                "180 mesh garnet",
+                "water jet",
+                "sand blasting"
             ]
         }
     },
@@ -360,7 +364,10 @@
             ]
         },
         "link": "/product/5",
-        "keywords": { "tr": [], "en": [] }
+        "keywords": {
+            "tr": ["silis kumu", "mikronize kum", "söve", "döküm kumu"],
+            "en": ["silica sand", "micronized sand", "pit sand", "foundry sand"]
+        }
     },
     {
         "id": 6,
@@ -412,7 +419,11 @@
                 "Hardness: 6,5 Mohs"
             ]
         },
-        "link": "/product/6"
+        "link": "/product/6",
+        "keywords": {
+            "tr": ["demir minerali", "pigment", "ağırlık kumu"],
+            "en": ["iron mineral", "pigment", "heavy sand", "weight sand"]
+        }
     },
     {
         "id": 7,
@@ -493,7 +504,38 @@
             "tr": ["Özgül Ağırlık: ~1,1 gr/cm3", "Sertlik: 2-2.5 Mohs"],
             "en": ["Gravity: ~1,1 gr/cm3", "Hardness: 2-2.5 Mohs"]
         },
-        "link": "/product/7"
+        "link": "/product/7",
+        "keywords": {
+            "tr": [
+                "perlit",
+                "topraksız tarım",
+                "ısı yalıtım",
+                "nem tutucu",
+                "inşaatta perlit",
+                "perlit bitkiler için",
+                "perlit toprak düzenleyici",
+                "perlit kullanımı",
+                "genişletilmiş perlit",
+                "perlit faydaları",
+                "çevre dostu perlit",
+                "peyzajda perlit",
+                "perlit ile toprak düzenleme"
+            ],
+            "en": [
+                "perlite",
+                "hydroponic",
+                "thermal insulation",
+                "moisture retainer",
+                "perlite in construction",
+                "perlite for plants",
+                "perlite soil amendment",
+                "perlite uses",
+                "expanded perlite",
+                "perlite benefits",
+                "eco-friendly perlite",
+                "perlite for landscaping"
+            ]
+        }
     },
     {
         "id": 8,
@@ -530,7 +572,33 @@
             "tr": ["Özgül Ağırlık: ~0.3 gr/cm3", "Sertlik: 6-6,5 Mohs"],
             "en": ["Gravity: ~0.3 gr/cm3", "Hardness: 6-6,5 Mohs"]
         },
-        "link": "/product/8"
+        "link": "/product/8",
+        "keywords": {
+            "tr": [
+                "pomza",
+                "gözeneklilik",
+                "pomza kullanımı",
+                "pomza faydaları",
+                "nem tutucu",
+                "hafif pumice taşı",
+                "endüstriyel pumice taşı",
+                "pomza aşındırıcılar",
+                "çevre dostu pumice taşı"
+            ],
+            "en": [
+                "pumice",
+                "porosity",
+                "pumice stone uses",
+                "moisture retainer",
+                "natural pumice",
+                "pumice for gardening",
+                "pumice for scrubbing",
+                "lightweight pumice",
+                "pumice for industrial use",
+                "pumice abrasives",
+                "eco-friendly pumice"
+            ]
+        }
     },
     {
         "id": 9,
@@ -575,7 +643,53 @@
                 "Hardness: ~8 Mohs"
             ]
         },
-        "link": "/product/9"
+        "link": "/product/9",
+        "keywords": {
+            "tr": [
+                "korund taşı",
+                "korund aşındırıcısı",
+                "korund tozu",
+                "korund kum",
+                "korund bezi",
+                "korund ile parlatma",
+                "korund inşaatta kullanımı",
+                "korund metal işçiliği",
+                "korund tekerleği",
+                "korund araçları",
+                "korund zımpara",
+                "korund ile yüzey bitirme",
+                "korund ile taşlama",
+                "doğal zımpara taşı",
+                "korund taşı kullanımı",
+                "korund ile bileme",
+                "korund minerali",
+                "korund ile ahşap parlatma",
+                "korund araç bakımı",
+                "korund aşındırıcı ürünler"
+            ],
+            "en": [
+                "emery stone",
+                "emery abrasive",
+                "emery powder",
+                "emery grit",
+                "emery cloth",
+                "emery for polishing",
+                "emery in construction",
+                "emery for metalworking",
+                "emery wheel",
+                "emery tools",
+                "emery sandpaper",
+                "emery for surface finishing",
+                "emery for grinding",
+                "natural emery",
+                "emery stone uses",
+                "emery for sharpening",
+                "emery mineral",
+                "emery for wood polishing",
+                "emery for tool maintenance",
+                "emery abrasive products"
+            ]
+        }
     },
     {
         "id": 10,
@@ -610,7 +724,11 @@
                 "Landscape and Urban Development: Offers aesthetic solutions for parks, walkways, and landscaping projects."
             ]
         },
-        "link": "/product/10"
+        "link": "/product/10",
+        "keywords": {
+            "tr": [],
+            "en": []
+        }
     },
     {
         "id": 11,
@@ -623,7 +741,11 @@
         "productVariety": { "tr": "", "en": "" },
         "production": "",
         "externalLink": true,
-        "link": "https://eilepomex.com/pomexblok"
+        "link": "https://eilepomex.com/pomexblok",
+        "keywords": {
+            "tr": [],
+            "en": []
+        }
     },
     {
         "id": 12,
@@ -636,6 +758,10 @@
         "productVariety": { "tr": "", "en": "" },
         "production": "",
         "externalLink": true,
-        "link": "https://eilepomex.com"
+        "link": "https://eilepomex.com",
+        "keywords": {
+            "tr": [],
+            "en": []
+        }
     }
 ]

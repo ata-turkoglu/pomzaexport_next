@@ -23,28 +23,10 @@ export async function generateMetadata() {
             siteName: siteMetaData.title,
             images: [
                 {
-                    url: "https://www.eilepomex.com/assets/logos/eile.png",
-                    height: "86",
-                    width: "86",
-                    alt: "eile pomex",
-                },
-                {
-                    url: "https://www.eilepomex.com/assets/logos/eilepomex-round.png",
-                    height: "110",
-                    width: "300",
-                    alt: "eile pomex",
-                },
-                {
-                    url: "https://www.eilepomex.com/assets/logos/eile-logo-tr.png",
-                    height: "112",
-                    width: "300",
-                    alt: "eile pomex tr",
-                },
-                {
-                    url: "https://www.eilepomex.com/assets/logos/eile-logo-en.png",
-                    height: "112",
-                    width: "300",
-                    alt: "eile pomex en",
+                    url: "https://www.eilepomex.com/assets/logo/pomza.png",
+                    height: "457",
+                    width: "1364",
+                    alt: "pomza export",
                 },
             ],
             //locale: "tr_TR",

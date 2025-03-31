@@ -1,8 +1,8 @@
 export default {
     title: "Pomza Export",
     description: {
-        tr: "Türkiye'nin altın üreten ilk yerli firmasıyız",
-        en: "Türkiye'nin altın üreten ilk yerli firmasıyız",
+        tr: "Pomza Export A.Ş., madencilik sektöründe tamamen yerli sermaye kurulmuş, köklü bir şirket olarak 50 yıldan fazla süredir faaliyet göstermektedir.",
+        en: "Pomza Export is one of the leading companies shaping Turkey's mining sector since 1961.",
     },
     headerTitle: "Pomza Export",
     theme: "system",
@@ -15,6 +15,9 @@ export default {
     facebokk: "https://www.facebook.com/61565487748657",
     keywords: {
         tr: [
+            "Türkiye'de altın üreten ilk yerli firma",
+            "Türkiye'nin ilk ve tek Rutil üreticisiyiz",
+            "Ülkenin ilk ve tek Garnet üreticisiyiz",
             "maden",
             "altın madeni",
             "altın",
@@ -30,6 +33,9 @@ export default {
             "hazır beton",
         ],
         en: [
+            "first local company to produce gold in Turkey",
+            "Turkey's first and only Rutile producer",
+            "Turkey's first and only Garnet producer",
             "mining",
             "gold mining",
             "gold",
@@ -64,7 +70,18 @@ export default {
             tr: "Pomza Export Hakkımızda",
             en: "Pomza Export About Us",
         },
-        keywords: { tr: [], en: [] },
+        keywords: {
+            tr: [
+                "Sart Maden İşletmesi",
+                "Yeniköy Maden İşletmesi",
+                "Küner Maden İşletmesi",
+            ],
+            en: [
+                "Sart Mining Facility",
+                "Yeniköy Mining Facility",
+                "Küner Mining Facility",
+            ],
+        },
     },
     contactPage: {
         title: {
@@ -75,7 +92,18 @@ export default {
             tr: "Pomza Export İletişim",
             en: "Pomza Export Contact",
         },
-        keywords: { tr: [], en: [] },
+        keywords: {
+            tr: [
+                "Sart Maden İşletmesi",
+                "Yeniköy Maden İşletmesi",
+                "Küner Maden İşletmesi",
+            ],
+            en: [
+                "Sart Mining Facility",
+                "Yeniköy Mining Facility",
+                "Küner Mining Facility",
+            ],
+        },
     },
     minePage: {
         title: {
@@ -83,9 +111,20 @@ export default {
             en: "Pomza Export",
         },
         description: {
-            tr: "Pomza Export Maden",
-            en: "Pomza Export Mining",
+            tr: "Pomza Export Madencilik",
+            en: "Pomza Export Mining Company",
         },
-        keywords: { tr: [], en: [] },
+        keywords: {
+            tr: [
+                "Sart Maden İşletmesi",
+                "Yeniköy Maden İşletmesi",
+                "Küner Maden İşletmesi",
+            ],
+            en: [
+                "Sart Mining Facility",
+                "Yeniköy Mining Facility",
+                "Küner Mining Facility",
+            ],
+        },
     },
 };

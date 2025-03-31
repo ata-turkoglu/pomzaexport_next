@@ -204,7 +204,7 @@ function Header() {
                 style={isOpen ? { display: "flex" } : { display: "none" }}
                 overlay={true}
             >
-                <div className="p-4 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
+                <div className="p-3 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
                     <div className="flex justify-between w-full items-start">
                         <span className="text-white h-full text-lg flex items-center cursor-pointer relative nav-link bg-transparent">
                             <span className="border px-2 pt-1 rounded-3xl border-gray-700">

@@ -17,7 +17,7 @@ function Facilities() {
     }, []);
 
     return (
-        <div className="h-full w-full flex flex-col">
+        <main className="h-full w-full flex flex-col">
             <div className="h-16 w-100 bg-[#151a38]"></div>
             <div className="flex flex-col p-2">
                 {minesJSON.map((item, index) => (
@@ -53,7 +53,7 @@ function Facilities() {
                     </div>
                 ))}
             </div>
-        </div>
+        </main>
     );
 }
 

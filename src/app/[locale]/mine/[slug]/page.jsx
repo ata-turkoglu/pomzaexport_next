@@ -17,10 +17,6 @@ export default function Mine({ params: { locale, slug } }) {
 
     const [mineId, setMineId] = useState(null);
     const [mobileView, setMobileView] = useState(false);
-    /* const [header, setHeader] = useState("");
-    const [description, setDescription] = useState("");
-    const [mineImages, setMineImages] = useState([]);
-    const [mapSrc, setMapSrc] = useState(null); */
     const [mineProducts, setMineProducts] = useState([]);
     const [productName, setProductName] = useState(null);
     const [imgUrl, setImgUrl] = useState(null);
@@ -63,13 +59,6 @@ export default function Mine({ params: { locale, slug } }) {
             setMobileView(true);
         }
     }, []);
-
-    function Sas() {
-        var sss = document.getElementById("aaa");
-        //sss.innerHTML = yenikoy;
-        console.log("");
-        return sss;
-    }
 
     useEffect(() => {
         const el = document.getElementById("showImage" + mineId);

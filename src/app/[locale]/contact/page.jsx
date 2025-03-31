@@ -79,14 +79,14 @@ export default function Contact() {
     };
 
     return (
-        <section className="bg-[#151a38]" id="contact">
+        <main className="bg-[#151a38]" id="contact">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                 <div className="my-10">
                     <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                         <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200"></p>
-                        <h2 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-3xl sm:text-5xl capitalize">
+                        <h1 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-3xl sm:text-5xl capitalize">
                             {t("contactUs")}
-                        </h2>
+                        </h1>
                     </div>
                 </div>
                 <div className="flex items-stretch justify-center">
@@ -138,7 +138,7 @@ export default function Contact() {
                                             </strong>
                                             <br />
                                             Yeniköy Mah. Menderes - Orhanlı Yolu
-                                            Sk. No : 179/22 Menderes/İZMİR
+                                            Sk. No : 179/26 Menderes/İZMİR
                                             <br />
                                             <span className="capitalize">
                                                 {t("telephone")}
@@ -177,7 +177,7 @@ export default function Contact() {
                                             <span className="capitalize">
                                                 {t("telephone")}
                                             </span>{" "}
-                                            : +90 232 787 67 24
+                                            : +90 232 782 67 24
                                             <br />
                                             <span className="capitalize">
                                                 {t("fax")}
@@ -302,6 +302,6 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     );
 }

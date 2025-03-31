@@ -6,7 +6,7 @@ export default function About({ params: { locale } }) {
     const t = useTranslations("About");
 
     return (
-        <div
+        <main
             className="flex flex-col justify-center items-center text-white h-fit relative overflow-hidden"
             style={{
                 background:
@@ -16,9 +16,9 @@ export default function About({ params: { locale } }) {
         >
             {locale == "tr" ? (
                 <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
-                    <h2 className="mb-3 text-2xl md:text-3xl text-center font-bold">
+                    <h1 className="mb-3 text-2xl md:text-3xl text-center font-bold">
                         Hakkımızda
-                    </h2>
+                    </h1>
                     <p className="mb-2">
                         Pomza Export A.Ş., madencilik sektöründe tamamen yerli
                         sermaye kurulmuş, köklü bir şirket olarak 50 yıldan
@@ -85,9 +85,9 @@ export default function About({ params: { locale } }) {
                 </div>
             ) : (
                 <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">
-                    <h2 className="mb-3 text-3xl text-center font-bold">
+                    <h1 className="mb-3 text-3xl text-center font-bold">
                         About
-                    </h2>
+                    </h1>
 
                     <p className="mb-2">
                         Pomza Export is one of the leading companies shaping
@@ -156,6 +156,6 @@ export default function About({ params: { locale } }) {
                     </p>
                 </div>
             )}
-        </div>
+        </main>
     );
 }
