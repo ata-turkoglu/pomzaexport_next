@@ -192,4 +192,52 @@ export default {
     At Pomza Export, we continue to push the boundaries of sustainable and eco-friendly mining practices.
 </p>`,
     },
+    2: {
+        tr: `
+            <p style="margin-bottom:1rem;">
+                Türkiye’de Tarım Perliti konusunda öncü olan Eti Maden İşletmelerinin İzmir Yeniköy Perlit Maden Sahasını şirketimiz POMZA Export Madencilik San. Ve Tic. A.Ş. devir almıştır. Perlit konusunda 1969 yılından günümüze kesintisiz çalışmaları devam eden şirketimiz sahip olduğu tecrübe ve bilgi ile konu sahada yenilikçi ve endüstriyel işletmecilik yapmaktadır.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Hatırı sayılır büyüklük, kalite ve rezerve sahip sahamızda şirketimiz gereken planlamaları yaparak modernizasyon yatırımlarını başlatmış ve 2019 yılında ETİPER markalı perlit ürünlerini müşterilerine sunmaya başlamıştır. Şirketimizin başlatmış olduğu yatırımlar, farklı sektörlerin ihtiyaçlarını karşılayacak yenilikçi çözümler üretme hedefiyle kesintisiz olarak devam etmektedir.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Tarım, İnşaat, Döküm, Gıda, Filtrasyon, Boya sanayileri başta olmak üzere, perlitin kullanıldığı her alanda müşteri ihtiyaçlarına uygun kalite ve kalibrasyonda üretim yapmaktayız. Ayrıca müşteri ihtiyaçlarına uygun ambalajda ürün tedariği sağlamaktayız.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Sahamızda bulunan GES (Güneş Enerjisi Santrali) ile elde edilen enerji sayesinde, perlit ürünlerimiz çevre dostu ve sürdürülebilirlik esasına göre üretilmekte ve hem yurtiçi hem de yurtdışı pazarlara sunulmaktadır.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Yeniköy perlit madeni sahamızda, 2 farklı işletmemiz daha bulunmaktadır. Pomex Blok tesisi ve Eile Pomex Yapı Kimyasalları fabrikası, perlit katklılı çeşitli uç ürünler üreterek Türk ekonomisine katma değer yaratmaktadır.
+            </p>
+            <p style="margin-bottom:1rem;">
+                2 adet robotik üretim hattının bulunduğu Pomex Blok tesisimiz, genleşmiş perlit katkılı blok üretimi yapmaktadır. Çevreci üretimin benimsendiği, ileri teknoloji ile çalışan blok tesisimizin üretim kapasitesi sektör talebiyle beraber her yıl artmaktadır.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Eile Pomex Yapı Kimyasalları fabrikasında, Pomza Export’un ürettiği madenler kullanılarak yenilikçi inşaat malzemeleri üretilmektedir. Otomatik üretim ve dolum sistemlerinin kullanıldığı ileri teknoloji üretim tesisimizde, perlit katkılı yalıtım sıvası, su izolasyon sistemleri, onarım güçlendirme ve zemin sistemleri gibi 150’den fazla ürün üretilmektedir.
+            </p>
+            `,
+        en: `
+            <p style="margin-bottom:1rem;">
+                Our company, POMZA Export Mining Industry and Trade Inc., has taken over the İzmir Yeniköy Perlite Mine Site from Eti Maden Enterprises, a pioneer in the field of agricultural perlite in Turkey. Our company has been continuously working on perlite since 1969 and, with its extensive experience and knowledge, carries out innovative and industrial mining operations at the site.
+            </p>
+            <p style="margin-bottom:1rem;">
+                With a significant reserve, high quality, and substantial size, our site has undergone careful planning, and modernization investments have been initiated. In 2019, we began offering ETİPER-branded perlite products to our customers. These investments continue uninterruptedly with the goal of developing innovative solutions to meet the needs of various industries.
+            </p>
+            <p style="margin-bottom:1rem;">
+                We produce perlite in the required quality and calibration tailored to customer needs across all fields where perlite is used, especially in agriculture, construction, foundry, food, filtration, and paint industries. Additionally, we provide products in packaging customized to customer requirements.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Through to the Solar Power Plant (SPP) located at our site, our perlite products are produced based on environmental and sustainability principles and are offered to both domestic and international markets.
+            </p>
+            <p style="margin-bottom:1rem;">
+                At our Yeniköy Perlite Mine Site, we also operate two additional facilities: the Pomex Block Plant and the Eile Pomex Construction Chemicals Factory, both of which create value for the Turkish economy by producing various end products with perlite additives.
+            </p>
+            <p style="margin-bottom:1rem;">
+                Our Pomex Block Plant, equipped with two robotic production lines, produces expanded perlite block products. Adopting eco-friendly production and using advanced technology, the plant’s production capacity increases every year in line with sector demand.
+            </p>
+            <p style="margin-bottom:1rem;">
+                At the Eile Pomex Construction Chemicals Factory, innovative construction materials are produced using minerals extracted by Pomza Export Mining. In our state-of-the-art production facility, which features automatic production and filling systems, more than 150 different products are manufactured—including perlite-based thermal insulation plasters, waterproofing systems, repair and reinforcement materials, and flooring systems.
+            </p>
+            `,
+    },
 };
