@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import "./aboutPage.css";
 
 export default function About({ params: { locale } }) {
     setRequestLocale(locale);
@@ -7,12 +8,8 @@ export default function About({ params: { locale } }) {
 
     return (
         <main
+            id="aboutPage"
             className="flex flex-col justify-center items-center text-white h-fit relative overflow-hidden"
-            style={{
-                background:
-                    "url(/assets/common/pattern.jpg), rgba(21,26,56,.95)",
-                backgroundBlendMode: "multiply",
-            }}
         >
             {locale == "tr" ? (
                 <div className="md:w-2/3 w-full z-20 text-justify text-blue-gray-50 md:mt-32 md:mx-auto mt-24 px-5 pb-60 h-full">

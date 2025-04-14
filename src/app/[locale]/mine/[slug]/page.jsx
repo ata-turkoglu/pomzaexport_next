@@ -110,8 +110,9 @@ export default function Mine({ params: { locale, slug } }) {
                             )}
                             {mobileView && (
                                 <span
-                                    className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 text-white"
+                                    className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 pt-3 text-white z-10"
                                     style={{ border: "1px solid white" }}
+                                    role="button"
                                     onClick={() => {
                                         external
                                             ? window.open(linkId, "_blank")
@@ -138,7 +139,7 @@ export default function Mine({ params: { locale, slug } }) {
                             return (
                                 <div
                                     key={key}
-                                    className="w-full h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
+                                    className="w-full h-auto md:h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
                                     onClick={() => {
                                         !mobileView &&
                                             (item.externalLink
@@ -183,13 +184,13 @@ export default function Mine({ params: { locale, slug } }) {
                                     ></img>
                                     {mobileView && (
                                         <span
-                                            className="text-white font-semibold z-10 text-center t-shadow"
+                                            className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow"
                                             style={{
                                                 display: mobileView
-                                                    ? "block"
+                                                    ? "flex"
                                                     : "",
                                                 fontSize: mobileView
-                                                    ? "1.5rem"
+                                                    ? "1.6rem"
                                                     : "",
                                             }}
                                         >

@@ -120,86 +120,102 @@ export default function Contact() {
                                                 {t("sartMadenIsletmesi")}
                                             </strong>
                                             <br />
-                                            Sart Mah. Pomza Sk. No: 40,
-                                            Salihli/MANİSA
+                                            <span>
+                                                Sart Mah. Pomza Sk. No: 40,
+                                                Salihli/MANİSA
+                                            </span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("telephone")}
                                             </span>{" "}
-                                            : +90 236 724 20 21
+                                            <span>: +90 236 724 20 21</span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("fax")}
                                             </span>{" "}
-                                            : +90 236 724 30 51 <br />
+                                            <span>: +90 236 724 30 51</span>{" "}
+                                            <br />
                                             <br />
                                             <strong className="uppercase">
                                                 {t("eilePomex")}
                                             </strong>
                                             <br />
-                                            Yeniköy Mah. Menderes - Orhanlı Yolu
-                                            Sk. No : 179/26 Menderes/İZMİR
+                                            <span>
+                                                Yeniköy Mah. Menderes - Orhanlı
+                                                Yolu Sk. No : 179/26
+                                                Menderes/İZMİR
+                                            </span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("telephone")}
                                             </span>{" "}
-                                            : +90 232 360 17 77
+                                            <span>: +90 232 360 17 77</span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("fax")}
                                             </span>{" "}
-                                            : +90 232 360 16 16 <br />
+                                            <span>: +90 232 360 16 16</span>
+                                            <br />
                                             <br />
                                             <strong className="uppercase">
                                                 {t("menderesMadenIsletmesi")}
                                             </strong>
                                             <br />
-                                            Küner Mah. 7801 Sk. No:94
-                                            Menderes/İZMİR
+                                            <span>
+                                                Küner Mah. 7801 Sk. No:94
+                                                Menderes/İZMİR
+                                            </span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("telephone")}
                                             </span>{" "}
-                                            : +90 232 782 14 46
+                                            <span>: +90 232 782 14 46</span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("fax")}
                                             </span>{" "}
-                                            : +90 232 782 15 98 <br />
+                                            <span>: +90 232 782 15 98</span>
+                                            <br />
                                             <br />
                                             <strong className="uppercase">
                                                 {t("etiperPerlitIsletmesi")}
                                             </strong>
                                             <br />
-                                            Yeniköy Mah. Menderes - Orhanlı Yolu
-                                            Sk. No : 179/22 Menderes/İZMİR
+                                            <span>
+                                                Yeniköy Mah. Menderes - Orhanlı
+                                                Yolu Sk. No : 179/22
+                                                Menderes/İZMİR
+                                            </span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("telephone")}
                                             </span>{" "}
-                                            : +90 232 782 67 24
+                                            <span>: +90 232 782 67 24</span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("fax")}
                                             </span>{" "}
-                                            : +90 232 782 67 25 <br />
+                                            <span>: +90 232 782 67 25</span>
+                                            <br />
                                             <br />
                                             <strong className="uppercase">
                                                 {t("ankaraOffice")}
                                             </strong>
                                             <br />
-                                            Çukurca Birlik Mah. 447 Sk. No: 3/5
-                                            Çankaya/ANKARA
+                                            <span>
+                                                Çukurca Birlik Mah. 447 Sk. No:
+                                                3/5 Çankaya/ANKARA
+                                            </span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("telephone")}
                                             </span>{" "}
-                                            : +90 312 495 64 90
+                                            <span>: +90 312 495 64 90</span>
                                             <br />
                                             <span className="capitalize">
                                                 {t("fax")}
                                             </span>{" "}
-                                            : +90 312 495 64 93
+                                            <span>: +90 312 495 64 93</span>
                                         </p>
                                     </div>
                                 </li>

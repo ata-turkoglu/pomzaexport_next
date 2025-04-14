@@ -1,0 +1,6 @@
+#aboutPage {
+    background-color: rgba(21, 26, 56, 0.95);
+    background-image: url("/assets/common/pattern.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}

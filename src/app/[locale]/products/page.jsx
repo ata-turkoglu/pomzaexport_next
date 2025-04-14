@@ -37,12 +37,10 @@ function Products() {
                             alt={item.name[locale]}
                         />
                         <span
-                            className="text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center"
+                            className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center"
                             style={{
-                                display: "block",
-                                fontSize: "1.8rem",
-                                alignSelf: "center",
-                                justifySelf: "center",
+                                display: "flex",
+                                fontSize: "1.6rem",
                             }}
                         >
                             {item.name[locale]}

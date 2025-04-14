@@ -23,7 +23,7 @@ function Facilities() {
                 {minesJSON.map((item, index) => (
                     <div
                         key={index}
-                        className="w-full h-full relative mb-2 cursor-pointer"
+                        className="w-full h-full flex relative mb-2 cursor-pointer"
                         onClick={() =>
                             router.push(
                                 "/" +
@@ -39,12 +39,10 @@ function Facilities() {
                             alt={item.name[locale]}
                         />
                         <span
-                            className="text-white z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow"
+                            className="flex items-center justify-center text-white z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow"
                             style={{
-                                display: "block",
-                                fontSize: "1.8rem",
-                                alignSelf: "center",
-                                justifySelf: "center",
+                                display: "flex",
+                                fontSize: "1.6rem",
                             }}
                         >
                             {item.location} <br></br>
