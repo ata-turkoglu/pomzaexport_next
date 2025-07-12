@@ -103,13 +103,39 @@ export default async function LocaleLayout({ children, params }) {
             <body
                 className={
                     GloberFont.className +
-                    " antialiased w-full h-full overflow-auto"
+                    " antialiased w-full h-full overflow-auto relative"
                 }
             >
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     {children}
                     <Footer />
+                    <div
+                        style={{
+                            position: "fixed",
+                            bottom: "20px",
+                            right: "20px",
+                            zIndex: 50,
+                            width: "fit-content",
+                            height: "fit-content",
+                            cursor: "pointer",
+                        }}
+                    >
+                        <a
+                            href="https://wa.me/+905348953039"
+                            target="_blank"
+                            aria-label="Chat on WhatsApp"
+                        >
+                            <img
+                                src="/assets/logo/whatsapp.png"
+                                alt="Chat on WhatsApp"
+                                width={40}
+                                style={{
+                                    filter: "drop-shadow(0 0 8px grey)",
+                                }}
+                            />
+                        </a>
+                    </div>
                 </NextIntlClientProvider>
             </body>
         </html>
