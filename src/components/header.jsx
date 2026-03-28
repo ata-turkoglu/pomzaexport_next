@@ -65,7 +65,7 @@ function Header() {
     return (
         <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-16 px-4">
             <div className="w-full h-full flex items-center justify-between">
-                <a
+                <Link
                     href={"/" + locale + "/"}
                     className="w-1/2 md:w-1/4 font-semibold flex items-start"
                 >
@@ -74,7 +74,7 @@ function Header() {
                         alt="Pomza Export"
                         className="w-60 d-shadow"
                     />
-                </a>
+                </Link>
                 {/* Mobile Menu Icon */}
                 <div className="md:hidden flex items-center">
                     <button

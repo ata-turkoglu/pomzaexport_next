@@ -2,6 +2,7 @@ import "@/globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SiteSplashGate from "@/components/siteSplashGate";
+import PageTransition from "@/components/pageTransition";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -107,7 +108,7 @@ export default async function LocaleLayout({ children, params }) {
                 <NextIntlClientProvider messages={messages}>
                     <SiteSplashGate />
                     <Header />
-                    {children}
+                    <PageTransition>{children}</PageTransition>
                     <Footer />
                     <div
                         style={{
