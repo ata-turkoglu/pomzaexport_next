@@ -1,7 +1,5 @@
 import IntroVideo from "@/components/introVideo";
-import FacilitiesLinks from "@/components/facilitiesLinks";
-import Brands from "@/components/brands";
-import Sustainability from "@/components/sustainability";
+import HomeBelowFoldLazy from "@/components/homeBelowFoldLazy";
 import siteMetaData from "@/lib/siteMetaData";
 
 import { setRequestLocale } from "next-intl/server";
@@ -41,9 +39,7 @@ function Home({ params: { locale } }) {
         >
             <h1 style={{ display: "none" }}>{getHeader(locale)}</h1>
             <IntroVideo />
-            <FacilitiesLinks />
-            <Sustainability />
-            <Brands />
+            <HomeBelowFoldLazy />
         </main>
     );
 }
