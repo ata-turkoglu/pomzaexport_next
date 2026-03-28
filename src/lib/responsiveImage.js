@@ -1,3 +1,5 @@
+import responsiveImageManifest from "./responsiveImageManifest.json";
+
 const ASSET_PREFIX = "/assets/";
 
 const FALLBACK_MIME_BY_EXT = {
@@ -70,4 +72,19 @@ export const getResponsiveImageSources = (src) => {
         },
         original: src,
     };
+};
+
+export const getResponsiveImageDimensions = (src) => {
+    if (typeof src !== "string") {
+        return null;
+    }
+
+    const cleanSrc = src.split("?")[0].split("#")[0];
+    const item = responsiveImageManifest[cleanSrc];
+
+    if (!item || !item.width || !item.height) {
+        return null;
+    }
+
+    return item;
 };

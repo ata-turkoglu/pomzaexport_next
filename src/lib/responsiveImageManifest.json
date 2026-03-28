@@ -1,0 +1,282 @@
+{
+  "/assets/common/brands-background.jpg": {
+    "width": 1598,
+    "height": 753
+  },
+  "/assets/common/pattern.jpg": {
+    "width": 1920,
+    "height": 1281
+  },
+  "/assets/common/pit.jpg": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/assets/common/sany.jpg": {
+    "width": 960,
+    "height": 640
+  },
+  "/assets/common/sustainability.jpg": {
+    "width": 1707,
+    "height": 1203
+  },
+  "/assets/common/sustainability1.jpg": {
+    "width": 1599,
+    "height": 1200
+  },
+  "/assets/common/view.jpg": {
+    "width": 2641,
+    "height": 1080
+  },
+  "/assets/common/water.jpg": {
+    "width": 970,
+    "height": 578
+  },
+  "/assets/common/yenikoy.jpg": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/assets/logo/eilepomex-logo-white.png": {
+    "width": 302,
+    "height": 110
+  },
+  "/assets/logo/emerex-logo-white.png": {
+    "width": 314,
+    "height": 128
+  },
+  "/assets/logo/erper-logo-white.png": {
+    "width": 300,
+    "height": 120
+  },
+  "/assets/logo/etiper-logo-white.png": {
+    "width": 612,
+    "height": 408
+  },
+  "/assets/logo/persan-logo-white.png": {
+    "width": 711,
+    "height": 260
+  },
+  "/assets/logo/pomexbeton-logo-white.png": {
+    "width": 304,
+    "height": 56
+  },
+  "/assets/logo/pomexblok-logo-white.png": {
+    "width": 258,
+    "height": 52
+  },
+  "/assets/logo/pomexgarnet-logo-white.png": {
+    "width": 278,
+    "height": 48
+  },
+  "/assets/logo/pomza.png": {
+    "width": 1364,
+    "height": 457
+  },
+  "/assets/logo/pomzaexport-logo-white.png": {
+    "width": 309,
+    "height": 59
+  },
+  "/assets/logo/sardesquartz-logo-white.png": {
+    "width": 318,
+    "height": 96
+  },
+  "/assets/logo/whatsapp.png": {
+    "width": 69,
+    "height": 69
+  },
+  "/assets/mineImages/kuner/1.jpg": {
+    "width": 1650,
+    "height": 924
+  },
+  "/assets/mineImages/kuner/2.jpg": {
+    "width": 2000,
+    "height": 1500
+  },
+  "/assets/mineImages/sart/1.jpg": {
+    "width": 1920,
+    "height": 1280
+  },
+  "/assets/mineImages/sart/2.jpg": {
+    "width": 1920,
+    "height": 1078
+  },
+  "/assets/mineImages/sart/3.jpg": {
+    "width": 1920,
+    "height": 1078
+  },
+  "/assets/mineImages/sart/4.jpg": {
+    "width": 1654,
+    "height": 931
+  },
+  "/assets/mineImages/sart/5.jpg": {
+    "width": 1776,
+    "height": 1184
+  },
+  "/assets/mineImages/sart/6.jpg": {
+    "width": 1920,
+    "height": 1280
+  },
+  "/assets/mineImages/sart/7.jpg": {
+    "width": 1920,
+    "height": 1280
+  },
+  "/assets/mineImages/sart/8.jpg": {
+    "width": 1920,
+    "height": 1280
+  },
+  "/assets/mineImages/yenikoy/1.jpg": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/assets/mineImages/yenikoy/2.jpg": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/assets/products/agregates.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/agregates1.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/bims-blok.jpg": {
+    "width": 2106,
+    "height": 1227
+  },
+  "/assets/products/bims-blok1.jpg": {
+    "width": 3740,
+    "height": 1521
+  },
+  "/assets/products/clay.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/eilepomex.jpg": {
+    "width": 1920,
+    "height": 1080
+  },
+  "/assets/products/eilepomex1.jpg": {
+    "width": 225,
+    "height": 225
+  },
+  "/assets/products/garnet.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/garnet1.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/garnet3.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/gold.jpg": {
+    "width": 1000,
+    "height": 667
+  },
+  "/assets/products/gold1.jpg": {
+    "width": 2592,
+    "height": 1166
+  },
+  "/assets/products/gold2.jpg": {
+    "width": 639,
+    "height": 507
+  },
+  "/assets/products/gold3.jpg": {
+    "width": 472,
+    "height": 766
+  },
+  "/assets/products/hematite.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/hematite1.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/hematite2.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/korund.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite1.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite2.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite3.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite4.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite5.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/perlite6.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/pumice.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/quartz.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/quartz1.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/quartz2.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/quartz3.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/quartz4.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/quartz5.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/rutile.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/rutile2.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/silis.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/silis1.jpg": {
+    "width": 1300,
+    "height": 995
+  },
+  "/assets/products/silis2.jpg": {
+    "width": 1300,
+    "height": 995
+  }
+}

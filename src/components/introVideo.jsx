@@ -60,6 +60,9 @@ export default function IntroVideo() {
                     <ResponsiveImage
                         className="w-full h-full object-cover"
                         src="/assets/common/view.jpg"
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="sync"
                         style={{
                             filter: "brightness(70%)",
                             objectPosition: "40%",
@@ -72,6 +75,9 @@ export default function IntroVideo() {
                 <ResponsiveImage
                     className="w-full h-full object-cover slide"
                     src="/assets/common/view.jpg"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                     style={{
                         filter: "brightness(70%)",
                         objectPosition: "40%",

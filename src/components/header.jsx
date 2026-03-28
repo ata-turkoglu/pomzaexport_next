@@ -80,6 +80,8 @@ function Header() {
                     <button
                         onClick={() => setIsOpen(true)}
                         type="button"
+                        aria-label="Open navigation menu"
+                        aria-expanded={isOpen}
                         className="text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
                     >
                         <svg
@@ -228,6 +230,7 @@ function Header() {
                         <button
                             onClick={() => setIsOpen(false)}
                             type="button"
+                            aria-label="Close navigation menu"
                             className="text-white hover:text-gray-400 focus:outline-none focus:text-gray-400"
                         >
                             <X />

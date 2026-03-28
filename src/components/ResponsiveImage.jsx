@@ -1,14 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import { getResponsiveImageSources } from "@/lib/responsiveImage";
+import {
+    getResponsiveImageDimensions,
+    getResponsiveImageSources,
+} from "@/lib/responsiveImage";
 
 export default function ResponsiveImage({ src, alt = "", onError, ...imgProps }) {
     const [forceOriginal, setForceOriginal] = useState(false);
     const sources = getResponsiveImageSources(src);
+    const dimensions = getResponsiveImageDimensions(src);
+    const preferMobileFallback = src === "/assets/common/view.jpg";
+    const resolvedImgProps = { ...imgProps };
+
+    if (
+        resolvedImgProps.width == null &&
+        dimensions &&
+        typeof dimensions.width === "number"
+    ) {
+        resolvedImgProps.width = dimensions.width;
+    }
+
+    if (
+        resolvedImgProps.height == null &&
+        dimensions &&
+        typeof dimensions.height === "number"
+    ) {
+        resolvedImgProps.height = dimensions.height;
+    }
 
     if (!sources || forceOriginal) {
-        return <img src={src} alt={alt} onError={onError} {...imgProps} />;
+        return <img src={src} alt={alt} onError={onError} {...resolvedImgProps} />;
     }
 
     const handleError = (event) => {
@@ -20,16 +42,26 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
 
     return (
         <picture style={{ display: "contents" }}>
-            <source
-                media="(max-width: 767px)"
-                srcSet={sources.mobile.webp}
-                type="image/webp"
-            />
-            <source
-                media="(max-width: 767px)"
-                srcSet={sources.mobile.fallback}
-                type={sources.mobile.fallbackType}
-            />
+            {preferMobileFallback ? (
+                <source
+                    media="(max-width: 767px)"
+                    srcSet={sources.mobile.fallback}
+                    type={sources.mobile.fallbackType}
+                />
+            ) : (
+                <>
+                    <source
+                        media="(max-width: 767px)"
+                        srcSet={sources.mobile.webp}
+                        type="image/webp"
+                    />
+                    <source
+                        media="(max-width: 767px)"
+                        srcSet={sources.mobile.fallback}
+                        type={sources.mobile.fallbackType}
+                    />
+                </>
+            )}
             <source
                 media="(min-width: 768px)"
                 srcSet={sources.web.webp}
@@ -44,7 +76,7 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
                 src={sources.original}
                 alt={alt}
                 onError={handleError}
-                {...imgProps}
+                {...resolvedImgProps}
             />
         </picture>
     );

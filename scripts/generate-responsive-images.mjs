@@ -5,6 +5,10 @@ import sharp from "sharp";
 const PUBLIC_DIR = path.resolve(process.cwd(), "public");
 const INPUT_ROOT = path.join(PUBLIC_DIR, "assets");
 const OUTPUT_ROOT = path.join(PUBLIC_DIR, "assets-responsive");
+const MANIFEST_PATH = path.resolve(
+    process.cwd(),
+    "src/lib/responsiveImageManifest.json"
+);
 
 const PROFILES = [
     { name: "web", width: 1600 },
@@ -59,10 +63,20 @@ const buildOutputPath = (profileName, formatFolder, relativeInputPath, ext) => {
     );
 };
 
-const processAsset = async (assetPath) => {
+const toWebPath = (relativePath) =>
+    `/assets/${relativePath.split(path.sep).join("/")}`;
+
+const processAsset = async (assetPath, manifest) => {
     const relativePath = path.relative(INPUT_ROOT, assetPath);
     const sourceExt = path.extname(assetPath).toLowerCase();
     const fallbackExt = getFallbackExtension(sourceExt);
+    const sourceImage = sharp(assetPath).rotate();
+    const metadata = await sourceImage.metadata();
+
+    manifest[toWebPath(relativePath)] = {
+        width: metadata.width || null,
+        height: metadata.height || null,
+    };
 
     for (const profile of PROFILES) {
         const webpOutput = buildOutputPath(
@@ -81,7 +95,7 @@ const processAsset = async (assetPath) => {
         await ensureDir(webpOutput);
         await ensureDir(fallbackOutput);
 
-        const baseTransform = sharp(assetPath).rotate().resize({
+        const baseTransform = sourceImage.clone().resize({
             width: profile.width,
             withoutEnlargement: true,
             fit: "inside",
@@ -125,13 +139,14 @@ const run = async () => {
 
     const allFiles = await walk(INPUT_ROOT);
     const imageFiles = allFiles.filter(isSupportedAsset);
+    const manifest = {};
 
     let processed = 0;
     const failed = [];
 
     for (const filePath of imageFiles) {
         try {
-            await processAsset(filePath);
+            await processAsset(filePath, manifest);
             processed += 1;
         } catch (error) {
             failed.push({
@@ -143,6 +158,18 @@ const run = async () => {
 
     console.log(
         `Responsive images generated: ${processed}/${imageFiles.length} source assets`
+    );
+
+    const sortedManifest = Object.fromEntries(
+        Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b))
+    );
+    await fs.mkdir(path.dirname(MANIFEST_PATH), { recursive: true });
+    await fs.writeFile(MANIFEST_PATH, JSON.stringify(sortedManifest, null, 2));
+    console.log(
+        `Responsive image manifest generated: ${path.relative(
+            process.cwd(),
+            MANIFEST_PATH
+        )}`
     );
 
     if (failed.length > 0) {

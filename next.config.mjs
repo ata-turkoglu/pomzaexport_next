@@ -4,6 +4,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     output: "export",
     trailingSlash: true,
+    productionBrowserSourceMaps: true,
 };
 
 export default withNextIntl(nextConfig);

@@ -56,7 +56,7 @@ export default function TextTransitions({ children }) {
     useLayoutEffect(() => {
         const list = children.map((item, index) => {
             return (
-                <h3
+                <h2
                     id={"text" + index}
                     key={index}
                     className={
@@ -65,7 +65,7 @@ export default function TextTransitions({ children }) {
                     style={index != 0 ? { display: "none" } : {}}
                 >
                     {setWords(item)}
-                </h3>
+                </h2>
             );
         });
         setContent(list);

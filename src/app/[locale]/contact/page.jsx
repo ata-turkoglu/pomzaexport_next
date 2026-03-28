@@ -20,6 +20,7 @@ export default function Contact() {
     const [token, setToken] = useState(null);
 
     const recaptchaRef = useRef();
+    const smtpPassword = process.env.NEXT_PUBLIC_SMTP_PASS || "";
 
     const handleChange = (e) => {
         setFormData({
@@ -33,6 +34,16 @@ export default function Contact() {
     });
 
     function Send() {
+        if (typeof window === "undefined" || !window.Email?.send) {
+            swal("Something Wrong", "Mail service is not available", "error");
+            return;
+        }
+
+        if (!smtpPassword) {
+            swal("Something Wrong", "Mail configuration is missing", "error");
+            return;
+        }
+
         var body =
             "Name: " +
             formData.name +
@@ -44,13 +55,12 @@ export default function Contact() {
         window.Email.send({
             Host: "smtp.elasticemail.com",
             Username: "info@pomzaexport.com",
-            Password: import.meta.env.VITE_STMP_PASS,
+            Password: smtpPassword,
             To: "info@pomzaexport.com",
             From: "info@pomzaexport.com",
             Subject: "Email from website",
             Body: body,
         }).then((message) => {
-            console.log(message);
             if (message == `OK`) {
                 swal(
                     "Success!",
@@ -70,7 +80,7 @@ export default function Contact() {
                 );
             }
             setToken(null);
-            recaptchaRef.current.reset();
+            recaptchaRef.current?.reset();
         });
     }
     const handleSubmit = (e) => {
@@ -112,9 +122,9 @@ export default function Contact() {
                                         </svg>
                                     </div>
                                     <div className="ml-4 mb-4">
-                                        <h3 className="mb-2 text-lg font-medium leading-6 text-white dark:text-white capitalize">
+                                        <h2 className="mb-2 text-lg font-medium leading-6 text-white dark:text-white capitalize">
                                             {t("contactAdresses")}
-                                        </h3>
+                                        </h2>
                                         <p className="text-white dark:text-slate-400">
                                             <strong className="uppercase">
                                                 {t("sartMadenIsletmesi")}

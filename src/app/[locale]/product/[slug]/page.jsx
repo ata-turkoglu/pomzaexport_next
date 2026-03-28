@@ -49,9 +49,9 @@ export default function Product({ params: { locale, slug } }) {
                 <div className="p-3 w-full md:w-2/3 h-fit">
                     {productData.whatIs && (
                         <div className="pt-5">
-                            <h3 className="mb-1">
+                            <h2 className="mb-1">
                                 {productData.whatIs.head[locale]}
-                            </h3>
+                            </h2>
                             <hr className="mb-4" />
                             <div className="text-md text-neutral-500">
                                 <span>
@@ -78,7 +78,7 @@ export default function Product({ params: { locale, slug } }) {
                     )}
 
                     <div className="pt-5">
-                        <h3 className="mb-0">{t("productInfo")}</h3>
+                        <h2 className="mb-0">{t("productInfo")}</h2>
                         <hr className="mb-4" />
                         <div className="text-md text-neutral-500">
                             {typeof productData.description[locale] ==
@@ -99,13 +99,13 @@ export default function Product({ params: { locale, slug } }) {
                     </div>
 
                     <div className="pt-5 mb-5">
-                        <h3>{t("productImages")}</h3>
+                        <h2>{t("productImages")}</h2>
                         <Gallery images={productData.images} />
                     </div>
 
                     {productData.usageAreas && (
                         <div className="pt-5">
-                            <h3 className="mb-1">{t("areasOfUsage")}</h3>
+                            <h2 className="mb-1">{t("areasOfUsage")}</h2>
                             <hr className="mb-4" />
                             <div className="text-md text-neutral-500"></div>
                             {typeof productData.usageAreas[locale] ==
@@ -127,7 +127,7 @@ export default function Product({ params: { locale, slug } }) {
 
                     {productData.productVariety && (
                         <div className="pt-5">
-                            <h3 className="mb-1">{t("productVariety")}</h3>
+                            <h2 className="mb-1">{t("productVariety")}</h2>
                             <hr className="mb-4" />
                             <div className="text-md">
                                 {productData.productVariety[locale]}
@@ -137,7 +137,7 @@ export default function Product({ params: { locale, slug } }) {
 
                     {productData.technicalInfo && (
                         <div className="pt-5">
-                            <h3 className="mb-1">{t("technicalInfo")}</h3>
+                            <h2 className="mb-1">{t("technicalInfo")}</h2>
                             <hr className="mb-4" />
                             <div className="text-md text-neutral-500">
                                 {typeof productData.technicalInfo[locale] ==

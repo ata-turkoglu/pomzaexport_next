@@ -42,24 +42,25 @@ function Footer({ hFull = false }) {
                 <div className="md:w-2/3 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
                     {/* Mines */}
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline capitalize">
+                        <h3 className="text-xl underline capitalize">
                             {t("facilities")}
-                        </h4>
+                        </h3>
                         <ul className="space-y-3">
                             {minesJSON.map((item, key) => {
                                 return (
-                                    <Link
-                                        key={key}
-                                        className="block hover:text-gray-300"
-                                        href={
-                                            "/" +
-                                            locale +
-                                            "/mine/" +
-                                            setSlug(item.id, item.name[locale])
-                                        }
-                                    >
-                                        {item.name[locale]}
-                                    </Link>
+                                    <li key={key}>
+                                        <Link
+                                            className="block hover:text-gray-300"
+                                            href={
+                                                "/" +
+                                                locale +
+                                                "/mine/" +
+                                                setSlug(item.id, item.name[locale])
+                                            }
+                                        >
+                                            {item.name[locale]}
+                                        </Link>
+                                    </li>
                                 );
                             })}
                         </ul>
@@ -67,29 +68,30 @@ function Footer({ hFull = false }) {
 
                     {/* Products */}
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline capitalize">
+                        <h3 className="text-xl underline capitalize">
                             {t("products")}
-                        </h4>
+                        </h3>
                         <ul className="space-y-3">
                             {productsJSON.map((item, key) => {
                                 return (
-                                    <Link
-                                        key={key}
-                                        className="block hover:text-gray-300"
-                                        href={
-                                            item.externalLink
-                                                ? item.link
-                                                : "/" +
-                                                  locale +
-                                                  "/product/" +
-                                                  setSlug(
-                                                      item.id,
-                                                      item.name[locale]
-                                                  )
-                                        }
-                                    >
-                                        {item.name[locale]}
-                                    </Link>
+                                    <li key={key}>
+                                        <Link
+                                            className="block hover:text-gray-300"
+                                            href={
+                                                item.externalLink
+                                                    ? item.link
+                                                    : "/" +
+                                                      locale +
+                                                      "/product/" +
+                                                      setSlug(
+                                                          item.id,
+                                                          item.name[locale]
+                                                      )
+                                            }
+                                        >
+                                            {item.name[locale]}
+                                        </Link>
+                                    </li>
                                 );
                             })}
                         </ul>
@@ -97,11 +99,11 @@ function Footer({ hFull = false }) {
 
                     {/* Address */}
                     <div className="space-y-4 mt-4">
-                        <h4 className="text-xl underline capitalize">
+                        <h3 className="text-xl underline capitalize">
                             {t_c("contactAdresses")}
-                        </h4>
+                        </h3>
                         <ul className="space-y-5 text-sm">
-                            <p className="hover:text-gray-300">
+                            <li className="hover:text-gray-300">
                                 <strong className="uppercase">
                                     {t_c("sartMadenIsletmesi")}
                                 </strong>
@@ -119,8 +121,8 @@ function Footer({ hFull = false }) {
                                 <br />
                                 <span className="capitalize">{t_c("fax")}</span>
                                 <span>: +90 236 724 30 51</span>
-                            </p>
-                            <p className="hover:text-gray-300">
+                            </li>
+                            <li className="hover:text-gray-300">
                                 <strong className="uppercase">
                                     {t_c("menderesMadenIsletmesi")}
                                 </strong>
@@ -138,8 +140,8 @@ function Footer({ hFull = false }) {
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 232 782 15 98</span>
-                            </p>
-                            <p className="hover:text-gray-300">
+                            </li>
+                            <li className="hover:text-gray-300">
                                 <strong className="uppercase">
                                     {t_c("etiperPerlitIsletmesi")}
                                 </strong>
@@ -158,8 +160,8 @@ function Footer({ hFull = false }) {
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 232 782 67 25</span>
-                            </p>
-                            <p className="hover:text-gray-300">
+                            </li>
+                            <li className="hover:text-gray-300">
                                 <strong className="uppercase">
                                     {t_c("eilePomex")}
                                 </strong>
@@ -180,8 +182,8 @@ function Footer({ hFull = false }) {
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 232 360 16 16</span>
-                            </p>
-                            <p className="hover:text-gray-300">
+                            </li>
+                            <li className="hover:text-gray-300">
                                 <strong className="uppercase">
                                     {t_c("ankaraOffice")}
                                 </strong>
@@ -199,7 +201,7 @@ function Footer({ hFull = false }) {
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 312 495 64 93</span>
-                            </p>
+                            </li>
                         </ul>
                     </div>
                 </div>
