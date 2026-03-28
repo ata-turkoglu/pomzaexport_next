@@ -13,9 +13,6 @@ export async function generateMetadata({ params }) {
 
     return {
         title: {
-            //template: locale == "tr" ? `%s Madencilik` : `%s Mining Company`,
-        },
-        title: {
             default:
                 locale == "tr"
                     ? "Pomza Export Madencilik"
@@ -30,13 +27,13 @@ export async function generateMetadata({ params }) {
             siteName: siteMetaData.title,
             images: [
                 {
-                    url: "https://www.eilepomex.com/assets/logo/pomza.png",
+                    url: "https://www.pomzaexport.com/assets/logo/pomza.png",
                     height: "457",
                     width: "1364",
                     alt: "pomza export",
                 },
                 {
-                    url: "https://www.eilepomex.com/assets/logo/pomzaexport-logo-white.png",
+                    url: "https://www.pomzaexport.com/assets/logo/pomzaexport-logo-white.png",
                     height: "59",
                     width: "309",
                     alt: "pomza export",
@@ -47,7 +44,7 @@ export async function generateMetadata({ params }) {
         },
         robots: {
             index: true,
-            folow: true,
+            follow: true,
             //noimageindex: true,
             "max-video-preview": -1,
             "max-image-preview": "large",

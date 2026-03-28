@@ -2,21 +2,37 @@ import IntroVideo from "@/components/introVideo";
 import FacilitiesLinks from "@/components/facilitiesLinks";
 import Brands from "@/components/brands";
 import Sustainability from "@/components/sustainability";
+import siteMetaData from "@/lib/siteMetaData";
 
-import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+
+const getHeader = (locale) => {
+    if (locale == "tr") {
+        return "Pomza Export Madencilik";
+    } else {
+        return "Pomza Export Mining Company";
+    }
+};
+
+export async function generateMetadata({ params }) {
+    const { locale } = await params;
+
+    return {
+        title: getHeader(locale),
+        description: siteMetaData.description[locale],
+        keywords: siteMetaData.keywords[locale],
+        alternates: {
+            canonical: `/${locale}/`,
+            languages: {
+                "tr-TR": "/tr/",
+                "en-US": "/en/",
+            },
+        },
+    };
+}
 
 function Home({ params: { locale } }) {
     setRequestLocale(locale);
-    const t = useTranslations("Home");
-
-    const getHeader = (locale) => {
-        if (locale == "tr") {
-            return "Pomza Export Madencilik";
-        } else {
-            return "Pomza Export Mining Company";
-        }
-    };
 
     return (
         <main

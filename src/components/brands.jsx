@@ -4,6 +4,8 @@ import "./css/brands.css";
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import productsJSON from "@/data/products.json";
+import { slugify } from "@/utils/commonFuncs";
 /* import { translateText as t } from "../../store/reducers/language"; */
 
 function Brands() {
@@ -14,6 +16,15 @@ function Brands() {
     useEffect(() => {
         window.innerWidth < 768 ? setMobile(true) : setMobile(false);
     }, []);
+
+    const getProductSlug = (id) => {
+        const product = productsJSON.find((item) => item.id === id);
+        if (!product) {
+            return id.toString();
+        }
+        return id.toString() + "-" + slugify(product.name[locale]);
+    };
+
     return (
         <div className="brands mx-3 md:mx-10 overflow-hidden">
             <div className="content">
@@ -71,7 +82,9 @@ function Brands() {
                         <img
                             className="cursor-pointer"
                             onClick={() =>
-                                router.push("/" + locale + "/product/7")
+                                router.push(
+                                    "/" + locale + "/product/" + getProductSlug(7)
+                                )
                             }
                             src="/assets/logo/etiper-logo-white.png"
                             alt="etiper"
@@ -81,7 +94,9 @@ function Brands() {
                         <img
                             className="cursor-pointer"
                             onClick={() =>
-                                router.push("/" + locale + "/product/1")
+                                router.push(
+                                    "/" + locale + "/product/" + getProductSlug(1)
+                                )
                             }
                             src="/assets/logo/sardesquartz-logo-white.png"
                             alt="sardes quartz"
@@ -91,7 +106,9 @@ function Brands() {
                         <img
                             className="cursor-pointer"
                             onClick={() =>
-                                router.push("/" + locale + "/product/9")
+                                router.push(
+                                    "/" + locale + "/product/" + getProductSlug(9)
+                                )
                             }
                             src="/assets/logo/emerex-logo-white.png"
                             alt="emerex"
@@ -114,7 +131,9 @@ function Brands() {
                         <img
                             className="cursor-pointer"
                             onClick={() =>
-                                router.push("/" + locale + "/product/4")
+                                router.push(
+                                    "/" + locale + "/product/" + getProductSlug(4)
+                                )
                             }
                             src="/assets/logo/pomexgarnet-logo-white.png"
                             alt="pomex garnet"
@@ -124,7 +143,9 @@ function Brands() {
                         <img
                             className="cursor-pointer"
                             onClick={() =>
-                                router.push("/" + locale + "/product/10")
+                                router.push(
+                                    "/" + locale + "/product/" + getProductSlug(10)
+                                )
                             }
                             src="/assets/logo/pomexbeton-logo-white.png"
                             alt="pomex beton"

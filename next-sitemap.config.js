@@ -1,15 +1,27 @@
 /** @type {import('next-sitemap').IConfig} */
-// Default code you can customize according to your requirements.
 const productList = require("./src/data/products.json");
+const shortDetailPathRegex = /^\/(tr|en)\/(product|mine)\/\d+$/;
+
 module.exports = {
-    siteUrl: "https://pomzaexport.com/",
+    siteUrl: "https://www.pomzaexport.com",
     changefreq: "monthly",
     priority: 0.7,
     generateIndexSitemap: false,
     generateRobotsTxt: true,
     exclude: [],
     transform: async (config, path) => {
-        if (path == "/" || path == "/tr" || path == "/en") {
+        const normalizedPath =
+            path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+
+        if (shortDetailPathRegex.test(normalizedPath)) {
+            return null;
+        }
+
+        if (normalizedPath == "/") {
+            return null;
+        }
+
+        if (normalizedPath == "/tr" || normalizedPath == "/en") {
             return {
                 loc: path,
                 changefreq: config.changefreq,
@@ -20,13 +32,13 @@ module.exports = {
                 images: [
                     {
                         loc: {
-                            href: "https://pomzaexport.com/assets/logo/pomza.png",
+                            href: "https://www.pomzaexport.com/assets/logo/pomza.png",
                         },
                     },
                 ],
             };
         }
-        if (checkProductDetail(path)) {
+        if (checkProductDetail(normalizedPath)) {
             const imgUrl = getProductImage(path);
             return {
                 loc: path,
@@ -35,7 +47,15 @@ module.exports = {
                 lastmod: config.autoLastmod
                     ? new Date().toISOString()
                     : undefined,
-                images: [{ loc: { href: config.siteUrl + imgUrl } }],
+                images: imgUrl
+                    ? [
+                          {
+                              loc: {
+                                  href: config.siteUrl + "/" + imgUrl,
+                              },
+                          },
+                      ]
+                    : [],
             };
         }
         return {
@@ -62,8 +82,12 @@ const checkProductDetail = (path) => {
 };
 
 const getProductImage = (path) => {
-    const list = path.split("/");
-    const last = list[list.length - 1];
+    const list = path.split("/").filter(Boolean);
+    const last = list[list.length - 1] || "";
     const id = last.split("-")[0];
-    return productList.find((itm) => itm.id == id).image.slice(1);
+    const product = productList.find((itm) => itm.id == id);
+    if (!product || !product.image) {
+        return null;
+    }
+    return product.image.slice(1);
 };

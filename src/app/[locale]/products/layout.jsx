@@ -2,31 +2,30 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import siteMetaData from "@/lib/siteMetaData";
-import minesJSON from "@/data/mines.json";
-import { slugify } from "@/utils/commonFuncs";
 
-/* export async function generateStaticParams({ params }) {
-    const { locale } = await params;
-    let list = [];
-
-    minesJSON.forEach((item) => {
-        list.push({ slug: item.id.toString() });
-        list.push({
-            slug: item.id.toString() + "-" + slugify(item.name[locale]),
-        });
-    });
-    return list;
-} */
-
-/* export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
     const { locale } = await params;
 
     return {
-        title: siteMetaData.minePage.title[locale],
-        description: siteMetaData.minePage.description[locale],
-        keywords: siteMetaData.minePage.keywords[locale],
+        title: siteMetaData.productsPage.title[locale],
+        description: siteMetaData.productsPage.description[locale],
+        keywords: siteMetaData.productsPage.keywords[locale],
+        openGraph: {
+            title: siteMetaData.productsPage.title[locale],
+            description: siteMetaData.productsPage.description[locale],
+            url: `https://www.pomzaexport.com/${locale}/products/`,
+            locale: locale === "tr" ? "tr_TR" : "en_US",
+            type: "website",
+        },
+        alternates: {
+            canonical: `/${locale}/products/`,
+            languages: {
+                "tr-TR": "/tr/products/",
+                "en-US": "/en/products/",
+            },
+        },
     };
-} */
+}
 
 export default async function ProductsLayout({ children, params }) {
     const { locale } = await params;

@@ -26,7 +26,7 @@ function Footer({ hFull = false }) {
                 <div className="md:w-1/3 space-y-8">
                     {!hFull && (
                         <Link
-                            href="/"
+                            href={"/" + locale + "/"}
                             className="text-2x1 font-semibold flex items-center space-x-3 text-primary"
                         >
                             <img

@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Deployment Notes (cPanel / Apache)
+
+- This project is exported as static HTML (`output: export`).
+- Keep `public/.htaccess` at the web root after deploy. It contains:
+- Canonical host redirect (`https://www.pomzaexport.com`)
+- Root redirect (`/` -> `/tr/`)
+- Canonical redirects for numeric product detail URLs (`/product/{id}` to slug URLs)
+
+## Backlog Note
+
+- Contact form currently uses a client-side SMTP flow (`window.Email`) and should be moved to a server-side or managed form endpoint in a later iteration for stronger security and reliability.

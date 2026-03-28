@@ -170,7 +170,12 @@ export default function Mine({ params: { locale, slug } }) {
                                             : setExternal(false);
                                         item.externalLink
                                             ? setLinkId(item.link)
-                                            : setLinkId(item.id);
+                                            : setLinkId(
+                                                  setSlug(
+                                                      item.id,
+                                                      item.name[locale]
+                                                  )
+                                              );
                                     }}
                                     onMouseLeave={(e) => {
                                         mouseLeave(e);

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://pomzaexport.com/
+Host: https://www.pomzaexport.com
 
 # Sitemaps
-Sitemap: https://pomzaexport.com/sitemap.xml
+Sitemap: https://www.pomzaexport.com/sitemap.xml

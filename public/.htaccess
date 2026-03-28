@@ -1,0 +1,39 @@
+RewriteEngine On
+
+# Redirect the bare root to the default locale homepage.
+RewriteRule ^$ https://www.pomzaexport.com/tr/ [R=301,L]
+
+# Canonical product detail URLs (EN)
+RewriteRule ^en/product/0/?$ https://www.pomzaexport.com/en/product/0-gold/ [R=301,L]
+RewriteRule ^en/product/1/?$ https://www.pomzaexport.com/en/product/1-quartz/ [R=301,L]
+RewriteRule ^en/product/2/?$ https://www.pomzaexport.com/en/product/2-rutile/ [R=301,L]
+RewriteRule ^en/product/3/?$ https://www.pomzaexport.com/en/product/3-agregates/ [R=301,L]
+RewriteRule ^en/product/4/?$ https://www.pomzaexport.com/en/product/4-garnet/ [R=301,L]
+RewriteRule ^en/product/5/?$ https://www.pomzaexport.com/en/product/5-silica-sand/ [R=301,L]
+RewriteRule ^en/product/6/?$ https://www.pomzaexport.com/en/product/6-hematite/ [R=301,L]
+RewriteRule ^en/product/7/?$ https://www.pomzaexport.com/en/product/7-perlite/ [R=301,L]
+RewriteRule ^en/product/8/?$ https://www.pomzaexport.com/en/product/8-pumice/ [R=301,L]
+RewriteRule ^en/product/9/?$ https://www.pomzaexport.com/en/product/9-emery/ [R=301,L]
+RewriteRule ^en/product/10/?$ https://www.pomzaexport.com/en/product/10-ready-mixed-concrete/ [R=301,L]
+RewriteRule ^en/product/11/?$ https://www.pomzaexport.com/en/product/11-bims-block/ [R=301,L]
+RewriteRule ^en/product/12/?$ https://www.pomzaexport.com/en/product/12-construction-chemicals/ [R=301,L]
+
+# Canonical product detail URLs (TR)
+RewriteRule ^tr/product/0/?$ https://www.pomzaexport.com/tr/product/0-altin/ [R=301,L]
+RewriteRule ^tr/product/1/?$ https://www.pomzaexport.com/tr/product/1-kuvars/ [R=301,L]
+RewriteRule ^tr/product/2/?$ https://www.pomzaexport.com/tr/product/2-rutil/ [R=301,L]
+RewriteRule ^tr/product/3/?$ https://www.pomzaexport.com/tr/product/3-agrega/ [R=301,L]
+RewriteRule ^tr/product/4/?$ https://www.pomzaexport.com/tr/product/4-garnet/ [R=301,L]
+RewriteRule ^tr/product/5/?$ https://www.pomzaexport.com/tr/product/5-silis-kumu/ [R=301,L]
+RewriteRule ^tr/product/6/?$ https://www.pomzaexport.com/tr/product/6-hematit/ [R=301,L]
+RewriteRule ^tr/product/7/?$ https://www.pomzaexport.com/tr/product/7-perlit/ [R=301,L]
+RewriteRule ^tr/product/8/?$ https://www.pomzaexport.com/tr/product/8-pomza/ [R=301,L]
+RewriteRule ^tr/product/9/?$ https://www.pomzaexport.com/tr/product/9-korund/ [R=301,L]
+RewriteRule ^tr/product/10/?$ https://www.pomzaexport.com/tr/product/10-hazir-beton/ [R=301,L]
+RewriteRule ^tr/product/11/?$ https://www.pomzaexport.com/tr/product/11-bims-blok/ [R=301,L]
+RewriteRule ^tr/product/12/?$ https://www.pomzaexport.com/tr/product/12-yapi-elemanlari/ [R=301,L]
+
+# Force a single canonical host and protocol for everything else.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.pomzaexport\.com$ [NC]
+RewriteRule ^ https://www.pomzaexport.com%{REQUEST_URI} [R=301,L]

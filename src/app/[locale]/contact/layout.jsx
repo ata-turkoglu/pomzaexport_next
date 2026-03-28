@@ -10,6 +10,20 @@ export async function generateMetadata({ params }) {
         title: siteMetaData.contactPage.title[locale],
         description: siteMetaData.contactPage.description[locale],
         keywords: siteMetaData.contactPage.keywords[locale],
+        openGraph: {
+            title: siteMetaData.contactPage.title[locale],
+            description: siteMetaData.contactPage.description[locale],
+            url: `https://www.pomzaexport.com/${locale}/contact/`,
+            locale: locale === "tr" ? "tr_TR" : "en_US",
+            type: "website",
+        },
+        alternates: {
+            canonical: `/${locale}/contact/`,
+            languages: {
+                "tr-TR": "/tr/contact/",
+                "en-US": "/en/contact/",
+            },
+        },
     };
 }
 
