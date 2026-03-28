@@ -9,6 +9,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import siteMetaData from "@/lib/siteMetaData";
 import localFont from "next/font/local";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 export async function generateMetadata({ params }) {
     const { locale } = await params;
@@ -126,7 +127,7 @@ export default async function LocaleLayout({ children, params }) {
                             target="_blank"
                             aria-label="Chat on WhatsApp"
                         >
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/whatsapp.png"
                                 alt="Chat on WhatsApp"
                                 width={40}

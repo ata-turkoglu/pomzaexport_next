@@ -1,50 +1,10 @@
 "use client";
-//import React, { useEffect, useState, useLayoutEffect } from "react";
 import Gallery from "@/components/gallery";
 import productsJSON from "@/data/products.json";
 import { useTranslations } from "next-intl";
-/* import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react"; */
+import ResponsiveImage from "@/components/ResponsiveImage";
 
-const CUSTOM_ANIMATION = {
-    mount: { scale: 1 },
-    unmount: { scale: 0.9 },
-};
-
-function Icon({ id, open }) {
-    return (
-        <svg
-            id={"icon" + id}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className={`${
-                open ? "rotate-180" : ""
-            } h-5 w-5 transition-transform`}
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-        </svg>
-    );
-}
-
-/* export async function generateStaticParams() {
-    return productsJSON.map((product) => {
-        return {
-            id: product.id.toString(),
-        };
-    });
-} */
-
-const SetUsageAreaListItem = (text) => {
+const setUsageAreaListItem = (text) => {
     if (text.includes(":")) {
         const parts = text.split(":");
 
@@ -53,35 +13,34 @@ const SetUsageAreaListItem = (text) => {
                 <strong>{parts[0]}</strong>: {parts[1]}
             </span>
         );
-    } else {
-        return text;
     }
+
+    return text;
 };
 
 export default function Product({ params: { locale, slug } }) {
     const t = useTranslations("ProductPage");
 
-    const mobileView = true;
     const id = slug.split("-")[0];
-    const data = productsJSON.find((itm) => itm.id == id);
+    const productData = productsJSON.find((itm) => itm.id == id);
 
-    const productData = data;
-    let selectedImg = data.image;
+    if (!productData) {
+        return null;
+    }
 
     return (
         <main className="h-fit">
             <div className="flex flex-col min-h-screen h-fit w-full items-center pb-12">
                 <div
                     className="w-full relative duration-300"
-                    style={{
-                        height: !mobileView ? "100vh" : "50vh",
-                    }}
+                    style={{ height: "50vh" }}
                 >
-                    <img
+                    <ResponsiveImage
                         className="w-full h-full object-cover brightness-90"
-                        src={selectedImg}
+                        src={productData.image}
                         loading="lazy"
-                    ></img>
+                        alt={productData.name[locale]}
+                    />
                     <h1 className="w-full text-4xl font-bold text-white absolute left-0 flex justify-center bottom-0 pb-5">
                         {productData.name[locale]}
                     </h1>
@@ -108,7 +67,7 @@ export default function Product({ params: { locale, slug } }) {
                                                 locale
                                             ].map((itm, indx) => (
                                                 <li key={indx} className="mb-2">
-                                                    {SetUsageAreaListItem(itm)}
+                                                    {setUsageAreaListItem(itm)}
                                                 </li>
                                             ))}
                                         </ul>
@@ -130,7 +89,7 @@ export default function Product({ params: { locale, slug } }) {
                                     {productData.description[locale].map(
                                         (itm, indx) => (
                                             <li key={indx} className="mb-2">
-                                                {SetUsageAreaListItem(itm)}
+                                                {setUsageAreaListItem(itm)}
                                             </li>
                                         )
                                     )}
@@ -157,7 +116,7 @@ export default function Product({ params: { locale, slug } }) {
                                     {productData.usageAreas[locale].map(
                                         (itm, indx) => (
                                             <li key={indx} className="mb-3">
-                                                {SetUsageAreaListItem(itm)}
+                                                {setUsageAreaListItem(itm)}
                                             </li>
                                         )
                                     )}
@@ -191,7 +150,7 @@ export default function Product({ params: { locale, slug } }) {
                                         {productData.technicalInfo[locale].map(
                                             (itm, indx) => (
                                                 <li key={indx} className="mb-3">
-                                                    {SetUsageAreaListItem(itm)}
+                                                    {setUsageAreaListItem(itm)}
                                                 </li>
                                             )
                                         )}

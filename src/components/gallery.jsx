@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Dialog } from "@material-tailwind/react";
+import ResponsiveImage from "./ResponsiveImage";
 export default function Gallery({ images, name = "gallery-image" }) {
     const [active, setActive] = React.useState(null);
     const [open, setOpen] = React.useState(false);
@@ -14,8 +15,11 @@ export default function Gallery({ images, name = "gallery-image" }) {
                         key={index}
                         className="h-full max-h-40 w-full md:max-w-52 md:mx-1 cursor-pointer overflow-hidden"
                     >
-                        <img
-                            onClick={() => [setActive(imgelink), handleOpen()]}
+                        <ResponsiveImage
+                            onClick={() => {
+                                setActive(imgelink);
+                                handleOpen();
+                            }}
                             src={imgelink}
                             className="w-full h-full object-cover"
                             alt={name}
@@ -26,7 +30,7 @@ export default function Gallery({ images, name = "gallery-image" }) {
             <Dialog open={open} handler={handleOpen} size="xl">
                 <div>
                     {active && (
-                        <img
+                        <ResponsiveImage
                             className="h-auto w-full max-w-full object-cover object-center"
                             src={active}
                             alt={name}

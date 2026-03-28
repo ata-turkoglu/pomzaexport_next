@@ -3,8 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import "./css/facilityBanner.css";
 import minesJSON from "../../data/mines.json";
 import productsJSON from "../../data/products.json";
+import ResponsiveImage from "./ResponsiveImage";
 
-export default function FacilityBanner({ mineId, direction, children }) {
+export default function FacilityBanner({ mineId, direction }) {
     const navigate = useNavigate();
     const [products, setProducts] = useState([]);
     const [mobileView, setMobileView] = useState(false);
@@ -24,7 +25,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
         }
     };
 
-    const mouseLeave = (e) => {
+    const mouseLeave = () => {
         setShowingImage(false);
     };
 
@@ -43,6 +44,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
             .filter((item) => item.facilityId == mineId)
             .map((item, index) => {
                 const { id, name, image } = item;
+                const productLabel = name?.tr || name?.en || "Pomza Export";
                 return (
                     <div
                         key={index}
@@ -57,10 +59,10 @@ export default function FacilityBanner({ mineId, direction, children }) {
                         onMouseLeave={mouseLeave}
                         style={{ border: "1px solid black" }}
                     >
-                        <img
+                        <ResponsiveImage
                             src={image}
                             className="w-full h-full object-cover"
-                            alt={name[locale]}
+                            alt={name?.tr || name?.en || "Pomza Export"}
                         />
                         <span
                             className="hidden md:block absolute inset-x-0 mx-auto w-3/4 bg-white text-center shadow-lg capitalize"
@@ -69,7 +71,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
                                 border: "1px solid grey",
                             }}
                         >
-                            {name[locale]}
+                            {productLabel}
                         </span>
                     </div>
                 );
@@ -103,7 +105,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
         >
             <div className="h-full w-full md:h-full md:w-1/2 relative">
                 <div className="h-full w-full overflow-hidden">
-                    <img
+                    <ResponsiveImage
                         className="h-full w-full object-cover z-0 scale"
                         src={mineBgImage}
                         style={{
@@ -111,7 +113,7 @@ export default function FacilityBanner({ mineId, direction, children }) {
                                 ? "brightness(60%)"
                                 : "brightness(80%)",
                         }}
-                    ></img>
+                    />
                 </div>
 
                 {/* info */}
@@ -158,10 +160,11 @@ export default function FacilityBanner({ mineId, direction, children }) {
                         id={"showImage" + mineId}
                         className="absolute left-0 top-0 w-full h-full bg-black z-20 hidden"
                     >
-                        <img
+                        <ResponsiveImage
                             className="w-full h-full object-cover"
                             src={imgUrl}
-                        ></img>
+                            alt={header}
+                        />
                     </div>
                 </div>
             </div>
@@ -169,15 +172,14 @@ export default function FacilityBanner({ mineId, direction, children }) {
             {/* Pattern */}
             {!mobileView && (
                 <div className="h-full w-1/2 relative">
-                    <img
+                    <ResponsiveImage
                         className="w-full h-full"
                         src="/assets/common/pattern.jpg"
-                    ></img>
+                        alt="Pomza Export pattern"
+                    />
                     <div
                         className="absolute w-full h-full left-0 top-0"
                         style={{
-                            backgroundImage:
-                                "linear-gradient(to bottom, #252525, #555555, #8a8a8a, #c3c3c3, #ffffff)",
                             backgroundImage:
                                 "linear-gradient(to bottom, #03337A,#ffffff)",
                             opacity: ".8",

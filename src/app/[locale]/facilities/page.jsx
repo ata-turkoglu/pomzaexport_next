@@ -3,6 +3,7 @@ import React, { useLayoutEffect } from "react";
 import minesJSON from "@/data/mines.json";
 import { useParams, useRouter } from "next/navigation";
 import { slugify } from "@/utils/commonFuncs";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 function Facilities() {
     const router = useRouter();
@@ -33,9 +34,9 @@ function Facilities() {
                             )
                         }
                     >
-                        <img
+                        <ResponsiveImage
                             src={item.images[0]}
-                            className="w-full h-full objecj-cover brightness-75"
+                            className="w-full h-full object-cover brightness-75"
                             alt={item.name[locale]}
                         />
                         <span

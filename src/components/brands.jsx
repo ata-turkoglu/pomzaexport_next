@@ -6,6 +6,7 @@ import { useRouter, useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import productsJSON from "@/data/products.json";
 import { slugify } from "@/utils/commonFuncs";
+import ResponsiveImage from "./ResponsiveImage";
 /* import { translateText as t } from "../../store/reducers/language"; */
 
 function Brands() {
@@ -34,7 +35,7 @@ function Brands() {
                 <div className="images">
                     <div className="imgContainer">
                         <a href="https://www.pomzaexport.com/" target="_blank">
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/pomzaexport-logo-white.png"
                                 alt="pomza export"
                             />
@@ -42,7 +43,7 @@ function Brands() {
                     </div>
                     <div className="imgContainer">
                         <a href="https://www.eilepomex.com/" target="_blank">
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/eilepomex-logo-white.png"
                                 alt="eile pomex"
                             />
@@ -52,7 +53,7 @@ function Brands() {
                 <div className="images">
                     <div className="imgContainer">
                         <a href="http://www.persanyapi.com.tr/" target="_blank">
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/persan-logo-white.png"
                                 alt="persan"
                             />
@@ -60,7 +61,7 @@ function Brands() {
                     </div>
                     <div className="imgContainer">
                         <a href="http://www.erper.com.tr/" target="_blank">
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/erper-logo-white.png"
                                 alt="erper"
                             />
@@ -79,7 +80,7 @@ function Brands() {
                 </div>
                 <div className="images">
                     <div className="imgContainer">
-                        <img
+                        <ResponsiveImage
                             className="cursor-pointer"
                             onClick={() =>
                                 router.push(
@@ -91,7 +92,7 @@ function Brands() {
                         />
                     </div>
                     <div className="imgContainer">
-                        <img
+                        <ResponsiveImage
                             className="cursor-pointer"
                             onClick={() =>
                                 router.push(
@@ -103,7 +104,7 @@ function Brands() {
                         />
                     </div>
                     <div className="imgContainer">
-                        <img
+                        <ResponsiveImage
                             className="cursor-pointer"
                             onClick={() =>
                                 router.push(
@@ -121,14 +122,14 @@ function Brands() {
                             href="https://www.eilepomex.com/pomexblok"
                             target="_blank"
                         >
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/pomexblok-logo-white.png"
                                 alt="pomex blok"
                             />
                         </a>
                     </div>
                     <div className="imgContainer">
-                        <img
+                        <ResponsiveImage
                             className="cursor-pointer"
                             onClick={() =>
                                 router.push(
@@ -140,7 +141,7 @@ function Brands() {
                         />
                     </div>
                     <div className="imgContainer">
-                        <img
+                        <ResponsiveImage
                             className="cursor-pointer"
                             onClick={() =>
                                 router.push(

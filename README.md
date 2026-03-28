@@ -43,6 +43,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Root redirect (`/` -> `/tr/`)
 - Canonical redirects for numeric product detail URLs (`/product/{id}` to slug URLs)
 
+## Responsive Image Notes
+
+- Source assets live in `public/assets`.
+- Responsive variants are generated into `public/assets-responsive` for:
+  - `web` (`1600px` max width) and `mobile` (`800px` max width)
+  - `webp` and `fallback` formats
+- Run `npm run images:build` after adding or updating images in `public/assets`.
+- `npm run build` already runs `npm run images:build` automatically before Next build.
+
 ## Backlog Note
 
 - Contact form currently uses a client-side SMTP flow (`window.Email`) and should be moved to a server-side or managed form endpoint in a later iteration for stronger security and reliability.

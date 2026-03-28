@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import TextTransitions, { TextContainer } from "./textTransitions";
 //import "@/components/css/introVideo.css";
 import { useTranslations } from "next-intl";
+import ResponsiveImage from "./ResponsiveImage";
 
 export default function IntroVideo() {
     const t = useTranslations("Intro");
@@ -56,7 +57,7 @@ export default function IntroVideo() {
                         />
                     </video>
                 ) : (
-                    <img
+                    <ResponsiveImage
                         className="w-full h-full object-cover"
                         src="/assets/common/view.jpg"
                         style={{
@@ -68,7 +69,7 @@ export default function IntroVideo() {
                 )}
             </div>
             <div className="h-screen w-full md:hidden">
-                <img
+                <ResponsiveImage
                     className="w-full h-full object-cover slide"
                     src="/assets/common/view.jpg"
                     style={{

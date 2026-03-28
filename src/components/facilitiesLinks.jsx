@@ -3,6 +3,7 @@ import mineJSON from "@/data/mines.json";
 import { slugify } from "@/utils/commonFuncs";
 import { useTranslations } from "next-intl";
 import { useRouter, useParams } from "next/navigation";
+import ResponsiveImage from "./ResponsiveImage";
 
 export default function FacilitiesLinks() {
     const router = useRouter();
@@ -35,7 +36,7 @@ export default function FacilitiesLinks() {
                             }
                             className="relative w-full h-auto md:h-full flex md:flex-1 mb-3 md:mb-0 ml-3 md:ml-0 mr-3 md:mr-5 cursor-pointer duration-300 hover:shadow-xl shadow-black hover:-translate-y-2 overflow-hidden"
                         >
-                            <img
+                            <ResponsiveImage
                                 className="w-full h-full object-cover"
                                 src={item.mineBgImage}
                                 alt={item.name[locale]}

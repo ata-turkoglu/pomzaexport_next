@@ -7,6 +7,7 @@ import { slugify } from "@/utils/commonFuncs";
 import minesJSON from "@/data/mines.json";
 import productsJSON from "@/data/products.json";
 import { useParams } from "next/navigation";
+import ResponsiveImage from "./ResponsiveImage";
 
 function Footer({ hFull = false }) {
     const t = useTranslations("Footer");
@@ -29,14 +30,13 @@ function Footer({ hFull = false }) {
                             href={"/" + locale + "/"}
                             className="text-2x1 font-semibold flex items-center space-x-3 text-primary"
                         >
-                            <img
+                            <ResponsiveImage
                                 src="/assets/logo/pomzaexport-logo-white.png"
                                 alt="pomza export"
                                 className="w-60 inline-block items-center"
                             />
                         </Link>
                     )}
-                    <p className="md:w-1/2"></p>
                 </div>
                 {/* footer navigations */}
                 <div className="md:w-2/3 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import ResponsiveImage from "./ResponsiveImage";
 
 const HOME_MIN_MS = 2200;
 const HOME_MAX_MS = 5200;
@@ -144,7 +145,7 @@ export default function SiteSplashGate() {
                     gap: "14px",
                 }}
             >
-                <img
+                <ResponsiveImage
                     src="/assets/logo/pomzaexport-logo-white.png"
                     alt="Pomza Export"
                     style={{

@@ -1,17 +1,14 @@
-#aboutPage {
-    background-color: rgba(21, 26, 56, 0.95);
+.sustainability-section {
     background-image: url("/assets-responsive/web/fallback/common/pattern.jpg");
     background-image: image-set(
         url("/assets-responsive/web/webp/common/pattern.webp") type("image/webp"),
         url("/assets-responsive/web/fallback/common/pattern.jpg")
             type("image/jpeg")
     );
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 767px) {
-    #aboutPage {
+    .sustainability-section {
         background-image: url(
             "/assets-responsive/mobile/fallback/common/pattern.jpg"
         );

@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { slugify } from "@/utils/commonFuncs";
 import mineTexts from "@/data/mineTexts.js";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 export default function Mine({ params: { locale, slug } }) {
     const router = useRouter();
@@ -25,20 +26,28 @@ export default function Mine({ params: { locale, slug } }) {
     const [external, setExternal] = useState(false);
     const t = useTranslations("MinePage");
 
-    const mouseOver = (e, name) => {
-        setProductName(name);
-        if (e.target.src) {
-            setImgUrl(e.target.src);
-            setShowingImage(true);
-        } else {
-            setImgUrl(e.target.previousSibling.src);
-            setShowingImage(true);
-        }
-    };
-
-    const mouseLeave = (e) => {
+    const mouseLeave = () => {
         setProductName(null);
         setShowingImage(false);
+        setLinkId(null);
+        setExternal(false);
+    };
+
+    const getLocalizedName = (item) =>
+        item?.name?.[locale] || item?.name?.tr || item?.name?.en || "";
+
+    const mouseOver = (item) => {
+        const localizedName = getLocalizedName(item);
+
+        setProductName(localizedName || null);
+        setImgUrl(item?.image || null);
+        setShowingImage(Boolean(item?.image));
+        setExternal(Boolean(item?.externalLink));
+        setLinkId(
+            item?.externalLink
+                ? item?.link
+                : setSlug(item.id, localizedName || String(item.id))
+        );
     };
 
     const setSlug = (id, name) => {
@@ -62,6 +71,10 @@ export default function Mine({ params: { locale, slug } }) {
 
     useEffect(() => {
         const el = document.getElementById("showImage" + mineId);
+        if (!el) {
+            return;
+        }
+
         if (showingImage) {
             el.classList.remove("leaveAnim");
             el.classList.add("enterAnim");
@@ -99,10 +112,11 @@ export default function Mine({ params: { locale, slug } }) {
                             id={"showImage" + mineData.id}
                             className="absolute left-0 top-0 w-full h-full bg-black z-200 hidden"
                         >
-                            <img
+                            <ResponsiveImage
                                 className="w-full h-full object-cover"
                                 src={imgUrl}
-                            ></img>
+                                alt={productName || mineData.name[locale]}
+                            />
                             {!mobileView && (
                                 <span className="text-white z-10 absolute left-10 bottom-10 text-6xl t-shadow">
                                     {productName}
@@ -141,52 +155,53 @@ export default function Mine({ params: { locale, slug } }) {
                                     key={key}
                                     className="w-full h-auto md:h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
                                     onClick={() => {
-                                        !mobileView &&
-                                            (item.externalLink
-                                                ? window.open(
-                                                      item.link,
-                                                      "_blank"
-                                                  )
-                                                : router.push(
-                                                      "/" +
-                                                          locale +
-                                                          "/product/" +
-                                                          setSlug(
-                                                              item.id,
-                                                              item.name[locale]
-                                                          )
-                                                  ));
-                                        mobileView &&
-                                            window.scrollTo({
-                                                top: 0,
-                                                left: 0,
-                                                behavior: "smooth",
-                                            });
+                                        if (!mobileView) {
+                                            if (item.externalLink) {
+                                                window.open(item.link, "_blank");
+                                            } else {
+                                                router.push(
+                                                    "/" +
+                                                        locale +
+                                                        "/product/" +
+                                                        setSlug(
+                                                            item.id,
+                                                            getLocalizedName(
+                                                                item
+                                                            )
+                                                        )
+                                                );
+                                            }
+                                            return;
+                                        }
+
+                                        mouseOver(item);
+                                        window.scrollTo({
+                                            top: 0,
+                                            left: 0,
+                                            behavior: "smooth",
+                                        });
                                     }}
-                                    onMouseOver={(e) => {
-                                        mouseOver(e, item.name[locale]);
-                                        item.externalLink
-                                            ? setExternal(true)
-                                            : setExternal(false);
-                                        item.externalLink
-                                            ? setLinkId(item.link)
-                                            : setLinkId(
-                                                  setSlug(
-                                                      item.id,
-                                                      item.name[locale]
-                                                  )
-                                              );
+                                    onTouchStart={() => {
+                                        if (mobileView) {
+                                            mouseOver(item);
+                                        }
                                     }}
-                                    onMouseLeave={(e) => {
-                                        mouseLeave(e);
-                                        setLinkId(null);
+                                    onMouseOver={() => {
+                                        if (!mobileView) {
+                                            mouseOver(item);
+                                        }
+                                    }}
+                                    onMouseLeave={() => {
+                                        if (!mobileView) {
+                                            mouseLeave();
+                                        }
                                     }}
                                 >
-                                    <img
+                                    <ResponsiveImage
                                         className="w-full h-full object-cover"
                                         src={item.image}
                                         alt={item.name[locale]}
-                                    ></img>
+                                    />
                                     {mobileView && (
                                         <span
                                             className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow"

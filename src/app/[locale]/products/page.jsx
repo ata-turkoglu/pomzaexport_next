@@ -3,6 +3,7 @@ import React, { useLayoutEffect } from "react";
 import productsJSON from "@/data/products.json";
 import { useParams, useRouter } from "next/navigation";
 import { slugify } from "@/utils/commonFuncs";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 function Products() {
     const router = useRouter();
@@ -31,9 +32,9 @@ function Products() {
                                   );
                         }}
                     >
-                        <img
+                        <ResponsiveImage
                             src={item.image}
-                            className="w-full h-full objecj-cover"
+                            className="w-full h-full object-cover"
                             alt={item.name[locale]}
                         />
                         <span

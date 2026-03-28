@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "images:build": "node scripts/generate-responsive-images.mjs",
+        "build": "npm run images:build && next build",
         "start": "next start",
         "lint": "next lint",
         "postbuild": "next-sitemap && cp public/sitemap.xml out/sitemap.xml && cp public/robots.txt out/robots.txt"
@@ -18,6 +19,7 @@
         "react": "^18",
         "react-dom": "^18",
         "react-google-recaptcha": "^3.1.0",
+        "sharp": "^0.34.5",
         "sweetalert": "^2.1.2"
     },
     "devDependencies": {

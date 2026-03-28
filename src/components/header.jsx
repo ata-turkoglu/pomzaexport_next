@@ -10,12 +10,12 @@ import { useParams, usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { slugify } from "@/utils/commonFuncs";
+import ResponsiveImage from "./ResponsiveImage";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [lang, setLang] = useState(null);
 
-    const route = usePathname();
     const router = useRouter();
     const { locale } = useParams();
     const pathname = usePathname();
@@ -60,7 +60,7 @@ function Header() {
 
     useLayoutEffect(() => {
         setLang(locale);
-    }, []);
+    }, [locale]);
 
     return (
         <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-16 px-4">
@@ -69,7 +69,7 @@ function Header() {
                     href={"/" + locale + "/"}
                     className="w-1/2 md:w-1/4 font-semibold flex items-start"
                 >
-                    <img
+                    <ResponsiveImage
                         src="/assets/logo/pomzaexport-logo-white.png"
                         alt="Pomza Export"
                         className="w-60 d-shadow"
@@ -199,7 +199,7 @@ function Header() {
             <Drawer
                 placement="top"
                 open={isOpen}
-                onClose={() => setIsOpen(true)}
+                onClose={() => setIsOpen(false)}
                 className="h-full w-full absolute"
                 style={isOpen ? { display: "flex" } : { display: "none" }}
                 overlay={true}
