@@ -1,44 +1,118 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import TextTransitions, { TextContainer } from "./textTransitions";
 import { useTranslations } from "next-intl";
-import ResponsiveImage from "./ResponsiveImage";
 
 export default function IntroVideo() {
     const t = useTranslations("Intro");
     const readyDispatched = useRef(false);
     const errorDispatched = useRef(false);
+    const videoRef = useRef(null);
+    const mobileImageRef = useRef(null);
 
-    const dispatchHeroEvent = (eventName) => {
-        window.dispatchEvent(new CustomEvent(eventName));
+    const isMobileViewport = () =>
+        typeof window !== "undefined" &&
+        window.matchMedia("(max-width: 767px)").matches;
+
+    const dispatchHeroEvent = (status) => {
+        if (typeof window === "undefined") {
+            return;
+        }
+
+        window.__heroMediaStatus = status;
+        window.dispatchEvent(new CustomEvent(`hero-media-${status}`));
     };
 
-    const handleVideoCanPlay = () => {
+    const dispatchReady = () => {
         if (readyDispatched.current) {
             return;
         }
         readyDispatched.current = true;
-        dispatchHeroEvent("hero-video-ready");
+        dispatchHeroEvent("ready");
     };
 
-    const handleVideoError = () => {
+    const dispatchError = () => {
         if (errorDispatched.current) {
             return;
         }
         errorDispatched.current = true;
-        dispatchHeroEvent("hero-video-error");
+        dispatchHeroEvent("error");
     };
+
+    const handleVideoCanPlay = () => {
+        if (isMobileViewport()) {
+            return;
+        }
+        dispatchReady();
+    };
+
+    const handleVideoError = () => {
+        if (isMobileViewport()) {
+            return;
+        }
+        dispatchError();
+    };
+
+    const handleImageLoad = () => {
+        if (!isMobileViewport()) {
+            return;
+        }
+        dispatchReady();
+    };
+
+    const handleImageError = () => {
+        if (!isMobileViewport()) {
+            return;
+        }
+        dispatchError();
+    };
+
+    useEffect(() => {
+        if (typeof window === "undefined") {
+            return;
+        }
+
+        if (isMobileViewport()) {
+            const imageEl = mobileImageRef.current;
+            if (!imageEl || !imageEl.complete) {
+                return;
+            }
+
+            if (imageEl.naturalWidth > 0) {
+                dispatchReady();
+            } else {
+                dispatchError();
+            }
+            return;
+        }
+
+        const videoEl = videoRef.current;
+        if (!videoEl) {
+            return;
+        }
+
+        if (videoEl.error) {
+            dispatchError();
+            return;
+        }
+
+        if (videoEl.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+            dispatchReady();
+        }
+    }, []);
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-black">
             <div className="absolute inset-0 hidden md:block">
                 <video
+                    ref={videoRef}
                     autoPlay={true}
                     muted
                     playsInline
                     preload="metadata"
                     onCanPlay={handleVideoCanPlay}
+                    onLoadedData={handleVideoCanPlay}
                     onError={handleVideoError}
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{
@@ -54,12 +128,15 @@ export default function IntroVideo() {
                 </video>
             </div>
             <div className="absolute inset-0 md:hidden">
-                <ResponsiveImage
+                <img
+                    ref={mobileImageRef}
                     className="w-full h-full object-cover hero-pan"
                     src="/assets/common/view.jpg"
                     loading="eager"
                     fetchPriority="high"
                     decoding="sync"
+                    onLoad={handleImageLoad}
+                    onError={handleImageError}
                     style={{
                         filter: "brightness(70%)",
                     }}

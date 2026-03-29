@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import productsJSON from "@/data/products.json";
 import minesJSON from "@/data/mines.json";
 import "./css/header.css";
-import { Drawer } from "@material-tailwind/react";
 import { X } from "lucide-react";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -201,15 +200,15 @@ function Header() {
                 </div>
             </div>
             {/* Mobile Menu */}
-            <Drawer
-                placement="top"
-                open={isOpen}
-                onClose={() => setIsOpen(false)}
-                className="h-full w-full absolute"
-                style={isOpen ? { display: "flex" } : { display: "none" }}
-                overlay={true}
-            >
-                <div className="p-3 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
+            {isOpen && (
+                <div className="fixed inset-0 z-50 md:hidden">
+                    <button
+                        type="button"
+                        aria-label="Close navigation menu"
+                        onClick={() => setIsOpen(false)}
+                        className="absolute inset-0 bg-black/60"
+                    />
+                    <div className="relative p-3 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center duration-200">
                     <div className="flex justify-between w-full items-start">
                         <div className="flex items-center gap-2">
                             <button
@@ -275,7 +274,8 @@ function Header() {
                         <span className="capitalize">{t("contact")}</span>
                     </Link>
                 </div>
-            </Drawer>
+                </div>
+            )}
         </nav>
     );
 }

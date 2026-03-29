@@ -38,7 +38,8 @@ export default function Product({ params: { locale, slug } }) {
                     <ResponsiveImage
                         className="w-full h-full object-cover brightness-90"
                         src={productData.image}
-                        loading="lazy"
+                        loading="eager"
+                        fetchPriority="high"
                         alt={productData.name[locale]}
                     />
                     <h1 className="w-full text-4xl font-bold text-white absolute left-0 flex justify-center bottom-0 pb-5">
