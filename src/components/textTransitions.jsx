@@ -1,75 +1,68 @@
 "use client";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { Children, useEffect, useMemo, useState } from "react";
 
-//import "./css/textTransition.css";
+const ROTATE_MS = 5000;
 
 export function TextContainer({ children }) {
-    return children;
+    return <>{children}</>;
 }
 
 export default function TextTransitions({ children }) {
-    const [content, setContent] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
-    const setWords = (item) => {
-        return item.props.children.split(" ").map((el, idx) => {
-            return (
-                <span
-                    key={idx}
-                    className="tt mr-2 text-white text-5xl font-medium"
-                >
-                    {el}
-                </span>
-            );
-        });
-    };
+    const lines = useMemo(
+        () =>
+            Children.toArray(children)
+                .map((item) => item?.props?.children)
+                .map((text) =>
+                    typeof text === "string"
+                        ? text.trim()
+                        : String(text || "").trim()
+                )
+                .filter(Boolean),
+        [children]
+    );
 
     useEffect(() => {
-        let counter = 1;
+        if (lines.length <= 1) {
+            return;
+        }
 
-        const showIntrvl = setInterval(() => {
-            if (counter != 0) {
-                document.getElementById("text" + (counter - 1)).style.display =
-                    "none";
-            } else {
-                const prevEl = document.getElementById(
-                    "text" + (children.length - 1)
-                );
-                if (prevEl.style.display == "flex") {
-                    prevEl.style.display = "none";
-                }
-            }
-
-            document.getElementById("text" + counter).style.display = "flex";
-
-            if (counter < children.length - 1) {
-                counter++;
-            } else {
-                counter = 0;
-            }
-        }, 5000);
+        const interval = window.setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % lines.length);
+        }, ROTATE_MS);
 
         return () => {
-            clearInterval(showIntrvl);
+            window.clearInterval(interval);
         };
-    }, [content]);
+    }, [lines.length]);
 
-    useLayoutEffect(() => {
-        const list = children.map((item, index) => {
-            return (
-                <h2
-                    id={"text" + index}
-                    key={index}
+    useEffect(() => {
+        setActiveIndex(0);
+    }, [lines.length]);
+
+    if (lines.length === 0) {
+        return null;
+    }
+
+    return (
+        <div className="relative h-full w-full overflow-hidden">
+            {lines.map((line, index) => (
+                <span
+                    key={line + index}
                     className={
-                        index != 0 ? "tth1 hidden t-shadow" : "tth1 t-shadow"
+                        "absolute inset-0 m-0 flex flex-wrap items-center justify-center gap-x-2 text-center text-white font-medium t-shadow transition-all duration-500 text-3xl md:text-5xl " +
+                        (index === activeIndex
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-2 pointer-events-none")
                     }
-                    style={index != 0 ? { display: "none" } : {}}
+                    aria-hidden={index !== activeIndex}
                 >
-                    {setWords(item)}
-                </h2>
-            );
-        });
-        setContent(list);
-    }, []);
-
-    return <div className="h-100 w-full flex justify-center">{content}</div>;
+                    {line.split(/\s+/).map((word, wordIndex) => (
+                        <span key={word + wordIndex}>{word}</span>
+                    ))}
+                </span>
+            ))}
+        </div>
+    );
 }

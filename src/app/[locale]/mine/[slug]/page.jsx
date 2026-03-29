@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ImgCarousel from "@/components/imgCarousel";
 import minesJSON from "@/data/mines.json";
 import productsJSON from "@/data/products.json";
 import "./mine.css";
-import "@/components/css/facilityBanner.css";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { slugify } from "@/utils/commonFuncs";
@@ -19,18 +18,21 @@ export default function Mine({ params: { locale, slug } }) {
     const [mineId, setMineId] = useState(null);
     const [mobileView, setMobileView] = useState(false);
     const [mineProducts, setMineProducts] = useState([]);
-    const [productName, setProductName] = useState(null);
-    const [imgUrl, setImgUrl] = useState(null);
-    const [showingImage, setShowingImage] = useState(false);
-    const [linkId, setLinkId] = useState(null);
-    const [external, setExternal] = useState(false);
+    const [previewItem, setPreviewItem] = useState(null);
+    const [isPreviewFading, setIsPreviewFading] = useState(false);
+    const previewCloseTimeoutRef = useRef(0);
     const t = useTranslations("MinePage");
 
     const mouseLeave = () => {
-        setProductName(null);
-        setShowingImage(false);
-        setLinkId(null);
-        setExternal(false);
+        if (!previewItem) {
+            return;
+        }
+        window.clearTimeout(previewCloseTimeoutRef.current);
+        setIsPreviewFading(true);
+        previewCloseTimeoutRef.current = window.setTimeout(() => {
+            setPreviewItem(null);
+            setIsPreviewFading(false);
+        }, 220);
     };
 
     const getLocalizedName = (item) =>
@@ -39,22 +41,23 @@ export default function Mine({ params: { locale, slug } }) {
     const mouseOver = (item) => {
         const localizedName = getLocalizedName(item);
 
-        setProductName(localizedName || null);
-        setImgUrl(item?.image || null);
-        setShowingImage(Boolean(item?.image));
-        setExternal(Boolean(item?.externalLink));
-        setLinkId(
-            item?.externalLink
+        window.clearTimeout(previewCloseTimeoutRef.current);
+        setIsPreviewFading(false);
+        setPreviewItem({
+            name: localizedName || "",
+            image: item?.image || "",
+            external: Boolean(item?.externalLink),
+            linkId: item?.externalLink
                 ? item?.link
-                : setSlug(item.id, localizedName || String(item.id))
-        );
+                : setSlug(item.id, localizedName || String(item.id)),
+        });
     };
 
     const setSlug = (id, name) => {
         return id.toString() + "-" + slugify(name);
     };
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const id = slug.split("-")[0];
         setMineId(id);
 
@@ -62,32 +65,40 @@ export default function Mine({ params: { locale, slug } }) {
         setMineData(data);
 
         const products = productsJSON.filter((item) => item.facilityId == id);
-        setMineProducts([...products]);
-
-        if (window.innerWidth < 768) {
-            setMobileView(true);
-        }
-    }, []);
+        setMineProducts(products);
+    }, [slug]);
 
     useEffect(() => {
-        const el = document.getElementById("showImage" + mineId);
-        if (!el) {
+        if (typeof window === "undefined") {
             return;
         }
 
-        if (showingImage) {
-            el.classList.remove("leaveAnim");
-            el.classList.add("enterAnim");
-            el.style.display = "block";
-        } else if (el) {
-            el.classList.remove("enterAnim");
-            el.classList.toggle("leaveAnim");
-            setTimeout(() => {
-                el.style.display = "none";
-                setImgUrl(null);
-            }, 300);
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+        const syncMobile = () => setMobileView(mediaQuery.matches);
+
+        syncMobile();
+        if (typeof mediaQuery.addEventListener === "function") {
+            mediaQuery.addEventListener("change", syncMobile);
+        } else {
+            mediaQuery.addListener(syncMobile);
         }
-    }, [showingImage]);
+
+        return () => {
+            if (typeof mediaQuery.removeEventListener === "function") {
+                mediaQuery.removeEventListener("change", syncMobile);
+            } else {
+                mediaQuery.removeListener(syncMobile);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        return () => {
+            window.clearTimeout(previewCloseTimeoutRef.current);
+        };
+    }, []);
+
+    const isPreviewVisible = Boolean(previewItem?.image);
 
     return (
         <>
@@ -98,7 +109,7 @@ export default function Mine({ params: { locale, slug } }) {
                         className="h-fit w-full overflow-hidden relative"
                         style={{ height: mobileView ? "50vh" : "70vh" }}
                     >
-                        <ImgCarousel images={[...mineData.images]} />
+                        <ImgCarousel images={mineData.images} />
                         <h1
                             className="absolute font-semibold text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
                             style={{
@@ -109,32 +120,44 @@ export default function Mine({ params: { locale, slug } }) {
                             {mineData.name[locale]}
                         </h1>
                         <div
-                            id={"showImage" + mineData.id}
-                            className="absolute left-0 top-0 w-full h-full bg-black z-200 hidden"
+                            className={
+                                "absolute left-0 top-0 w-full h-full bg-black z-[200] transition-opacity duration-200 " +
+                                (isPreviewVisible && !isPreviewFading
+                                    ? "opacity-100"
+                                    : "opacity-0 pointer-events-none")
+                            }
                         >
-                            <ResponsiveImage
-                                className="w-full h-full object-cover"
-                                src={imgUrl}
-                                alt={productName || mineData.name[locale]}
-                            />
-                            {!mobileView && (
+                            {previewItem?.image && (
+                                <ResponsiveImage
+                                    className="w-full h-full object-cover"
+                                    src={previewItem.image}
+                                    alt={
+                                        previewItem.name ||
+                                        mineData.name[locale]
+                                    }
+                                />
+                            )}
+                            {!mobileView && previewItem?.name && (
                                 <span className="text-white z-10 absolute left-10 bottom-10 text-6xl t-shadow">
-                                    {productName}
+                                    {previewItem.name}
                                 </span>
                             )}
-                            {mobileView && (
+                            {mobileView && isPreviewVisible && (
                                 <span
                                     className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 pt-3 text-white z-10"
                                     style={{ border: "1px solid white" }}
                                     role="button"
                                     onClick={() => {
-                                        external
-                                            ? window.open(linkId, "_blank")
+                                        previewItem.external
+                                            ? window.open(
+                                                  previewItem.linkId,
+                                                  "_blank"
+                                              )
                                             : router.push(
                                                   "/" +
                                                       locale +
                                                       "/product/" +
-                                                      linkId
+                                                      previewItem.linkId
                                               );
                                     }}
                                 >
@@ -186,7 +209,7 @@ export default function Mine({ params: { locale, slug } }) {
                                             mouseOver(item);
                                         }
                                     }}
-                                    onMouseOver={() => {
+                                    onMouseEnter={() => {
                                         if (!mobileView) {
                                             mouseOver(item);
                                         }
@@ -204,7 +227,7 @@ export default function Mine({ params: { locale, slug } }) {
                                     />
                                     {mobileView && (
                                         <span
-                                            className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow"
+                                            className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow select-none"
                                             style={{
                                                 display: mobileView
                                                     ? "flex"

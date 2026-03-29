@@ -168,6 +168,7 @@ export default function SiteSplashGate() {
                 <ResponsiveImage
                     src="/assets/logo/pomzaexport-logo-white.png"
                     alt="Pomza Export"
+                    loading="eager"
                     style={{
                         width: "100%",
                         height: "auto",

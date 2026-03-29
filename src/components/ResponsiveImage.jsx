@@ -11,7 +11,11 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
     const sources = getResponsiveImageSources(src);
     const dimensions = getResponsiveImageDimensions(src);
     const preferMobileFallback = src === "/assets/common/view.jpg";
-    const resolvedImgProps = { ...imgProps };
+    const resolvedImgProps = {
+        loading: "lazy",
+        decoding: "async",
+        ...imgProps,
+    };
 
     if (
         resolvedImgProps.width == null &&

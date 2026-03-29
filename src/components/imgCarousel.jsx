@@ -7,6 +7,8 @@ export default function ImgCarousel({ images }) {
         <Carousel
             autoplay={true}
             loop={true}
+            prevArrow={() => null}
+            nextArrow={() => null}
             navigation={() => {
                 return <span></span>;
             }}
@@ -17,7 +19,8 @@ export default function ImgCarousel({ images }) {
                         <ResponsiveImage
                             src={img}
                             className="h-full w-full object-cover"
-                            loading="lazy"
+                            loading={key === 0 ? "eager" : "lazy"}
+                            fetchPriority={key === 0 ? "high" : "auto"}
                             alt="Pomza Export"
                             style={{
                                 filter: "brightness(75%)",

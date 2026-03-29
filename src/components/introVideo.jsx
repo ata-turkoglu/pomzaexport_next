@@ -1,14 +1,12 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import TextTransitions, { TextContainer } from "./textTransitions";
-//import "@/components/css/introVideo.css";
 import { useTranslations } from "next-intl";
 import ResponsiveImage from "./ResponsiveImage";
 
 export default function IntroVideo() {
     const t = useTranslations("Intro");
-    const [videoError, setVideoError] = useState(false);
     const readyDispatched = useRef(false);
     const errorDispatched = useRef(false);
 
@@ -25,7 +23,6 @@ export default function IntroVideo() {
     };
 
     const handleVideoError = () => {
-        setVideoError(true);
         if (errorDispatched.current) {
             return;
         }
@@ -35,45 +32,30 @@ export default function IntroVideo() {
 
     return (
         <div className="relative">
-            <div className="h-full w-full overflow-hidden hidden md:block">
-                {!videoError ? (
-                    <video
-                        autoPlay={true}
-                        muted
-                        playsInline
-                        preload="metadata"
-                        poster="/assets/common/view.jpg"
-                        onCanPlay={handleVideoCanPlay}
-                        onError={handleVideoError}
-                        style={{
-                            filter: "brightness(70%)",
-                            zIndex: 0,
-                        }}
-                        loop={true}
-                    >
-                        <source
-                            src="/assets/video/pmzaltin-faststart.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                ) : (
-                    <ResponsiveImage
-                        className="w-full h-full object-cover"
-                        src="/assets/common/view.jpg"
-                        loading="eager"
-                        fetchPriority="high"
-                        decoding="sync"
-                        style={{
-                            filter: "brightness(70%)",
-                            objectPosition: "40%",
-                        }}
-                        alt="pomza export"
+            <div className="h-full w-full overflow-hidden hidden md:block bg-black">
+                <video
+                    autoPlay={true}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    onCanPlay={handleVideoCanPlay}
+                    onError={handleVideoError}
+                    className="w-full h-full object-cover"
+                    style={{
+                        filter: "brightness(70%)",
+                        zIndex: 0,
+                    }}
+                    loop={true}
+                >
+                    <source
+                        src="/assets/video/pmzaltin-faststart.mp4"
+                        type="video/mp4"
                     />
-                )}
+                </video>
             </div>
             <div className="h-screen w-full md:hidden">
                 <ResponsiveImage
-                    className="w-full h-full object-cover slide"
+                    className="w-full h-full object-cover"
                     src="/assets/common/view.jpg"
                     loading="eager"
                     fetchPriority="high"
@@ -85,7 +67,7 @@ export default function IntroVideo() {
                     alt="pomza export"
                 />
             </div>
-            <div className="absolute z-10 bottom-1/4 inset-x-0 h-fit w-full px-4">
+            <div className="absolute z-10 bottom-1/4 inset-x-0 h-[160px] md:h-[220px] w-full px-4 overflow-hidden">
                 <TextTransitions>
                     <TextContainer>
                         {t("weContinueWhereTheLydiansLeftOff")}

@@ -73,6 +73,7 @@ function Header() {
                         src="/assets/logo/pomzaexport-logo-white.png"
                         alt="Pomza Export"
                         className="w-60 d-shadow"
+                        loading="eager"
                     />
                 </Link>
                 {/* Mobile Menu Icon */}
@@ -120,7 +121,7 @@ function Header() {
                                 return (
                                     <li
                                         key={key}
-                                        className="text-sm text-white w-full px-6 pb-3 duration-200 z-40"
+                                        className="text-sm text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
                                         onClick={() =>
                                             router.push(
                                                 "/" +
@@ -146,7 +147,7 @@ function Header() {
                                 return (
                                     <li
                                         key={key}
-                                        className="text-sm text-white w-full px-6 pb-2 duration-200 z-40"
+                                        className="text-sm text-white w-full px-6 pb-2 duration-200 z-40 cursor-pointer"
                                         onClick={() =>
                                             item.externalLink
                                                 ? window.open(
@@ -182,13 +183,13 @@ function Header() {
                         </span>
                         <ul className="nav-list pb-3">
                             <li
-                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
+                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
                                 onClick={() => changeLanguage("tr")}
                             >
                                 tr
                             </li>
                             <li
-                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
+                                className="text-md text-white w-full px-6 pb-3 duration-200 z-40 cursor-pointer"
                                 onClick={() => changeLanguage("en")}
                             >
                                 en
@@ -208,25 +209,32 @@ function Header() {
             >
                 <div className="p-3 h-fit w-full bg-[#151a38] z-50 flex flex-col items-center md:hidden duration-200">
                     <div className="flex justify-between w-full items-start">
-                        <span className="text-white h-full text-lg flex items-center cursor-pointer relative nav-link bg-transparent">
-                            <span className="border px-2 pt-1 rounded-3xl border-gray-700">
-                                {lang}
-                            </span>
-                            <ul className="nav-list pb-3 bg-transparent">
-                                <li
-                                    className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
-                                    onClick={() => changeLanguage("tr")}
-                                >
-                                    tr
-                                </li>
-                                <li
-                                    className="text-md text-white w-full px-6 pb-3 duration-200 z-40"
-                                    onClick={() => changeLanguage("en")}
-                                >
-                                    en
-                                </li>
-                            </ul>
-                        </span>
+                        <div className="flex items-center gap-2">
+                            <button
+                                type="button"
+                                onClick={() => changeLanguage("tr")}
+                                className={
+                                    "border rounded-3xl px-3 py-1 text-sm uppercase cursor-pointer " +
+                                    (lang === "tr"
+                                        ? "border-white text-white"
+                                        : "border-gray-500 text-gray-300")
+                                }
+                            >
+                                tr
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => changeLanguage("en")}
+                                className={
+                                    "border rounded-3xl px-3 py-1 text-sm uppercase cursor-pointer " +
+                                    (lang === "en"
+                                        ? "border-white text-white"
+                                        : "border-gray-500 text-gray-300")
+                                }
+                            >
+                                en
+                            </button>
+                        </div>
                         <button
                             onClick={() => setIsOpen(false)}
                             type="button"
