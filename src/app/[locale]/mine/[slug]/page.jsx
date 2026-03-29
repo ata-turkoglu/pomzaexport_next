@@ -16,7 +16,6 @@ export default function Mine({ params: { locale, slug } }) {
     const [mineData, setMineData] = useState(null);
 
     const [mineId, setMineId] = useState(null);
-    const [mobileView, setMobileView] = useState(false);
     const [mineProducts, setMineProducts] = useState([]);
     const [previewItem, setPreviewItem] = useState(null);
     const [isPreviewFading, setIsPreviewFading] = useState(false);
@@ -57,6 +56,10 @@ export default function Mine({ params: { locale, slug } }) {
         return id.toString() + "-" + slugify(name);
     };
 
+    const isMobileViewport = () =>
+        typeof window !== "undefined" &&
+        window.matchMedia("(max-width: 767px)").matches;
+
     useEffect(() => {
         const id = slug.split("-")[0];
         setMineId(id);
@@ -67,30 +70,6 @@ export default function Mine({ params: { locale, slug } }) {
         const products = productsJSON.filter((item) => item.facilityId == id);
         setMineProducts(products);
     }, [slug]);
-
-    useEffect(() => {
-        if (typeof window === "undefined") {
-            return;
-        }
-
-        const mediaQuery = window.matchMedia("(max-width: 767px)");
-        const syncMobile = () => setMobileView(mediaQuery.matches);
-
-        syncMobile();
-        if (typeof mediaQuery.addEventListener === "function") {
-            mediaQuery.addEventListener("change", syncMobile);
-        } else {
-            mediaQuery.addListener(syncMobile);
-        }
-
-        return () => {
-            if (typeof mediaQuery.removeEventListener === "function") {
-                mediaQuery.removeEventListener("change", syncMobile);
-            } else {
-                mediaQuery.removeListener(syncMobile);
-            }
-        };
-    }, []);
 
     useEffect(() => {
         return () => {
@@ -105,17 +84,10 @@ export default function Mine({ params: { locale, slug } }) {
             {mineData && (
                 <main className="flex flex-col h-fit w-full items-center overflow-scroll">
                     {/* Image Container */}
-                    <div
-                        className="h-fit w-full overflow-hidden relative"
-                        style={{ height: mobileView ? "50vh" : "70vh" }}
-                    >
+                    <div className="w-full h-[50vh] md:h-[70vh] overflow-hidden relative">
                         <ImgCarousel images={mineData.images} />
                         <h1
-                            className="absolute font-semibold text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
-                            style={{
-                                top: mobileView ? "85%" : "80%",
-                                left: "5%",
-                            }}
+                            className="absolute top-[85%] md:top-[80%] left-[5%] font-semibold text-white text-3xl md:text-6xl w-fit flex justify-center t-shadow"
                         >
                             {mineData.name[locale]}
                         </h1>
@@ -137,14 +109,14 @@ export default function Mine({ params: { locale, slug } }) {
                                     }
                                 />
                             )}
-                            {!mobileView && previewItem?.name && (
-                                <span className="text-white z-10 absolute left-10 bottom-10 text-6xl t-shadow">
+                            {previewItem?.name && (
+                                <span className="hidden md:block text-white z-10 absolute left-10 bottom-10 text-6xl t-shadow">
                                     {previewItem.name}
                                 </span>
                             )}
-                            {mobileView && isPreviewVisible && (
+                            {isPreviewVisible && (
                                 <span
-                                    className="absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 pt-3 text-white z-10"
+                                    className="md:hidden absolute right-0 left-0 mx-auto bottom-5 w-fit h-fit p-2 pt-3 text-white z-10"
                                     style={{ border: "1px solid white" }}
                                     role="button"
                                     onClick={() => {
@@ -168,17 +140,14 @@ export default function Mine({ params: { locale, slug } }) {
                     </div>
 
                     {/* Product Container */}
-                    <div
-                        className="w-full py-3 md:py-8 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:gap-0 md:flex md:items-center md:justify-center duration-200"
-                        style={{ height: mobileView ? "fit-content" : "30vh" }}
-                    >
+                    <div className="w-full py-3 md:py-8 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:gap-0 md:flex md:items-center md:justify-center md:h-[30vh] duration-200">
                         {mineProducts.map((item, key) => {
                             return (
                                 <div
                                     key={key}
-                                    className="w-full h-auto md:h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
+                                    className="w-full aspect-[4/3] md:aspect-auto md:h-full md:max-w-max overflow-hidden cursor-pointer md:mr-1 hover:shadow-lg shadow-black duration-200 productContainer relative"
                                     onClick={() => {
-                                        if (!mobileView) {
+                                        if (!isMobileViewport()) {
                                             if (item.externalLink) {
                                                 window.open(item.link, "_blank");
                                             } else {
@@ -205,17 +174,17 @@ export default function Mine({ params: { locale, slug } }) {
                                         });
                                     }}
                                     onTouchStart={() => {
-                                        if (mobileView) {
+                                        if (isMobileViewport()) {
                                             mouseOver(item);
                                         }
                                     }}
                                     onMouseEnter={() => {
-                                        if (!mobileView) {
+                                        if (!isMobileViewport()) {
                                             mouseOver(item);
                                         }
                                     }}
                                     onMouseLeave={() => {
-                                        if (!mobileView) {
+                                        if (!isMobileViewport()) {
                                             mouseLeave();
                                         }
                                     }}
@@ -225,21 +194,9 @@ export default function Mine({ params: { locale, slug } }) {
                                         src={item.image}
                                         alt={item.name[locale]}
                                     />
-                                    {mobileView && (
-                                        <span
-                                            className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow select-none"
-                                            style={{
-                                                display: mobileView
-                                                    ? "flex"
-                                                    : "",
-                                                fontSize: mobileView
-                                                    ? "1.6rem"
-                                                    : "",
-                                            }}
-                                        >
-                                            {item.name[locale]}
-                                        </span>
-                                    )}
+                                    <span className="md:hidden flex items-center justify-center text-white font-semibold text-2xl z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow select-none">
+                                        {item.name[locale]}
+                                    </span>
                                 </div>
                             );
                         })}
@@ -261,8 +218,7 @@ export default function Mine({ params: { locale, slug } }) {
                         <div className="w-full flex items-center justify-center">
                             <iframe
                                 src={mineData.mapSrc}
-                                width={mobileView ? "380" : "500"}
-                                height={mobileView ? "380" : "500"}
+                                className="w-[380px] h-[380px] md:w-[500px] md:h-[500px] max-w-full border-0"
                                 allowFullScreen
                                 referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>

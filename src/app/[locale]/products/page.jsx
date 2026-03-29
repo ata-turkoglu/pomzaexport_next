@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import productsJSON from "@/data/products.json";
 import { useParams, useRouter } from "next/navigation";
 import { slugify } from "@/utils/commonFuncs";
@@ -20,7 +20,7 @@ function Products() {
                 {productsJSON.map((item, index) => (
                     <div
                         key={index}
-                        className="w-full h-full relative cursor-pointer"
+                        className="w-full aspect-[4/3] md:aspect-[16/10] relative cursor-pointer overflow-hidden"
                         onClick={() => {
                             item.externalLink
                                 ? window.open(item.link, "_blank")

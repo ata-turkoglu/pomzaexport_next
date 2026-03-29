@@ -24,7 +24,7 @@ function Facilities() {
                 {minesJSON.map((item, index) => (
                     <div
                         key={index}
-                        className="w-full h-full flex relative mb-2 cursor-pointer"
+                        className="w-full aspect-[16/9] md:aspect-[21/9] flex relative mb-2 cursor-pointer overflow-hidden"
                         onClick={() =>
                             router.push(
                                 "/" +

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import "./css/brands.css";
-import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import productsJSON from "@/data/products.json";
@@ -10,13 +9,9 @@ import ResponsiveImage from "./ResponsiveImage";
 /* import { translateText as t } from "../../store/reducers/language"; */
 
 function Brands() {
-    const [mobile, setMobile] = useState(null);
     const router = useRouter();
     const { locale } = useParams();
     const t = useTranslations("Brands");
-    useEffect(() => {
-        window.innerWidth < 768 ? setMobile(true) : setMobile(false);
-    }, []);
 
     const getProductSlug = (id) => {
         const product = productsJSON.find((item) => item.id === id);
@@ -69,11 +64,8 @@ function Brands() {
                     </div>
                 </div>
             </div>
-            {mobile ? (
-                <div className="content-border-h"></div>
-            ) : (
-                <div className="content-border"></div>
-            )}
+            <div className="content-border desktop-separator"></div>
+            <div className="content-border-h mobile-separator"></div>
             <div className="content">
                 <div className="headerContainer">
                     <h2 color="white">{t("ourBrands")}</h2>

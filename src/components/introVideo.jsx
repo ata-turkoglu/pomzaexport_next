@@ -31,8 +31,8 @@ export default function IntroVideo() {
     };
 
     return (
-        <div className="relative">
-            <div className="h-full w-full overflow-hidden hidden md:block bg-black">
+        <section className="relative h-screen w-full overflow-hidden bg-black">
+            <div className="absolute inset-0 hidden md:block">
                 <video
                     autoPlay={true}
                     muted
@@ -40,7 +40,7 @@ export default function IntroVideo() {
                     preload="metadata"
                     onCanPlay={handleVideoCanPlay}
                     onError={handleVideoError}
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     style={{
                         filter: "brightness(70%)",
                         zIndex: 0,
@@ -53,7 +53,7 @@ export default function IntroVideo() {
                     />
                 </video>
             </div>
-            <div className="h-screen w-full md:hidden">
+            <div className="absolute inset-0 md:hidden">
                 <ResponsiveImage
                     className="w-full h-full object-cover hero-pan"
                     src="/assets/common/view.jpg"
@@ -90,6 +90,6 @@ export default function IntroVideo() {
                     </TextContainer>
                 </TextTransitions>
             </div>
-        </div>
+        </section>
     );
 }
