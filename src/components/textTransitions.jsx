@@ -51,7 +51,7 @@ export default function TextTransitions({ children }) {
                 <span
                     key={line + index}
                     className={
-                        "absolute inset-0 m-0 flex flex-wrap items-center justify-center gap-x-2 text-center text-white font-medium t-shadow transition-all duration-500 text-3xl md:text-5xl " +
+                        "absolute inset-0 m-0 flex flex-wrap items-center content-center justify-center gap-x-2 gap-y-0 text-center text-white font-medium leading-tight md:leading-tight t-shadow transition-all duration-500 text-3xl md:text-5xl " +
                         (index === activeIndex
                             ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-2 pointer-events-none")

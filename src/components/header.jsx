@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState } from "react";
 import productsJSON from "@/data/products.json";
 import minesJSON from "@/data/mines.json";
 import "./css/header.css";
@@ -14,15 +14,19 @@ import ResponsiveImage from "./ResponsiveImage";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const [lang, setLang] = useState(null);
 
     const router = useRouter();
     const { locale } = useParams();
     const pathname = usePathname();
     const t = useTranslations("Header");
+    const activeLocale = locale === "en" ? "en" : "tr";
 
     const changeLanguage = (language) => {
-        setLang(language);
+        if (language === activeLocale) {
+            setIsOpen(false);
+            return;
+        }
+
         window.localStorage.setItem("lang", language);
 
         const realPath = pathname.split("/").splice(2).join("/");
@@ -52,15 +56,13 @@ function Header() {
                 router.push("/" + language + "/" + realPath);
             }
         }
+
+        setIsOpen(false);
     };
 
     const setSlug = (id, name) => {
         return id.toString() + "-" + slugify(name);
     };
-
-    useLayoutEffect(() => {
-        setLang(locale);
-    }, [locale]);
 
     return (
         <nav className="bg-transparent flex items-center absolute left-0 top-0 z-40 w-full h-16 px-4">
@@ -179,7 +181,7 @@ function Header() {
                     </Link>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
                         <span className="border px-2 pt-1 rounded-3xl border-gray-800">
-                            {lang}
+                            {activeLocale}
                         </span>
                         <ul className="nav-list pb-3">
                             <li
@@ -214,10 +216,10 @@ function Header() {
                                 type="button"
                                 onClick={() => changeLanguage("tr")}
                                 className={
-                                    "border rounded-3xl px-3 py-1 text-sm uppercase cursor-pointer " +
-                                    (lang === "tr"
+                                    "inline-flex items-center justify-center border rounded-3xl px-3 h-8 py-0 pt-1 text-xs uppercase leading-none cursor-pointer " +
+                                    (activeLocale === "tr"
                                         ? "border-white text-white"
-                                        : "border-gray-500 text-gray-300")
+                                        : "border-none text-gray-300")
                                 }
                             >
                                 tr
@@ -226,10 +228,10 @@ function Header() {
                                 type="button"
                                 onClick={() => changeLanguage("en")}
                                 className={
-                                    "border rounded-3xl px-3 py-1 text-sm uppercase cursor-pointer " +
-                                    (lang === "en"
+                                    "inline-flex items-center justify-center border rounded-3xl px-3 h-8 py-0 pt-1 text-xs uppercase leading-none cursor-pointer " +
+                                    (activeLocale === "en"
                                         ? "border-white text-white"
-                                        : "border-gray-500 text-gray-300")
+                                        : "border-none text-gray-300")
                                 }
                             >
                                 en
