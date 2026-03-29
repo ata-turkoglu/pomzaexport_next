@@ -58,18 +58,16 @@ export const getResponsiveImageSources = (src) => {
 
     const fallbackExt = getFallbackExtension(info.ext);
     const fallbackType = FALLBACK_MIME_BY_EXT[fallbackExt] || "image/jpeg";
+    const buildProfileSources = (profile) => ({
+        webp: toResponsivePath(src, profile, "webp", ".webp"),
+        fallback: toResponsivePath(src, profile, "fallback", fallbackExt),
+        fallbackType,
+    });
 
     return {
-        mobile: {
-            webp: toResponsivePath(src, "mobile", "webp", ".webp"),
-            fallback: toResponsivePath(src, "mobile", "fallback", fallbackExt),
-            fallbackType,
-        },
-        web: {
-            webp: toResponsivePath(src, "web", "webp", ".webp"),
-            fallback: toResponsivePath(src, "web", "fallback", fallbackExt),
-            fallbackType,
-        },
+        mobile: buildProfileSources("mobile"),
+        web: buildProfileSources("web"),
+        listing: buildProfileSources("listing"),
         original: src,
     };
 };

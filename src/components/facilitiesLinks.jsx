@@ -40,6 +40,9 @@ export default function FacilitiesLinks() {
                                 className="w-full h-full object-cover"
                                 src={item.mineBgImage}
                                 alt={item.name[locale]}
+                                desktopProfile="listing"
+                                width={400}
+                                height={225}
                             />
                             <h3 className="absolute w-full left-0 bottom-0 px-3 pt-3 pb-1 text-white text-2xl t-shadow font-extrabold">
                                 {item.location} <br></br>

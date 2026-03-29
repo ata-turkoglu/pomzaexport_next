@@ -23,15 +23,22 @@ export default function Gallery({ images, name = "gallery-image" }) {
                             src={imgelink}
                             className="w-full h-full object-cover"
                             alt={name}
+                            mobileProfile="listing"
+                            desktopProfile="listing"
                         />
                     </div>
                 ))}
             </div>
-            <Dialog open={open} handler={handleOpen} size="xl">
-                <div>
+            <Dialog
+                open={open}
+                handler={handleOpen}
+                size="xl"
+                className="m-0 border-0 bg-transparent shadow-none ring-0 outline-none rounded-none"
+            >
+                <div className="overflow-hidden">
                     {active && (
                         <ResponsiveImage
-                            className="h-auto w-full max-w-full object-cover object-center"
+                            className="block h-auto w-full max-w-full object-cover object-center"
                             src={active}
                             alt={name}
                         />

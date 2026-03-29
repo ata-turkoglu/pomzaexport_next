@@ -36,6 +36,9 @@ function Products() {
                             src={item.image}
                             className="w-full h-full object-cover"
                             alt={item.name[locale]}
+                            desktopProfile="listing"
+                            width={400}
+                            height={300}
                         />
                         <span
                             className="flex items-center justify-center text-white font-semibold z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center"

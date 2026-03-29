@@ -26,6 +26,10 @@ export default function Sustainability() {
                             className="w-auto h-full object-cover"
                             src="/assets/common/sustainability.jpg"
                             alt="pomza export"
+                            mobileProfile="listing"
+                            desktopProfile="listing"
+                            width={400}
+                            height={282}
                         />
                     </div>
                     <div className="flex flex-1 h-full">
@@ -33,6 +37,10 @@ export default function Sustainability() {
                             className="w-full h-full object-cover"
                             src="/assets/common/sustainability1.jpg"
                             alt="pomza export"
+                            mobileProfile="listing"
+                            desktopProfile="listing"
+                            width={400}
+                            height={300}
                         />
                     </div>
                     <div className="flex flex-1 h-full">
@@ -40,6 +48,10 @@ export default function Sustainability() {
                             className="w-full h-full object-cover"
                             src="/assets/common/sany.jpg"
                             alt="pomza export"
+                            mobileProfile="listing"
+                            desktopProfile="listing"
+                            width={400}
+                            height={267}
                         />
                     </div>
                     <div className="flex flex-1 h-full">
@@ -47,6 +59,10 @@ export default function Sustainability() {
                             className="w-full h-full object-cover"
                             src="/assets/common/water.jpg"
                             alt="pomza export"
+                            mobileProfile="listing"
+                            desktopProfile="listing"
+                            width={400}
+                            height={238}
                         />
                     </div>
                 </div>

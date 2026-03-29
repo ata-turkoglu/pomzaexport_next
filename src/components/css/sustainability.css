@@ -1,8 +1,9 @@
 .sustainability-section {
-    background-image: url("/assets-responsive/web/fallback/common/pattern.jpg");
+    background-image: url("/assets-responsive/mobile/fallback/common/pattern.jpg");
     background-image: image-set(
-        url("/assets-responsive/web/webp/common/pattern.webp") type("image/webp"),
-        url("/assets-responsive/web/fallback/common/pattern.jpg")
+        url("/assets-responsive/mobile/webp/common/pattern.webp")
+            type("image/webp"),
+        url("/assets-responsive/mobile/fallback/common/pattern.jpg")
             type("image/jpeg")
     );
 }

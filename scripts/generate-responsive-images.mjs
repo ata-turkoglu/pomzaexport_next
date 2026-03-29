@@ -13,6 +13,7 @@ const MANIFEST_PATH = path.resolve(
 const PROFILES = [
     { name: "web", width: 1600 },
     { name: "mobile", width: 800 },
+    { name: "listing", width: 400 },
 ];
 
 const WEBP_QUALITY = 75;

@@ -6,11 +6,20 @@ import {
     getResponsiveImageSources,
 } from "@/lib/responsiveImage";
 
-export default function ResponsiveImage({ src, alt = "", onError, ...imgProps }) {
+export default function ResponsiveImage({
+    src,
+    alt = "",
+    onError,
+    mobileProfile = "mobile",
+    desktopProfile = "web",
+    ...imgProps
+}) {
     const [forceOriginal, setForceOriginal] = useState(false);
     const sources = getResponsiveImageSources(src);
     const dimensions = getResponsiveImageDimensions(src);
     const isViewHeroImage = src === "/assets/common/view.jpg";
+    const mobileSources = sources?.[mobileProfile] || sources?.mobile;
+    const desktopSources = sources?.[desktopProfile] || sources?.web;
     const resolvedImgProps = {
         loading: "lazy",
         decoding: "async",
@@ -44,32 +53,29 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
         }
     };
 
-    const mobileWebpSrcSet = `${sources.mobile.webp} 1x, ${sources.web.webp} 2x`;
-    const mobileFallbackSrcSet = `${sources.mobile.fallback} 1x, ${sources.web.fallback} 2x`;
-
     return (
         <picture style={{ display: "contents" }}>
             <>
                 <source
                     media="(max-width: 767px)"
-                    srcSet={mobileWebpSrcSet}
+                    srcSet={mobileSources.webp}
                     type="image/webp"
                 />
                 <source
                     media="(max-width: 767px)"
-                    srcSet={mobileFallbackSrcSet}
-                    type={sources.mobile.fallbackType}
+                    srcSet={mobileSources.fallback}
+                    type={mobileSources.fallbackType}
                 />
             </>
             <source
                 media="(min-width: 768px)"
-                srcSet={sources.web.webp}
+                srcSet={desktopSources.webp}
                 type="image/webp"
             />
             <source
                 media="(min-width: 768px)"
-                srcSet={sources.web.fallback}
-                type={sources.web.fallbackType}
+                srcSet={desktopSources.fallback}
+                type={desktopSources.fallbackType}
             />
             <img
                 src={sources.original}

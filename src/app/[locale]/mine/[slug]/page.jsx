@@ -193,6 +193,10 @@ export default function Mine({ params: { locale, slug } }) {
                                         className="w-full h-full object-cover"
                                         src={item.image}
                                         alt={item.name[locale]}
+                                        mobileProfile="listing"
+                                        desktopProfile="listing"
+                                        width={400}
+                                        height={300}
                                     />
                                     <span className="md:hidden flex items-center justify-center text-white font-semibold text-2xl z-10 absolute left-0 top-0 right-0 bottom-0 m-auto text-center t-shadow select-none">
                                         {item.name[locale]}
