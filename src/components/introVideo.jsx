@@ -55,14 +55,13 @@ export default function IntroVideo() {
             </div>
             <div className="h-screen w-full md:hidden">
                 <ResponsiveImage
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hero-pan"
                     src="/assets/common/view.jpg"
                     loading="eager"
                     fetchPriority="high"
                     decoding="sync"
                     style={{
                         filter: "brightness(70%)",
-                        objectPosition: "40%",
                     }}
                     alt="pomza export"
                 />

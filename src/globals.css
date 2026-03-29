@@ -72,3 +72,24 @@ h6 {
     filter: drop-shadow(0 0 10px black);
     -webkit-filter: drop-shadow(0 0 10px rgba(85, 85, 85, 0.5));
 }
+
+.hero-pan {
+    animation: hero-pan 90s linear alternate infinite;
+}
+
+@keyframes hero-pan {
+    from {
+        object-position: 30%;
+    }
+
+    to {
+        object-position: 78%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-pan {
+        animation: none;
+        object-position: 40%;
+    }
+}

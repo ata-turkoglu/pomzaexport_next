@@ -10,7 +10,7 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
     const [forceOriginal, setForceOriginal] = useState(false);
     const sources = getResponsiveImageSources(src);
     const dimensions = getResponsiveImageDimensions(src);
-    const preferMobileFallback = src === "/assets/common/view.jpg";
+    const isViewHeroImage = src === "/assets/common/view.jpg";
     const resolvedImgProps = {
         loading: "lazy",
         decoding: "async",
@@ -33,7 +33,7 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
         resolvedImgProps.height = dimensions.height;
     }
 
-    if (!sources || forceOriginal) {
+    if (isViewHeroImage || !sources || forceOriginal) {
         return <img src={src} alt={alt} onError={onError} {...resolvedImgProps} />;
     }
 
@@ -44,28 +44,23 @@ export default function ResponsiveImage({ src, alt = "", onError, ...imgProps })
         }
     };
 
+    const mobileWebpSrcSet = `${sources.mobile.webp} 1x, ${sources.web.webp} 2x`;
+    const mobileFallbackSrcSet = `${sources.mobile.fallback} 1x, ${sources.web.fallback} 2x`;
+
     return (
         <picture style={{ display: "contents" }}>
-            {preferMobileFallback ? (
+            <>
                 <source
                     media="(max-width: 767px)"
-                    srcSet={sources.mobile.fallback}
+                    srcSet={mobileWebpSrcSet}
+                    type="image/webp"
+                />
+                <source
+                    media="(max-width: 767px)"
+                    srcSet={mobileFallbackSrcSet}
                     type={sources.mobile.fallbackType}
                 />
-            ) : (
-                <>
-                    <source
-                        media="(max-width: 767px)"
-                        srcSet={sources.mobile.webp}
-                        type="image/webp"
-                    />
-                    <source
-                        media="(max-width: 767px)"
-                        srcSet={sources.mobile.fallback}
-                        type={sources.mobile.fallbackType}
-                    />
-                </>
-            )}
+            </>
             <source
                 media="(min-width: 768px)"
                 srcSet={sources.web.webp}
