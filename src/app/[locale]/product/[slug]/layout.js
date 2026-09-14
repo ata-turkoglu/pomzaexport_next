@@ -1,3 +1,4 @@
+import { detailDescription } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -25,9 +26,7 @@ export async function generateMetadata({ params }) {
     const enSlug = product.id.toString() + "-" + slugify(product.name.en);
     const canonicalSlug = locale === "tr" ? trSlug : enSlug;
     const canonicalPath = `/${locale}/product/${canonicalSlug}/`;
-    const description = Array.isArray(product.description[locale])
-        ? product.description[locale].join(" ")
-        : product.description[locale];
+    const description = detailDescription(product.name[locale], locale, "product");
 
     const metaObj = {
         title: product.name[locale],
@@ -71,5 +70,7 @@ export default async function ProductDetailLayout({ children, params }) {
         notFound();
     }
     setRequestLocale(locale);
+    const item = productsJSON.find((entry) => entry.id == params.slug.split("-")[0]);
+    if (!item) notFound();
     return <div>{children}</div>;
 }

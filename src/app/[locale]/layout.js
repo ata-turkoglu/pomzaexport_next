@@ -1,4 +1,6 @@
 import "@/globals.css";
+import JsonLd from "@/components/JsonLd";
+import { organizationGraph } from "@/lib/seo";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SiteSplashGate from "@/components/siteSplashGate";
@@ -16,6 +18,7 @@ export async function generateMetadata({ params }) {
 
     return {
         title: {
+            template: "%s | Pomza Export",
             default:
                 locale == "tr"
                     ? "Pomza Export Madencilik"
@@ -42,7 +45,7 @@ export async function generateMetadata({ params }) {
                     alt: "pomza export",
                 },
             ],
-            locale,
+            locale: locale === "tr" ? "tr_TR" : "en_US",
             type: "website",
         },
         robots: {
@@ -106,6 +109,7 @@ export default async function LocaleLayout({ children, params }) {
                     " antialiased w-full h-full overflow-auto relative"
                 }
             >
+                <JsonLd data={organizationGraph(locale)} />
                 <NextIntlClientProvider messages={messages}>
                     <SiteSplashGate />
                     <Header />

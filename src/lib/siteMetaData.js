@@ -40,7 +40,7 @@ export default {
             "gold mining",
             "gold",
             "kuvars",
-            "agregates",
+            "aggregates",
             "garnet",
             "silica sand",
             "hematite",
@@ -56,8 +56,8 @@ export default {
             en: "Products",
         },
         description: {
-            tr: "Pomza Export Ürünler",
-            en: "Pomza Export Products",
+            tr: "Pomza, perlit, kuvars ve diğer endüstriyel minerallerin özellikleri, kullanım alanları ve Pomza Export ürün grupları hakkında bilgi edinin.",
+            en: "Learn about pumice, perlite, quartz and other industrial minerals, their properties, applications and Pomza Export product groups.",
         },
         keywords: { tr: [], en: [] },
     },
@@ -67,8 +67,8 @@ export default {
             en: "About Us",
         },
         description: {
-            tr: "Pomza Export Hakkımızda",
-            en: "Pomza Export About Us",
+            tr: "Pomza Export’un madencilik faaliyetleri, kurumsal yaklaşımı, çevre ve kalite politikaları hakkında bilgi edinin.",
+            en: "Discover Pomza Export’s mining activities, company background, environmental approach and quality policies.",
         },
         keywords: {
             tr: [
@@ -89,8 +89,8 @@ export default {
             en: "Contact",
         },
         description: {
-            tr: "Pomza Export İletişim",
-            en: "Pomza Export Contact",
+            tr: "Pomza Export’un Manisa, İzmir ve Ankara adreslerine, işletme telefonlarına ve iletişim bilgilerine ulaşın.",
+            en: "Find addresses, facility telephone numbers and contact details for Pomza Export in Manisa, İzmir and Ankara.",
         },
         keywords: {
             tr: [
@@ -107,12 +107,12 @@ export default {
     },
     minePage: {
         title: {
-            tr: "Pomza Export",
-            en: "Pomza Export",
+            tr: "Maden İşletmelerimiz",
+            en: "Mining Facilities",
         },
         description: {
-            tr: "Pomza Export Madencilik",
-            en: "Pomza Export Mining Company",
+            tr: "Manisa ve İzmir’deki Sart, Yeniköy ve Küner maden işletmelerini, faaliyetlerini ve ürün gruplarını keşfedin.",
+            en: "Explore Pomza Export’s Sart, Yeniköy and Küner mining facilities in Manisa and İzmir, their activities and mineral products.",
         },
         keywords: {
             tr: [

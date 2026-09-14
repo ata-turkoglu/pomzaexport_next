@@ -1,5 +1,7 @@
 "use client";
 
+import DetailContext from "@/components/DetailContext";
+
 import React, { useEffect, useRef, useState } from "react";
 import ImgCarousel from "@/components/imgCarousel";
 import minesJSON from "@/data/mines.json";
@@ -13,10 +15,9 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 
 export default function Mine({ params: { locale, slug } }) {
     const router = useRouter();
-    const [mineData, setMineData] = useState(null);
-
-    const [mineId, setMineId] = useState(null);
-    const [mineProducts, setMineProducts] = useState([]);
+    const mineId = slug.split("-")[0];
+    const mineData = minesJSON.find((item) => item.id == mineId);
+    const mineProducts = productsJSON.filter((item) => item.facilityId == mineId);
     const [previewItem, setPreviewItem] = useState(null);
     const [isPreviewFading, setIsPreviewFading] = useState(false);
     const previewCloseTimeoutRef = useRef(0);
@@ -59,17 +60,6 @@ export default function Mine({ params: { locale, slug } }) {
     const isMobileViewport = () =>
         typeof window !== "undefined" &&
         window.matchMedia("(max-width: 767px)").matches;
-
-    useEffect(() => {
-        const id = slug.split("-")[0];
-        setMineId(id);
-
-        const data = minesJSON.find((itm) => itm.id == id);
-        setMineData(data);
-
-        const products = productsJSON.filter((item) => item.facilityId == id);
-        setMineProducts(products);
-    }, [slug]);
 
     useEffect(() => {
         return () => {
@@ -139,8 +129,10 @@ export default function Mine({ params: { locale, slug } }) {
                         </div>
                     </div>
 
+                    <DetailContext item={mineData} locale={locale} kind="mine" />
+
                     {/* Product Container */}
-                    <div className="w-full py-3 md:py-8 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:gap-0 md:flex md:items-center md:justify-center md:h-[30vh] duration-200">
+                    <div className="w-full pt-2 pb-3 md:pt-3 md:pb-6 md:pl-3 md:pr-0 px-3 grid grid-cols-2 gap-2 md:gap-0 md:flex md:items-center md:justify-center md:h-[30vh] duration-200">
                         {mineProducts.map((item, key) => {
                             return (
                                 <div

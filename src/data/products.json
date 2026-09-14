@@ -222,7 +222,7 @@
     {
         "id": 3,
         "facilityId": 1,
-        "name": { "tr": "Agrega", "en": "Agregates" },
+        "name": { "tr": "Agrega", "en": "Aggregates" },
         "image": "/assets/products/agregates.jpg",
         "images": [
             "/assets/products/agregates.jpg",
@@ -736,7 +736,7 @@
         "name": { "tr": "Bims Blok", "en": "Bims Block" },
         "image": "/assets/products/bims-blok.jpg",
         "images": [],
-        "description": { "tr": "", "en": "" },
+        "description": {"tr": "Bims blok, Pomza Export ürün grupları arasında yer alan bir yapı malzemesidir. Pomexblok ürünlerine ilişkin ayrıntılı bilgiler EILE POMEX marka sitesinde sunulmaktadır.", "en": "Bims block is a building material in the Pomza Export product range. Detailed information about Pomexblok products is available on the EILE POMEX brand website."},
         "usageAreas": { "tr": "", "en": "" },
         "productVariety": { "tr": "", "en": "" },
         "production": "",
@@ -753,7 +753,7 @@
         "name": { "tr": "Yapı Elemanları", "en": "Construction Chemicals" },
         "image": "/assets/products/eilepomex.jpg",
         "images": [],
-        "description": { "tr": "", "en": "" },
+        "description": {"tr": "Pomza Export’un yapı elemanları ve yapı kimyasalları grubu EILE POMEX markasıyla tanıtılmaktadır. Ürün grupları ve uygulama bilgileri için EILE POMEX marka sitesini inceleyebilirsiniz.", "en": "Pomza Export presents its building materials and construction chemicals under the EILE POMEX brand. Visit the brand website for product groups and application information."},
         "usageAreas": { "tr": "", "en": "" },
         "productVariety": { "tr": "", "en": "" },
         "production": "",

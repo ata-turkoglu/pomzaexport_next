@@ -1,3 +1,4 @@
+import { detailDescription } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -24,9 +25,7 @@ export async function generateMetadata({ params }) {
     const enSlug = mine.id.toString() + "-" + slugify(mine.name.en);
     const canonicalSlug = locale === "tr" ? trSlug : enSlug;
     const canonicalPath = `/${locale}/mine/${canonicalSlug}/`;
-    const description = Array.isArray(mine.description[locale])
-        ? mine.description[locale].join(" ")
-        : mine.description[locale];
+    const description = detailDescription(mine.name[locale], locale, "mine");
 
     const metaObj = {
         title: mine.name[locale],
@@ -70,5 +69,7 @@ export default async function MineLayout({ children, params }) {
         notFound();
     }
     setRequestLocale(locale);
+    const item = minesJSON.find((entry) => entry.id == params.slug.split("-")[0]);
+    if (!item) notFound();
     return <div>{children}</div>;
 }
