@@ -7,6 +7,7 @@ module.exports = {
     changefreq: "monthly",
     priority: 0.7,
     generateIndexSitemap: false,
+    autoLastmod: false,
     generateRobotsTxt: true,
     exclude: [],
     transform: async (config, path) => {

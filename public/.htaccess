@@ -3,11 +3,14 @@ RewriteEngine On
 # Redirect the bare root to the default locale homepage.
 RewriteRule ^$ https://www.pomzaexport.com/tr/ [R=301,L]
 
+# Preserve the former English aggregate URL.
+RewriteRule ^en/product/3-agregates/?$ https://www.pomzaexport.com/en/product/3-aggregates/ [R=301,L]
+
 # Canonical product detail URLs (EN)
 RewriteRule ^en/product/0/?$ https://www.pomzaexport.com/en/product/0-gold/ [R=301,L]
 RewriteRule ^en/product/1/?$ https://www.pomzaexport.com/en/product/1-quartz/ [R=301,L]
 RewriteRule ^en/product/2/?$ https://www.pomzaexport.com/en/product/2-rutile/ [R=301,L]
-RewriteRule ^en/product/3/?$ https://www.pomzaexport.com/en/product/3-agregates/ [R=301,L]
+RewriteRule ^en/product/3/?$ https://www.pomzaexport.com/en/product/3-aggregates/ [R=301,L]
 RewriteRule ^en/product/4/?$ https://www.pomzaexport.com/en/product/4-garnet/ [R=301,L]
 RewriteRule ^en/product/5/?$ https://www.pomzaexport.com/en/product/5-silica-sand/ [R=301,L]
 RewriteRule ^en/product/6/?$ https://www.pomzaexport.com/en/product/6-hematite/ [R=301,L]
