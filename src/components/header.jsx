@@ -111,10 +111,10 @@ function Header() {
                         href={"/" + locale + "/about"}
                         className="px-6 py-2 h-full text-md flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
-                        <span className="capitalize pt-1">{t("aboutus")}</span>
+                        <span className="pt-1">{t("aboutus")}</span>
                     </Link>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        <span className="capitalize pt-1">
+                        <span className="pt-1">
                             {t("facilities")}
                         </span>
                         <ul className="nav-list pb-3">
@@ -142,7 +142,7 @@ function Header() {
                         </ul>
                     </span>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
-                        <span className="capitalize pt-1">{t("products")}</span>
+                        <span className="pt-1">{t("products")}</span>
                         <ul className="nav-list pb-3">
                             {productsJSON.map((item, key) => {
                                 return (
@@ -176,7 +176,7 @@ function Header() {
                         href={"/" + locale + "/contact"}
                         className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow"
                     >
-                        <span className="capitalize pt-1">{t("contact")}</span>
+                        <span className="pt-1">{t("contact")}</span>
                     </Link>
                     <span className="px-6 py-2 h-full text-lg flex items-center cursor-pointer relative nav-link nav-item t-shadow">
                         <span className="border px-2 pt-1 rounded-3xl border-gray-800">
@@ -250,28 +250,28 @@ function Header() {
                         onClick={() => setIsOpen(false)}
                         className="text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        <span className="capitalize">{t("aboutus")}</span>
+                        <span>{t("aboutus")}</span>
                     </Link>
                     <Link
                         href={"/" + locale + "/facilities"}
                         onClick={() => setIsOpen(false)}
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        <span className="capitalize">{t("facilities")}</span>
+                        <span>{t("facilities")}</span>
                     </Link>
                     <Link
                         href={"/" + locale + "/products"}
                         onClick={() => setIsOpen(false)}
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        <span className="capitalize">{t("products")}</span>
+                        <span>{t("products")}</span>
                     </Link>
                     <Link
                         href={"/" + locale + "/contact"}
                         onClick={() => setIsOpen(false)}
                         className=" text-white hover:text-gray-400 my-4 rounded-md text-xl font-medium"
                     >
-                        <span className="capitalize">{t("contact")}</span>
+                        <span>{t("contact")}</span>
                     </Link>
                 </div>
                 </div>

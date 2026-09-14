@@ -42,7 +42,7 @@ function Footer({ hFull = false }) {
                 <div className="md:w-2/3 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
                     {/* Mines */}
                     <div className="space-y-4 mt-4">
-                        <h3 className="text-xl underline capitalize">
+                        <h3 className="text-xl underline">
                             {t("facilities")}
                         </h3>
                         <ul className="space-y-3">
@@ -68,7 +68,7 @@ function Footer({ hFull = false }) {
 
                     {/* Products */}
                     <div className="space-y-4 mt-4">
-                        <h3 className="text-xl underline capitalize">
+                        <h3 className="text-xl underline">
                             {t("products")}
                         </h3>
                         <ul className="space-y-3">
@@ -99,12 +99,12 @@ function Footer({ hFull = false }) {
 
                     {/* Address */}
                     <div className="space-y-4 mt-4">
-                        <h3 className="text-xl underline capitalize">
+                        <h3 className="text-xl underline">
                             {t_c("contactAdresses")}
                         </h3>
                         <ul className="space-y-5 text-sm">
                             <li className="hover:text-gray-300">
-                                <strong className="uppercase">
+                                <strong>
                                     {t_c("sartMadenIsletmesi")}
                                 </strong>
                                 <br />
@@ -114,16 +114,16 @@ function Footer({ hFull = false }) {
                                 <span>Salihli/MANİSA</span>
 
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("telephone")}
                                 </span>
                                 <span>: +90 236 724 20 21</span>
                                 <br />
-                                <span className="capitalize">{t_c("fax")}</span>
+                                <span>{t_c("fax")}</span>
                                 <span>: +90 236 724 30 51</span>
                             </li>
                             <li className="hover:text-gray-300">
-                                <strong className="uppercase">
+                                <strong>
                                     {t_c("menderesMadenIsletmesi")}
                                 </strong>
                                 <br />
@@ -131,18 +131,18 @@ function Footer({ hFull = false }) {
                                 <br />
                                 <span> Menderes/İZMİR</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("telephone")}
                                 </span>{" "}
                                 <span>: +90 232 782 14 46</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 232 782 15 98</span>
                             </li>
                             <li className="hover:text-gray-300">
-                                <strong className="uppercase">
+                                <strong>
                                     {t_c("etiperPerlitIsletmesi")}
                                 </strong>
                                 <br />
@@ -151,18 +151,18 @@ function Footer({ hFull = false }) {
                                     179/22 <br /> Menderes/İZMİR
                                 </span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("telephone")}
                                 </span>{" "}
                                 <span>: +90 232 782 67 24</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 232 782 67 25</span>
                             </li>
                             <li className="hover:text-gray-300">
-                                <strong className="uppercase">
+                                <strong>
                                     {t_c("eilePomex")}
                                 </strong>
                                 <br />
@@ -173,18 +173,18 @@ function Footer({ hFull = false }) {
                                 <br />
                                 <span>Menderes/İZMİR</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("telephone")}
                                 </span>{" "}
                                 <span>: +90 232 360 17 77</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 232 360 16 16</span>
                             </li>
                             <li className="hover:text-gray-300">
-                                <strong className="uppercase">
+                                <strong>
                                     {t_c("ankaraOffice")}
                                 </strong>
                                 <br />
@@ -192,12 +192,12 @@ function Footer({ hFull = false }) {
                                 <br />
                                 <span>Çankaya/ANKARA</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("telephone")}
                                 </span>{" "}
                                 <span>: +90 312 495 64 90</span>
                                 <br />
-                                <span className="capitalize">
+                                <span>
                                     {t_c("fax")}
                                 </span>{" "}
                                 <span>: +90 312 495 64 93</span>
@@ -211,7 +211,17 @@ function Footer({ hFull = false }) {
 
             {/* Social Media */}
             <div className="flex flex-col sm:flex-row gap-8 sm:items-center justify-between my-8">
-                <p className="capitalize">{t("copyright")}</p>
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+                    <p>{t("copyright")}</p>
+                    <a
+                        href="https://mths.mekasist.com/MTHS?mersis=0732005656700012"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 hover:text-gray-300"
+                    >
+                        {t("informationSocietyServices")}
+                    </a>
+                </div>
                 <div className="flex items-center space-x-5">
                     <Link
                         href="https://www.linkedin.com/company/pomzaexport/"

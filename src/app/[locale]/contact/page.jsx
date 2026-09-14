@@ -31,7 +31,7 @@ export default function Contact() {
 
     const onVerify = useCallback((token) => {
         setToken(token);
-    });
+    }, []);
 
     function Send() {
         if (typeof window === "undefined" || !window.Email?.send) {
@@ -85,6 +85,7 @@ export default function Contact() {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!token) return;
         Send();
     };
 
@@ -256,6 +257,9 @@ export default function Contact() {
                                                 type="text"
                                                 id="name"
                                                 name="name"
+                                                required
+                                                maxLength={120}
+                                                aria-label={t("nameSurname")}
                                                 autoComplete="given-name"
                                                 placeholder={t("nameSurname")}
                                                 className="capitalize mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
@@ -272,9 +276,15 @@ export default function Contact() {
                                                 type="email"
                                                 id="email"
                                                 name="email"
+                                                required
+                                                maxLength={254}
+                                                aria-label={t("email")}
                                                 autoComplete="email"
+                                                autoCapitalize="none"
+                                                autoCorrect="off"
+                                                spellCheck={false}
                                                 placeholder={t("email")}
-                                                className="capitalize mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                                className="normal-case mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                                                 value={formData.email}
                                                 onChange={handleChange}
                                             />
@@ -288,6 +298,9 @@ export default function Contact() {
                                         <textarea
                                             id="textarea"
                                             name="message"
+                                                required
+                                                maxLength={5000}
+                                                aria-label={t("yourMessage")}
                                             cols="30"
                                             rows="5"
                                             placeholder={t("yourMessage")}
@@ -318,8 +331,10 @@ export default function Contact() {
                                 >
                                     <ReCAPTCHA
                                         ref={recaptchaRef}
-                                        sitekey="6Lf-S8UpAAAAAL58_LEdcdltYiANv69K7ei0K9wP"
+                                        sitekey="6LeH0bstAAAAAEAnZLClEFTcRtZsEPjvtwy5y9CR"
                                         onChange={onVerify}
+                                        onExpired={() => setToken(null)}
+                                        onErrored={() => setToken(null)}
                                         size="normal"
                                     />
                                 </div>

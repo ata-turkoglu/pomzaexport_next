@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import productsJSON from "@/data/products.json";
-import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { slugify } from "@/utils/commonFuncs";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
 function Products() {
-    const router = useRouter();
     const { locale } = useParams();
 
     const setSlug = (id, name) => {
@@ -14,23 +14,18 @@ function Products() {
     };
 
     return (
-        <div className="h-full w-full flex flex-col">
+        <main className="h-full w-full flex flex-col">
             <div className="h-16 w-100 bg-[#151a38]"></div>
+            <section className="px-5 py-8 text-center">
+                <h1 className="text-3xl font-bold">{locale === "tr" ? "Mineraller ve Ürün Grupları" : "Minerals and Product Groups"}</h1>
+                <p className="mt-3">{locale === "tr" ? "Pomza Export ürünlerinin özelliklerini, kullanım alanlarını ve üretim tesislerini tanıyın." : "Explore Pomza Export’s product properties, applications and production facilities."}</p>
+            </section>
             <div className="grid grid-cols-2 gap-2 p-2">
                 {productsJSON.map((item, index) => (
-                    <div
-                        key={index}
-                        className="w-full aspect-[4/3] md:aspect-[16/10] relative cursor-pointer overflow-hidden"
-                        onClick={() => {
-                            item.externalLink
-                                ? window.open(item.link, "_blank")
-                                : router.push(
-                                      "/" +
-                                          locale +
-                                          "/product/" +
-                                          setSlug(item.id, item.name[locale])
-                                  );
-                        }}
+                    <Link
+                        key={item.id}
+                        className="w-full aspect-[4/3] md:aspect-[16/10] relative overflow-hidden"
+                        href={`/${locale}/product/${setSlug(item.id, item.name[locale])}/`}
                     >
                         <ResponsiveImage
                             src={item.image}
@@ -49,10 +44,10 @@ function Products() {
                         >
                             {item.name[locale]}
                         </span>
-                    </div>
+                    </Link>
                 ))}
             </div>
-        </div>
+        </main>
     );
 }
 

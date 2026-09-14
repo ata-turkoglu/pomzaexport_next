@@ -1,17 +1,18 @@
 {
     "Header": {
-        "aboutus": "about us",
-        "facilities": "facilities",
-        "contact": "contact",
-        "products": "products"
+        "aboutus": "About Us",
+        "facilities": "Facilities",
+        "contact": "Contact",
+        "products": "Products"
     },
     "Footer": {
-        "products": "products",
-        "copyright": "copyright",
+        "products": "Products",
+        "copyright": "Copyright",
+        "informationSocietyServices": "Information Society Services",
         "kvkk": "kvkk",
-        "facilities": "facilities",
+        "facilities": "Facilities",
         "contactAdresses": "our contact addresses",
-        "sartMadenIsletmesi": "sart maning operations",
+        "sartMadenIsletmesi": "Sart Mining Operations",
         "eilePomex": "eile pomex construction chemicals",
         "menderesMadenIsletmesi": "menderes mining operations",
         "etiperPerlitIsletmesi": "etiper perlit facility",
@@ -50,18 +51,18 @@
         "reachUs": "you can reach us by calling our relavant number or filling out the contact form.",
         "nameSurname": "name surname",
         "address": "address",
-        "telephone": "phone",
-        "fax": "fax",
+        "telephone": "Phone",
+        "fax": "Fax",
         "contactForm": "contact form",
         "email": "email",
         "yourMessage": "your message",
         "send": "send",
-        "contactAdresses": "our contact addresses",
-        "sartMadenIsletmesi": "sart maning operations",
-        "eilePomex": "eile pomex construction chemicals",
-        "menderesMadenIsletmesi": "menderes mining operations",
-        "etiperPerlitIsletmesi": "etiper perlit facility",
-        "ankaraOffice": "ankara office"
+        "contactAdresses": "Our Contact Addresses",
+        "sartMadenIsletmesi": "Sart Mining Operations",
+        "eilePomex": "Eile Pomex Construction Chemicals",
+        "menderesMadenIsletmesi": "Menderes Mining Operations",
+        "etiperPerlitIsletmesi": "Etiper Perlit Facility",
+        "ankaraOffice": "Ankara Office"
     },
     "Docs": {
         "companyCertificates": "company certificates",
