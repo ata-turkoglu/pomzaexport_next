@@ -1,4 +1,10 @@
 "use client";
+
+import DetailContext from "@/components/DetailContext";
+import Link from "next/link";
+import minesJSON from "@/data/mines.json";
+import { slugify } from "@/utils/commonFuncs";
+import MineralQuestions from "@/components/MineralQuestions";
 import Gallery from "@/components/gallery";
 import productsJSON from "@/data/products.json";
 import { useTranslations } from "next-intl";
@@ -28,6 +34,9 @@ export default function Product({ params: { locale, slug } }) {
         return null;
     }
 
+    const facility = minesJSON.find((mine) => mine.id === productData.facilityId);
+    const hasContent = (value) => Array.isArray(value) ? value.some(Boolean) : Boolean(value && value.trim());
+
     return (
         <main className="h-fit">
             <div className="flex flex-col min-h-screen h-fit w-full items-center pb-12">
@@ -47,7 +56,17 @@ export default function Product({ params: { locale, slug } }) {
                     </h1>
                 </div>
 
-                <div className="p-3 w-full md:w-2/3 h-fit">
+                <DetailContext item={productData} locale={locale} kind="product" />
+                <div className="px-3 pb-3 pt-1 w-full md:w-2/3 h-fit">
+                    {productData.externalLink && <p className="mt-2 mb-3">
+                        <a className="underline" href={productData.link}>
+                            {locale === "tr" ? "Ürün ayrıntılarını EILE POMEX marka sitesinde inceleyin" : "Explore product details on the EILE POMEX brand website"}
+                        </a>
+                    </p>}
+                    {facility && !productData.externalLink && <p className="mt-2 mb-3">
+                        {locale === "tr" ? "İlgili işletme: " : "Related facility: "}
+                        <Link className="underline" href={`/${locale}/mine/${facility.id}-${slugify(facility.name[locale])}/`}>{facility.name[locale]}</Link>
+                    </p>}
                     {productData.whatIs && (
                         <div className="pt-5">
                             <h2 className="mb-1">
@@ -99,12 +118,12 @@ export default function Product({ params: { locale, slug } }) {
                         </div>
                     </div>
 
-                    <div className="pt-5 mb-5">
+                    {productData.images.length > 0 && <div className="pt-5 mb-5">
                         <h2>{t("productImages")}</h2>
-                        <Gallery images={productData.images} />
-                    </div>
+                        <Gallery images={productData.images} name={productData.name[locale]} />
+                    </div>}
 
-                    {productData.usageAreas && (
+                    {hasContent(productData.usageAreas?.[locale]) && (
                         <div className="pt-5">
                             <h2 className="mb-1">{t("areasOfUsage")}</h2>
                             <hr className="mb-4" />
@@ -126,7 +145,7 @@ export default function Product({ params: { locale, slug } }) {
                         </div>
                     )}
 
-                    {productData.productVariety && (
+                    {hasContent(productData.productVariety?.[locale]) && (
                         <div className="pt-5">
                             <h2 className="mb-1">{t("productVariety")}</h2>
                             <hr className="mb-4" />
@@ -136,7 +155,7 @@ export default function Product({ params: { locale, slug } }) {
                         </div>
                     )}
 
-                    {productData.technicalInfo && (
+                    {hasContent(productData.technicalInfo?.[locale]) && (
                         <div className="pt-5">
                             <h2 className="mb-1">{t("technicalInfo")}</h2>
                             <hr className="mb-4" />
@@ -160,6 +179,7 @@ export default function Product({ params: { locale, slug } }) {
                             </div>
                         </div>
                     )}
+                    <MineralQuestions id={productData.id} locale={locale} />
                 </div>
             </div>
         </main>
